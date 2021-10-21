@@ -18,7 +18,8 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
+            android:layout_height="?attr/actionBarSize"
+            android:background="#00a8c7">
 
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
@@ -97,7 +98,9 @@
                     android:id="@+id/btnKhaiBao"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/khai_bao"
+                    android:src="@drawable/khai_bao"
+                    android:scaleType="centerCrop"
+                    android:background="@android:color/transparent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/linearFunction"
@@ -107,13 +110,13 @@
                 <Button
                     android:id="@+id/btnDatKham"
                     android:layout_width="0dp"
-                    android:layout_height="70dp"
+                    android:layout_height="55dp"
                     android:backgroundTint="#00a8c7"
                     app:layout_constraintEnd_toEndOf="@+id/rvFunction"
                     app:layout_constraintStart_toStartOf="@+id/rvFunction"
                     app:layout_constraintTop_toBottomOf="@id/btnKhaiBao"
                     android:text="@string/dat_kham"
-                    android:layout_marginTop="30dp"/>
+                    android:layout_marginTop="10dp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvFunction"
