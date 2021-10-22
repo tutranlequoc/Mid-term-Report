@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item android:id="@+id/nav_paper"
-            android:title="@string/nav_ho_so"
-            android:icon="@drawable/hosodatkham"/>
+            android:title="@string/ho_so"
+            android:icon="@drawable/iconkiemtra"/>
         <item android:id="@+id/nav_phieuKham"
-            android:title="@string/nav_phieu_kham"
+            android:title="@string/phieu_kham"
             android:icon="@drawable/iconphieukham"/>
         <item android:id="@+id/nav_noti"
-            android:title="@string/nav_notification"
+            android:title="@string/notification"
             android:icon="@drawable/iconkiemtra"/>
     </group>
     <item android:id="@+id/nav_others"
@@ -19,9 +19,9 @@
                 android:icon="@drawable/iconphieukham"/>
             <item android:id="@+id/nav_regu"
                 android:title="Quy định"
-                android:icon="@drawable/khai_bao"/>
+                android:icon="@drawable/khaibao"/>
             <item android:id="@+id/nav_faq"
-                android:icon="@drawable/hosodatkham"
+                android:icon="@drawable/iconphieukham"
                 android:title="Câu hỏi thường gặp"/>
         </menu>
 
