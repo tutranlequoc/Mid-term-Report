@@ -36,92 +36,43 @@
                     android:id="@+id/imvBacSi"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:contentDescription="@string/h_nh_nh"
+                    android:contentDescription="@string/mo_ta_anh"
                     android:scaleType="centerCrop"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/gvFunction"/>
 
-                <LinearLayout
-                    android:id="@+id/linearFunction"
+                <GridView
+                    android:id="@+id/gvFunction"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/imvBacSi">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="100dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hồ sơ"
-                            android:textSize="22dp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageButton
-                            android:layout_width="70dp"
-                            android:layout_height="100dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Phiếu khám"
-                            android:textSize="22dp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <ImageButton
-                            android:layout_width="70dp"
-                            android:layout_height="100dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Kiểm tra BHYT"
-                            android:textSize="22dp" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
+                    android:numColumns="3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/btnKhaiBao"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="30dp"/>
 
                 <ImageButton
                     android:id="@+id/btnKhaiBao"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:contentDescription="@string/mo_ta_anh"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
                     android:background="@android:color/transparent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/khai_bao"
+                    android:src="@drawable/khaibao"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/linearFunction" />
+                    app:layout_constraintBottom_toTopOf="@+id/btnDatKham"
+                    android:layout_marginBottom="30dp"/>
 
                 <Button
                     android:id="@+id/btnDatKham"
                     android:layout_width="0dp"
-                    android:layout_height="55dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:backgroundTint="#00a8c7"
                     android:text="@string/dat_kham"
@@ -129,8 +80,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
-                    app:layout_constraintTop_toBottomOf="@id/btnKhaiBao" />
-
+                    app:layout_constraintBottom_toTopOf="@+id/tblFunction"
+                    android:layout_marginBottom="30dp"/>
 
                 <TableLayout
                     android:id="@+id/tblFunction"
@@ -140,7 +91,6 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/btnDatKham"
                     app:layout_constraintVertical_bias="0"
                     android:layout_margin="30dp">
 
@@ -159,7 +109,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Hỗ trợ đặt khám"
+                                android:text="@string/ho_tro_dat_kham"
                                 android:textSize="12sp"
                                 android:textColor="#BDB8B8"
                                 android:layout_gravity="center"/>
@@ -183,7 +133,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Hỗ trợ Zalo"
+                                android:text="@string/ho_tro_zalo"
                                 android:textColor="#BDB8B8"
                                 android:textSize="12sp"
                                 android:layout_gravity="center"/>
@@ -191,6 +141,7 @@
                             <ImageView
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
+                                android:contentDescription="@string/mo_ta_anh"
                                 android:src="@drawable/zalo"
                                 android:layout_gravity="center"/>
                         </LinearLayout>
@@ -203,13 +154,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Bản đồ"
+                                android:text="@string/ban_do"
                                 android:textColor="#BDB8B8"
                                 android:textSize="12sp"
                                 android:layout_gravity="center"/>
                             <ImageView
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
+                                android:contentDescription="@string/mo_ta_anh"
                                 android:src="@drawable/location"
                                 android:layout_gravity="center" />
                         </LinearLayout>
@@ -217,8 +169,6 @@
                     </TableRow>
 
                 </TableLayout>
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.drawerlayout.widget.DrawerLayout>

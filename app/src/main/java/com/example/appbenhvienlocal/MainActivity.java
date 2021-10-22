@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        linkViews();
-//        initData();
-//        loadData();
+        linkViews();
+        initData();
+        loadData();
     }
 
     private void loadData() {
@@ -34,15 +34,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         listFunction = new ArrayList<Function>();
-        listFunction.add(new Function("Hỗ trợ đặt khám", R.drawable.location));
-        listFunction.add(new Function("Hỗ trợ Zalo", R.drawable.location));
-        listFunction.add(new Function("Bản đồ", R.drawable.location));
+        listFunction.add(new Function(getResources().getString(R.string.ho_so), R.drawable.iconhoso));
+        listFunction.add(new Function(getResources().getString(R.string.phieu_kham), R.drawable.iconphieukham));
+        listFunction.add(new Function(getResources().getString(R.string.kiem_tra), R.drawable.iconkiemtra));
         adapter = new CustomAdapter(getApplicationContext(), R.layout.function, listFunction);
     }
 
 
     private void linkViews() {
-//        gvFunction = findViewById(R.id.gvFunction);
+        gvFunction = findViewById(R.id.gvFunction);
     }
 
 }
