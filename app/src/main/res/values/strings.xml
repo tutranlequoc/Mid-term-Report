@@ -11,4 +11,6 @@
     <string name="phieu_kham"><b>Phiếu khám</b></string>
     <string name="kiem_tra"><b>Kiểm tra</b></string>>
     <string name="notification">Thông báo</string>
+    <string name="open_navigation_drawer">Open Navigation</string>
+    <string name="close_navigation_drawer">Close Navigation</string>
 </resources>

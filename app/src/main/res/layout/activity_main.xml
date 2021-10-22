@@ -27,6 +27,7 @@
             android:background="#00a8c7">
 
             <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="#00a8c7"/>
