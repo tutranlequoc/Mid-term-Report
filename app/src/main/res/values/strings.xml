@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">AppBenhVienLocal</string>
-    <string name="nav_ho_so">HỒ SƠ ĐẶT KHÁM</string>
-    <string name="nav_phieu_kham">PHIẾU KHÁM BỆNH</string>
-    <string name="nav_notification">THÔNG BÁO</string>
-    <string name="nav_faq">CÂU HỎI THƯỜNG GẶP</string>
-    <string name="nav_patient_name">Trần Lê Quốc Tú</string>
+    <string name="h_nh_nh">Hình ảnh</string>
+    <string name="dat_kham">ĐẶT KHÁM</string>
 </resources>
