@@ -11,15 +11,19 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         android:id="@+id/drawerLayout">
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#00a8c7">
+            android:background="#00a8c7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/imvBacSi">
 
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
@@ -27,149 +31,144 @@
                 android:background="#00a8c7"/>
 
         </com.google.android.material.appbar.AppBarLayout>
+            <ImageView
+                android:id="@+id/imvBacSi"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/mo_ta_anh"
+                android:scaleType="centerCrop"
+                android:src="@drawable/doctor"
+                app:layout_constraintBottom_toTopOf="@+id/gvFunction"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appBar"/>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <GridView
+                android:id="@+id/gvFunction"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/btnKhaiBao"
+                android:layout_marginBottom="10dp" />
 
-                <ImageView
-                    android:id="@+id/imvBacSi"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:contentDescription="@string/mo_ta_anh"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/gvFunction"/>
+            <ImageButton
+                android:id="@+id/btnKhaiBao"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/mo_ta_anh"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/round"
+                android:scaleType="centerCrop"
+                android:src="@drawable/khaibao"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/btnDatKham"
+                android:layout_marginBottom="10dp"/>
 
-                <GridView
-                    android:id="@+id/gvFunction"
+            <Button
+                android:id="@+id/btnDatKham"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#00a8c7"
+                android:text="@string/dat_kham"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/tblFunction"
+                android:layout_marginBottom="10dp"/>
+
+            <TableLayout
+                android:id="@+id/tblFunction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="15dp">
+
+                <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:numColumns="3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/btnKhaiBao"
-                    android:layout_marginBottom="30dp"
-                    android:layout_marginTop="30dp"/>
+                    android:background="#BDB8B8">
 
-                <ImageButton
-                    android:id="@+id/btnKhaiBao"
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:contentDescription="@string/mo_ta_anh"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@android:color/transparent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/khaibao"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/btnDatKham"
-                    android:layout_marginBottom="30dp"/>
-
-                <Button
-                    android:id="@+id/btnDatKham"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:backgroundTint="#00a8c7"
-                    android:text="@string/dat_kham"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tblFunction"
-                    android:layout_marginBottom="30dp"/>
-
-                <TableLayout
-                    android:id="@+id/tblFunction"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:stretchColumns="*"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintVertical_bias="0"
-                    android:layout_margin="30dp">
-
-                    <TableRow
+                    <LinearLayout
+                        android:background="#FFFFFF"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#BDB8B8">
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="1dp">
 
-                        <LinearLayout
-                            android:background="#FFFFFF"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginRight="1dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ho_tro_dat_kham"
+                            android:textSize="12sp"
+                            android:textColor="#BDB8B8"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/phone_number"
+                            android:padding="0dp"
+                            android:background="@android:color/transparent"
+                            android:textColor="#00a8c7"
+                            android:textSize="18sp"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="#FFFFFF"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="1dp">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/ho_tro_dat_kham"
-                                android:textSize="12sp"
-                                android:textColor="#BDB8B8"
-                                android:layout_gravity="center"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/phone_number"
-                                android:padding="0dp"
-                                android:background="@android:color/transparent"
-                                android:textColor="#00a8c7"
-                                android:textSize="18sp"
-                                android:layout_gravity="center" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:background="#FFFFFF"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginRight="1dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ho_tro_zalo"
+                            android:textColor="#BDB8B8"
+                            android:textSize="12sp"
+                            android:layout_gravity="center"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/ho_tro_zalo"
-                                android:textColor="#BDB8B8"
-                                android:textSize="12sp"
-                                android:layout_gravity="center"/>
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:contentDescription="@string/mo_ta_anh"
+                            android:src="@drawable/zalo"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="#FFFFFF"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:contentDescription="@string/mo_ta_anh"
-                                android:src="@drawable/zalo"
-                                android:layout_gravity="center"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:background="#FFFFFF"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ban_do"
+                            android:textColor="#BDB8B8"
+                            android:textSize="12sp"
+                            android:layout_gravity="center"/>
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:contentDescription="@string/mo_ta_anh"
+                            android:src="@drawable/location"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/ban_do"
-                                android:textColor="#BDB8B8"
-                                android:textSize="12sp"
-                                android:layout_gravity="center"/>
-                            <ImageView
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:contentDescription="@string/mo_ta_anh"
-                                android:src="@drawable/location"
-                                android:layout_gravity="center" />
-                        </LinearLayout>
+                </TableRow>
 
-                    </TableRow>
-
-                </TableLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+            </TableLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.drawerlayout.widget.DrawerLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
