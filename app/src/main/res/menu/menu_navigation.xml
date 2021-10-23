@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_paper"
+            android:title="@string/ho_so"
+            android:icon="@drawable/iconkiemtra"/>
+        <item android:id="@+id/nav_phieuKham"
+            android:title="@string/phieu_kham"
+            android:icon="@drawable/iconphieukham"/>
+        <item android:id="@+id/nav_noti"
+            android:title="@string/notification"
+            android:icon="@drawable/iconkiemtra"/>
+    </group>
+    <item android:id="@+id/nav_others"
+        android:title="">
+        <menu>
+            <item android:id="@+id/nav_policy"
+                android:title="Điều khoản"
+                android:icon="@drawable/iconphieukham"/>
+            <item android:id="@+id/nav_regu"
+                android:title="Quy định"
+                android:icon="@drawable/khaibao"/>
+            <item android:id="@+id/nav_faq"
+                android:icon="@drawable/iconphieukham"
+                android:title="Câu hỏi thường gặp"/>
+        </menu>
+
+    </item>
+</menu>

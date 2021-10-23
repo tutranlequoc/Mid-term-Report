@@ -1,6 +1,9 @@
 package com.example.appbenhvienlocal;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     GridView gvFunction;
     ArrayList<Function> listFunction;
     CustomAdapter adapter;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+
+    private DrawerLayout drawerLayout;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +33,20 @@ public class MainActivity extends AppCompatActivity {
         linkViews();
         initData();
         loadData();
+        addEvents();
+    }
+
+    private void addEvents() {
+        //tạo thanh toggle trên toolbar để thao tác mở đóng navigation
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open_navigation_drawer,R.string.close_navigation_drawer);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
     }
 
     private void loadData() {
         gvFunction.setAdapter(adapter);
+        setSupportActionBar(toolbar);
+
     }
 
     private void initData() {
@@ -43,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void linkViews() {
         gvFunction = findViewById(R.id.gvFunction);
+        drawerLayout=findViewById(R.id.drawerLayout);
+        toolbar=findViewById(R.id.toolBar);
+
+
     }
 
 }
