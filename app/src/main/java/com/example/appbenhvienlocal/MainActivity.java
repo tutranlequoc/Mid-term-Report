@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadData() {
         gvFunction.setAdapter(adapter);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
     }
@@ -62,8 +65,11 @@ public class MainActivity extends AppCompatActivity {
         gvFunction = findViewById(R.id.gvFunction);
         drawerLayout=findViewById(R.id.drawerLayout);
         toolbar=findViewById(R.id.toolBar);
-
-
     }
 
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.toolbar,menu);
+//        return super.onCreateOptionsMenu(menu);
+//    }
 }
