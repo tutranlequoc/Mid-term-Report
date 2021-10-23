@@ -34,7 +34,55 @@
                 android:id="@+id/toolBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#00a8c7"/>
+                android:background="#00a8c7">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/logo"/>
+                        <LinearLayout
+                            android:layout_width="220dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="BỆNH VIỆN DA LIỄU THÀNH PHỐ HỒ CHÍ MINH"
+                                android:textSize="8dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HCMC HOSPITAL of DERMATO VENEROLOGY"
+                                android:textSize="8dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DA ĐẸP DA KHỎE - SỐNG KHỎE SỐNG VUI"
+                                android:textSize="8dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"/>
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/medpro"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
             <ImageView
@@ -176,12 +224,12 @@
 
             </TableLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/navigation"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start|left"
-            app:headerLayout="@layout/layout_header_navigation"
-            app:menu="@menu/menu_navigation"/>
+<!--        <com.google.android.material.navigation.NavigationView-->
+<!--            android:id="@+id/navigation"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="start|left"-->
+<!--            app:headerLayout="@layout/layout_header_navigation"-->
+<!--            app:menu="@menu/menu_navigation"/>-->
     </androidx.drawerlayout.widget.DrawerLayout>
 <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
