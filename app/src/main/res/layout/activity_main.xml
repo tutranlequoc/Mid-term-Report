@@ -224,12 +224,12 @@
 
             </TableLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-<!--        <com.google.android.material.navigation.NavigationView-->
-<!--            android:id="@+id/navigation"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_gravity="start|left"-->
-<!--            app:headerLayout="@layout/layout_header_navigation"-->
-<!--            app:menu="@menu/menu_navigation"/>-->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|left"
+            app:headerLayout="@layout/layout_header_navigation"
+            app:menu="@menu/menu_navigation"/>
     </androidx.drawerlayout.widget.DrawerLayout>
 <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
