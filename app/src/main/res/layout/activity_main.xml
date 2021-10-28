@@ -97,7 +97,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/gvFunction"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/appBar" />
+                app:layout_constraintTop_toBottomOf="@id/appBar"/>
 
             <GridView
                 android:id="@+id/gvFunction"
@@ -108,7 +108,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/btnKhaiBao"
                 app:layout_constraintTop_toBottomOf="@id/imvBacSi"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="100dp" />
 
             <ImageButton
                 android:id="@+id/btnKhaiBao"
@@ -130,7 +130,6 @@
                 android:id="@+id/btnDatKham"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:layout_marginTop="10dp"
                 android:backgroundTint="#00a8c7"
                 android:text="@string/dat_kham"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -223,18 +222,8 @@
                             android:contentDescription="@string/mo_ta_anh"
                             android:src="@drawable/location"
                             android:layout_gravity="center" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="G đớp đi"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tu dop di"/>
                     </LinearLayout>
-
                 </TableRow>
-
             </TableLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <com.google.android.material.navigation.NavigationView
