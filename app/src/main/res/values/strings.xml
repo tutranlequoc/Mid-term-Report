@@ -13,4 +13,11 @@
     <string name="notification">Thông báo</string>
     <string name="open_navigation_drawer">Open Navigation</string>
     <string name="close_navigation_drawer">Close Navigation</string>
+    <string-array name="spinner">
+        <item>Tất cả</item>
+        <item>Đã khám</item>
+        <item>Đã thanh toán</item>
+        <item>Chưa thanh toán</item>
+        <item>Đã hủy</item>
+    </string-array>
 </resources>
