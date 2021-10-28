@@ -11,5 +11,13 @@
     <string name="phieu_kham"><b>Phiếu khám</b></string>
     <string name="kiem_tra"><b>Kiểm tra</b></string>>
     <string name="notification">Thông báo</string>
-    <string name="infor">Bệnh viện da liễu thành phố Hồ Chí Minh <br/> DA ĐẸP DA KHỎE - SỐNG TRẺ SỐNG VUI</string>
+    <string name="open_navigation_drawer">Open Navigation</string>
+    <string name="close_navigation_drawer">Close Navigation</string>
+    <string-array name="spinner">
+        <item>Tất cả</item>
+        <item>Đã khám</item>
+        <item>Đã thanh toán</item>
+        <item>Chưa thanh toán</item>
+        <item>Đã hủy</item>
+    </string-array>
 </resources>

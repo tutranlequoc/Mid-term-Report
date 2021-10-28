@@ -16,166 +16,216 @@
         xmlns:tools="http://schemas.android.com/tools"
         tools:context=".MainActivity"
         tools:openDrawer="start">
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#00a8c7">
+            android:background="#00a8c7"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#00a8c7"/>
+                android:background="#00a8c7">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/logo"/>
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="BỆNH VIỆN DA LIỄU THÀNH PHỐ HỒ CHÍ MINH"
+                                android:textSize="8dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HCMC HOSPITAL of DERMATO VENEROLOGY"
+                                android:textSize="8dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DA ĐẸP DA KHỎE - SỐNG KHỎE SỐNG VUI"
+                                android:textSize="8dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"/>
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/medpro"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
+            <ImageView
+                android:id="@+id/imvBacSi"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/mo_ta_anh"
+                android:src="@drawable/doctor"
+                app:layout_constraintVertical_bias="0"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toTopOf="@+id/gvFunction"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appBar"/>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <GridView
+                android:id="@+id/gvFunction"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/btnKhaiBao"
+                app:layout_constraintTop_toBottomOf="@id/imvBacSi"
+                android:layout_marginBottom="100dp" />
 
-                <ImageView
-                    android:id="@+id/imvBacSi"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:contentDescription="@string/mo_ta_anh"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/gvFunction"/>
+            <ImageButton
+                android:id="@+id/btnKhaiBao"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round"
+                android:contentDescription="@string/mo_ta_anh"
+                android:scaleType="centerCrop"
+                android:src="@drawable/khaibao"
+                app:layout_constraintBottom_toTopOf="@+id/btnDatKham"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gvFunction" />
 
-                <GridView
-                    android:id="@+id/gvFunction"
+            <Button
+                android:id="@+id/btnDatKham"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#00a8c7"
+                android:text="@string/dat_kham"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnKhaiBao"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                app:layout_constraintBottom_toTopOf="@+id/tblFunction"
+                android:layout_marginBottom="10dp"/>
+
+            <TableLayout
+                android:id="@+id/tblFunction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnDatKham"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="15dp">
+
+                <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:numColumns="3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/btnKhaiBao"
-                    android:layout_marginBottom="30dp"
-                    android:layout_marginTop="30dp"/>
+                    android:background="#BDB8B8">
 
-                <ImageButton
-                    android:id="@+id/btnKhaiBao"
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:contentDescription="@string/mo_ta_anh"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@android:color/transparent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/khaibao"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/btnDatKham"
-                    android:layout_marginBottom="30dp"/>
-
-                <Button
-                    android:id="@+id/btnDatKham"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:backgroundTint="#00a8c7"
-                    android:text="@string/dat_kham"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    app:layout_constraintBottom_toTopOf="@+id/tblFunction"
-                    android:layout_marginBottom="30dp"/>
-
-                <TableLayout
-                    android:id="@+id/tblFunction"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:stretchColumns="*"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintVertical_bias="0"
-                    android:layout_margin="30dp">
-
-                    <TableRow
+                    <LinearLayout
+                        android:background="#FFFFFF"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#BDB8B8">
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="1dp">
 
-                        <LinearLayout
-                            android:background="#FFFFFF"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginRight="1dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ho_tro_dat_kham"
+                            android:textSize="12sp"
+                            android:textColor="#BDB8B8"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/phone_number"
+                            android:padding="0dp"
+                            android:background="@android:color/transparent"
+                            android:textColor="#00a8c7"
+                            android:textSize="18sp"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="#FFFFFF"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="1dp">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/ho_tro_dat_kham"
-                                android:textSize="12sp"
-                                android:textColor="#BDB8B8"
-                                android:layout_gravity="center"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/phone_number"
-                                android:padding="0dp"
-                                android:background="@android:color/transparent"
-                                android:textColor="#00a8c7"
-                                android:textSize="18sp"
-                                android:layout_gravity="center" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:background="#FFFFFF"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginRight="1dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ho_tro_zalo"
+                            android:textColor="#BDB8B8"
+                            android:textSize="12sp"
+                            android:layout_gravity="center"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/ho_tro_zalo"
-                                android:textColor="#BDB8B8"
-                                android:textSize="12sp"
-                                android:layout_gravity="center"/>
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:contentDescription="@string/mo_ta_anh"
+                            android:src="@drawable/zalo"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="#FFFFFF"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:contentDescription="@string/mo_ta_anh"
-                                android:src="@drawable/zalo"
-                                android:layout_gravity="center"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:background="#FFFFFF"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/ban_do"
-                                android:textColor="#BDB8B8"
-                                android:textSize="12sp"
-                                android:layout_gravity="center"/>
-                            <ImageView
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:contentDescription="@string/mo_ta_anh"
-                                android:src="@drawable/location"
-                                android:layout_gravity="center" />
-                        </LinearLayout>
-
-                    </TableRow>
-
-                </TableLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ban_do"
+                            android:textColor="#BDB8B8"
+                            android:textSize="12sp"
+                            android:layout_gravity="center"/>
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:contentDescription="@string/mo_ta_anh"
+                            android:src="@drawable/location"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navigation"
             android:layout_width="wrap_content"
