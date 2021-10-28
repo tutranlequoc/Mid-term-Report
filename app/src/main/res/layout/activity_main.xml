@@ -168,7 +168,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/ho_tro_dat_kham"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="#BDB8B8"
                             android:layout_gravity="center"/>
                         <TextView
@@ -193,7 +193,7 @@
                             android:layout_gravity="center"
                             android:text="@string/ho_tro_zalo"
                             android:textColor="#BDB8B8"
-                            android:textSize="16sp" />
+                            android:textSize="14sp" />
 
                         <ImageButton
                             android:layout_width="30dp"
@@ -215,7 +215,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/ban_do"
                             android:textColor="#BDB8B8"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:layout_gravity="center"/>
                         <ImageButton
                             android:layout_width="25dp"
