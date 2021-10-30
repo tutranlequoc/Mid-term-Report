@@ -3,11 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/drawable/bottom_sheet.xml" value="0.2703125" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/drawable/rounded_corner.xml" value="0.2703125" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_main.xml" value="0.2877604166666667" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_chuatungkham.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_datungkham.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_hoso.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_hoso_moi.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_phieukham.xml" value="0.184375" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/bottom_sheet_background.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/bottomsheet.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/button_dangnhap.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/fragment_nhaphoso.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/function.xml" value="0.19114583333333332" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/item_list_quen_ma_hs.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/item_selected_quen_ma_hs.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/layout_header_navigation.xml" value="0.4" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/screen_hoso.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/screen_phieukham.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/screen_quenmaso.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/screen_thongbao.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/toolbar_view.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/menu/menu_navigation.xml" value="0.25416666666666665" />

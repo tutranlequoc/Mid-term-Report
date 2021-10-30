@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single"
+        android:id="@+id/groupButton">
+    <item android:id="@+id/nav_login"
+        android:title=""
+        app:actionLayout="@layout/button_dangnhap"
+        app:showAsAction="ifRoom"
+        />
+<!--        android:actionLayout="@layout/button_dangnhap"-->
+
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1">
         <item android:id="@+id/nav_paper"
             android:title="@string/ho_so"
             android:icon="@drawable/iconkiemtra"/>
@@ -11,19 +24,33 @@
             android:title="@string/notification"
             android:icon="@drawable/iconkiemtra"/>
     </group>
-    <item android:id="@+id/nav_others"
-        android:title="">
-        <menu>
-            <item android:id="@+id/nav_policy"
-                android:title="Điều khoản"
-                android:icon="@drawable/iconphieukham"/>
-            <item android:id="@+id/nav_regu"
-                android:title="Quy định"
-                android:icon="@drawable/khaibao"/>
-            <item android:id="@+id/nav_faq"
-                android:icon="@drawable/iconphieukham"
-                android:title="Câu hỏi thường gặp"/>
-        </menu>
 
-    </item>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group2">
+        <item android:id="@+id/nav_policy"
+            android:title="Điều khoản"
+            android:icon="@drawable/iconphieukham"/>
+        <item android:id="@+id/nav_regu"
+            android:title="Quy định"
+            android:icon="@drawable/khaibao"/>
+        <item android:id="@+id/nav_faq"
+            android:icon="@drawable/iconphieukham"
+            android:title="Câu hỏi thường gặp"/>
+    </group>
+
+<!--    <item android:id="@+id/nav_others"-->
+<!--        android:title="">-->
+<!--        <menu>-->
+<!--            <item android:id="@+id/nav_policy"-->
+<!--                android:title="Điều khoản"-->
+<!--                android:icon="@drawable/iconphieukham"/>-->
+<!--            <item android:id="@+id/nav_regu"-->
+<!--                android:title="Quy định"-->
+<!--                android:icon="@drawable/khaibao"/>-->
+<!--            <item android:id="@+id/nav_faq"-->
+<!--                android:icon="@drawable/iconphieukham"-->
+<!--                android:title="Câu hỏi thường gặp"/>-->
+<!--        </menu>-->
+
+<!--    </item>-->
 </menu>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xem cách tìm số hồ sơ"
+        android:backgroundTint="#ADCEDF"
+        android:textColor="#0AA0F1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vui lòng nhập số hồ sơ để tiếp tục"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Vui lòng nhập mã số hoặc mã BHYT"
+        android:textSize="20sp"
+        android:layout_gravity="center"/>
+        <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Số hồ sơ được in trên toa thuốc, phiếu chỉ định hoặc phiếu trả kết quả khám chữa bệnh"
+            android:layout_gravity="center"
+            android:paddingBottom="400dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="TIẾP TỤC"
+        android:backgroundTint="#109EEC"
+        android:textSize="22sp"/>
+</LinearLayout>
