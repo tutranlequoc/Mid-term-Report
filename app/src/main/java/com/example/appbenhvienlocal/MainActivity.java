@@ -7,22 +7,13 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.adapter.CustomAdapter;
-import com.example.fragmentMenu.screen_hoso;
 import com.example.function.Function;
 import com.google.android.material.navigation.NavigationView;
 
@@ -90,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int itemId = item.getItemId();
         if(itemId==R.id.nav_paper)
         {
-            Intent i = new Intent(MainActivity.this, screen_hoso.class);
+            Intent i = new Intent(MainActivity.this, screen_hoso_moi.class);
             startActivity(i);
         }
         else if (itemId==R.id.nav_phieuKham) {

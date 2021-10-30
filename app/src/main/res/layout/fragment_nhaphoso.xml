@@ -29,11 +29,6 @@
         android:layout_height="wrap_content"
         android:text="Số hồ sơ được in trên toa thuốc, phiếu chỉ định hoặc phiếu trả kết quả khám chữa bệnh"
             android:layout_gravity="center"
-            android:paddingBottom="400dp"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="TIẾP TỤC"
-        android:backgroundTint="#109EEC"
-        android:textSize="22sp"/>
+            />
+
 </LinearLayout>

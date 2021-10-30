@@ -22,7 +22,7 @@
         android:layout_marginBottom="25dp"/>
     <Button
         android:id="@+id/btnQuetMa"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:backgroundTint="#0E7EED"
         android:text="QUÉT MÃ BHYT"
@@ -30,7 +30,7 @@
         android:layout_marginBottom="10dp"/>
     <Button
         android:id="@+id/btnNhapHS"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:backgroundTint="#ffffff"
         android:text="ĐÃ TỪNG KHÁM, NHẬP SỐ HỒ SƠ"
@@ -39,9 +39,9 @@
         android:layout_marginBottom="10dp"/>
     <Button
         android:id="@+id/btnDKMoi"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:backgroundTint="#0C90D8"
+
         android:text="QUÉT MÃ BHYT"
         android:textSize="10sp"/>
 

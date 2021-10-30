@@ -46,4 +46,5 @@ public class ViewPageAdapter extends FragmentStatePagerAdapter {
         }
         return title;
     }
+
 }

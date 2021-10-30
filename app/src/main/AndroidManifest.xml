@@ -14,11 +14,6 @@
         <activity
             android:name=".screen_hoso_moi"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".screen_phieukham"
@@ -31,12 +26,11 @@
         <activity
             android:name=".screen_datungkham"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        </activity>
-        <activity
-            android:name="com.example.fragmentMenu.screen_hoso"
-            android:exported="true">
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
