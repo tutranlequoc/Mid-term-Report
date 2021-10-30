@@ -9,19 +9,33 @@
 
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#ECE3E3">
+        android:background="#00a8c7"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#ECE3E3"
-            android:src="@drawable/ic_baseline_keyboard_backspace_24" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#00a8c7">
 
 
-    </androidx.appcompat.widget.Toolbar>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24"
+                android:backgroundTint="#00a8c7"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
 
 
     <ImageView
@@ -40,36 +54,45 @@
         android:textColor="@color/black"
         android:textSize="20dp" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-    <EditText
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edittext"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:background="#fff"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
         android:gravity="center"
-        android:hint="Số điện thoại"
-        android:textSize="20sp"
+        android:orientation="horizontal"
 
-        />
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/vietnam"/>
+        >
+        <Spinner
+            android:id="@+id/spRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="left"
+            android:hint="Số điện thoại"
+            android:inputType="phone"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp" />
+    </LinearLayout>
 
-    </FrameLayout>
+
+>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
-        android:background="#fff"
+        android:background="@drawable/rounded_edittext"
         android:gravity="center_vertical"
         android:hint="Họ và tên"
         android:paddingLeft="10dp"
@@ -79,9 +102,9 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
-        android:background="#fff"
+        android:background="@drawable/rounded_edittext"
         android:gravity="center_vertical"
         android:hint="Nhập mât khẩu"
         android:paddingLeft="10dp"
@@ -91,9 +114,9 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
-        android:background="#fff"
+        android:background="@drawable/rounded_edittext"
         android:gravity="center_vertical"
         android:hint="Xác nhận lại mật khẩu"
         android:paddingLeft="10dp"
@@ -109,6 +132,7 @@
         android:layout_marginTop="50dp"
         android:gravity="center"
         android:textSize="24sp"
+        android:background="@drawable/rounded_button"
         android:text="Đăng kí" />
 
 

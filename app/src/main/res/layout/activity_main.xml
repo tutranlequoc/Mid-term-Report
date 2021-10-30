@@ -110,21 +110,28 @@
                 app:layout_constraintTop_toBottomOf="@id/imvBacSi"
                 android:layout_marginBottom="100dp" />
 
-            <ImageButton
-                android:id="@+id/btnKhaiBao"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/round"
-                android:contentDescription="@string/mo_ta_anh"
-                android:scaleType="centerCrop"
-                android:src="@drawable/khaibao"
-                app:layout_constraintBottom_toTopOf="@+id/btnDatKham"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gvFunction" />
+
+
+
+    <ImageView
+        android:id="@+id/btnKhaiBao"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round"
+        android:contentDescription="@string/mo_ta_anh"
+        android:scaleType="centerCrop"
+        android:src="@drawable/khaibao"
+        app:layout_constraintBottom_toTopOf="@+id/btnDatKham"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gvFunction"
+       />
+
+
+
 
             <Button
                 android:id="@+id/btnDatKham"
