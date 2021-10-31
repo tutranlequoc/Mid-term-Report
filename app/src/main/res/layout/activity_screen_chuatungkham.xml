@@ -14,12 +14,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="left">
-            <ImageButton
+            <Button
                 android:id="@+id/imbBackDTK"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:src="@drawable/arr"
+                android:drawableLeft="@drawable/ic_baseline_keyboard_backspace_24"
                 android:layout_marginRight="60dp"
                 />
             <TextView
@@ -43,17 +43,19 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
     <TextView
+        android:id="@+id/txtThongBao"
         android:layout_marginTop="20dp"
         android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:background="@drawable/rounded_corner"
-        android:text="Vui lòng cung cấp thông tin chính xác để được phục vụ tốt nhất.
-Trong trường hợp cung cấp sai thông tin bệnh nhân &amp; điện thoại, việc xác nhận cuộc hẹn se4k hông có hiệu lực trước khi đặt khám
-(*) Yêu cầu vui lòng nhập đầy đủ thông tin bên dưới"
         android:textSize="12sp"
-        android:textColor="#FFFFFF"
+        android:textColor="#00E60F0F"
         android:layout_marginBottom="30dp"/>
+<!--        android:text="Vui lòng cung cấp thông tin chính xác để được phục vụ tốt nhất.-->
+<!--Trong trường hợp cung cấp sai thông tin bệnh nhân &amp; điện thoại, việc xác nhận cuộc hẹn se4k hông có hiệu lực trước khi đặt khám-->
+<!--(*) Yêu cầu vui lòng nhập đầy đủ thông tin bên dưới"-->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

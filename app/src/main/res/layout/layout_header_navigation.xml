@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/logobv"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:text="DA ĐẸP DA KHỎE - SỐNG KHỎE TRẺ VUI"
             android:textColor="#FFFFFF"
-            android:textSize="10sp"/>
+            android:textSize="11sp"/>
 
     </LinearLayout>
 

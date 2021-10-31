@@ -12,9 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppBenhVienLocal">
         <activity
+            android:name=".screen_faq"
+            android:exported="true" />
+        <activity
+            android:name=".screen_quydinh"
+            android:exported="true" />
+        <activity
+            android:name=".screen_dieukhoan"
+            android:exported="true" />
+        <activity
+            android:name=".screen_thongbao"
+            android:exported="true" />
+        <activity
+            android:name=".screen_thongtinthanhtoan"
+            android:exported="true" />
+        <activity
             android:name=".screen_hoso_moi"
-            android:exported="true" >
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".screen_phieukham"
             android:exported="true" />
@@ -25,7 +39,7 @@
         </activity>
         <activity
             android:name=".screen_datungkham"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,7 +48,9 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>
