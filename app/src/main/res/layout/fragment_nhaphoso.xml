@@ -6,11 +6,13 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/btnTimHoSo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Xem cách tìm số hồ sơ"
         android:backgroundTint="#ADCEDF"
-        android:textColor="#0AA0F1"/>
+        android:textColor="#FFFFFF"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

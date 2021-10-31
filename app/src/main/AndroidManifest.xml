@@ -25,7 +25,13 @@
             android:exported="true" />
         <activity
             android:name=".screen_thongtinthanhtoan"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".screen_hoso_moi"
             android:exported="true" />
@@ -40,11 +46,7 @@
         <activity
             android:name=".screen_datungkham"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"

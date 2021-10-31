@@ -18,7 +18,7 @@
         android:gravity="left"
         android:padding="3dp">
         <Button
-            android:id="@+id/btnBackThongBao"
+            android:id="@+id/btnBackPhieuKham"
             android:layout_width="40dp"
             android:layout_height="45dp"
             android:drawableLeft="@drawable/ic_baseline_keyboard_backspace_24"
@@ -43,4 +43,19 @@
         android:id="@+id/spinnerDanhSach"
         android:layout_margin="10dp"
         android:layout_gravity="right"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:src="@drawable/iconhoso"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Bạn chưa có phiếu khám nào"
+            android:textAlignment="center"/>
+    </LinearLayout>
 </LinearLayout>

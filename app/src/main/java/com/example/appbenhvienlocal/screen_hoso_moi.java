@@ -2,6 +2,7 @@ package com.example.appbenhvienlocal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ public class screen_hoso_moi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_hoso_moi);
         linkViews();
+        addEvents();
         //        addEvents();
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +38,18 @@ public class screen_hoso_moi extends AppCompatActivity {
 //
         });
 
+    }
+
+
+    private void addEvents() {
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(screen_hoso_moi.this,
+                        MainActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void linkViews() {
