@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    tools:context=".MainActivity">-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
@@ -108,7 +108,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/btnKhaiBao"
                 app:layout_constraintTop_toBottomOf="@id/imvBacSi"
-                android:layout_marginBottom="100dp" />
+                android:layout_marginBottom="60dp" />
 
             <ImageButton
                 android:id="@+id/btnKhaiBao"
@@ -117,7 +117,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/round"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/mo_ta_anh"
                 android:scaleType="centerCrop"
                 android:src="@drawable/khaibao"
@@ -138,7 +138,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 app:layout_constraintBottom_toTopOf="@+id/tblFunction"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp" />
 
             <TableLayout
                 android:id="@+id/tblFunction"
@@ -155,10 +155,10 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#BDB8B8">
+                    android:divider="@drawable/divider_khai_baoyt_hor"
+                    android:showDividers="middle">
 
                     <LinearLayout
-                        android:background="#FFFFFF"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
@@ -168,21 +168,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/ho_tro_dat_kham"
-                            android:textSize="12sp"
+                            android:textSize="14sp"
                             android:textColor="#BDB8B8"
                             android:layout_gravity="center"/>
-                        <TextView
+                        <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/phone_number"
-                            android:padding="0dp"
                             android:background="@android:color/transparent"
                             android:textColor="#00a8c7"
                             android:textSize="18sp"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:minHeight="0dp"/>
                     </LinearLayout>
                     <LinearLayout
-                        android:background="#FFFFFF"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
@@ -191,20 +190,21 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:text="@string/ho_tro_zalo"
                             android:textColor="#BDB8B8"
-                            android:textSize="12sp"
-                            android:layout_gravity="center"/>
+                            android:textSize="14sp" />
 
-                        <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                        <ImageButton
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:scaleType="fitXY"
                             android:contentDescription="@string/mo_ta_anh"
+                            android:background="@android:color/transparent"
                             android:src="@drawable/zalo"
                             android:layout_gravity="center"/>
                     </LinearLayout>
                     <LinearLayout
-                        android:background="#FFFFFF"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
@@ -214,11 +214,13 @@
                             android:layout_height="wrap_content"
                             android:text="@string/ban_do"
                             android:textColor="#BDB8B8"
-                            android:textSize="12sp"
+                            android:textSize="14sp"
                             android:layout_gravity="center"/>
-                        <ImageView
+                        <ImageButton
                             android:layout_width="25dp"
                             android:layout_height="25dp"
+                            android:scaleType="fitXY"
+                            android:background="@android:color/transparent"
                             android:contentDescription="@string/mo_ta_anh"
                             android:src="@drawable/location"
                             android:layout_gravity="center" />
@@ -235,4 +237,4 @@
             app:headerLayout="@layout/layout_header_navigation"
             app:menu="@menu/menu_navigation" />
     </androidx.drawerlayout.widget.DrawerLayout>
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

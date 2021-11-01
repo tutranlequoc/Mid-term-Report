@@ -7,9 +7,17 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+
+import android.annotation.SuppressLint;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+
 import android.widget.GridView;
 import android.widget.Spinner;
 
@@ -26,7 +34,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     CustomAdapter adapter;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
-    Spinner spinner;
+  //  Spinner spinner;
+    Button btnDatKham;
 //    ArrayAdapter<String> spinnerAdapter= new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.spinner));
 
     private DrawerLayout drawerLayout;
@@ -47,6 +56,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         navigationView.setNavigationItemSelectedListener(this::onNavigationItemSelected);
+
+        btnDatKham.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ChonThongTinKham.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void loadData() {
@@ -72,7 +90,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout=findViewById(R.id.drawerLayout);
         toolbar=findViewById(R.id.toolBar);
         navigationView =findViewById(R.id.navigation);
-//        spinner = findViewById(R.id.spinnerPhieuKham);
+
+//        spinner = findViewById(R.id.spinnerPhieuKham) (phần Tú comment - cần sửa lại tên để không trùng);
+
+        spinner = findViewById(R.id.spinnerPhieuKham);
+        btnDatKham = findViewById(R.id.btnDatKham);
+
 
     }
 
