@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:id="@+id/layoutFooter">
 
     <ImageView
         android:id="@+id/imvFunction"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/location"/>
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/iconhoso"/>
 
     <TextView
         android:id="@+id/txtFunction"
