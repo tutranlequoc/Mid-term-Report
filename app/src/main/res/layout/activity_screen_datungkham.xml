@@ -9,18 +9,21 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00a8c7">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="left">
             <Button
+                android:paddingLeft="5dp"
                 android:id="@+id/imbBackDTK"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:drawableLeft="@drawable/ic_baseline_keyboard_backspace_24"
                 android:layout_marginRight="60dp"
+                android:background="#00a8c7"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -48,14 +51,14 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="480dp">
+        android:layout_height="490dp">
 
     </androidx.viewpager.widget.ViewPager>
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="TIẾP TỤC"
-        android:backgroundTint="#109EEC"
+        android:background="#109EEC"
         android:textSize="22sp"/>
 
 </LinearLayout>
