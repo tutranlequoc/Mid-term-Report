@@ -4,13 +4,57 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppBenhVienLocal"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true">
+        android:theme="@style/Theme.AppBenhVienLocal">
+        <activity
+            android:name=".QuanLyHoSo"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".PhieuKhamBenhDaThanhToan"
+            android:exported="true" />
+        <activity
+            android:name=".KhaiBaoYTe"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".PhieuKhamBenh"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ChonPhuongThucTT"
+            android:exported="true" />
+        <activity
+            android:name=".XacNhanThongTin"
+            android:exported="true" />
+        <activity
+            android:name=".HoSoDatKham"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ChonNgayKham"
+            android:exported="true" />
+        <activity
+            android:name=".VuiLongChonGiokham"
+            android:exported="true" />
+        <activity
+            android:name=".VuiLongChonDichVu"
+            android:exported="true" />
+        <activity
+            android:name=".VuiLongChonChuyenKhoa"
+            android:exported="true" />
+        <activity
+            android:name=".ChonThongTinKham"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
