@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     CustomAdapter adapter;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
-  //  Spinner spinner;
+    //Spinner spinner;
     Button btnDatKham;
 //    ArrayAdapter<String> spinnerAdapter= new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.spinner));
 
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 //        spinner = findViewById(R.id.spinnerPhieuKham) (phần Tú comment - cần sửa lại tên để không trùng);
 
-        spinner = findViewById(R.id.spinnerPhieuKham);
+        //spinner = findViewById(R.id.spinnerPhieuKham);
         btnDatKham = findViewById(R.id.btnDatKham);
 
 
