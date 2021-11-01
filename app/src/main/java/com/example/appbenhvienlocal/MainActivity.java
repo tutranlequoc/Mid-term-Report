@@ -7,20 +7,19 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+
 import android.annotation.SuppressLint;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.Menu;
 import android.view.MenuItem;
+
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.adapter.CustomAdapter;
 import com.example.function.Function;
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     CustomAdapter adapter;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
-    Spinner spinner;
+  //  Spinner spinner;
     Button btnDatKham;
 //    ArrayAdapter<String> spinnerAdapter= new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.spinner));
 
@@ -91,8 +90,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout=findViewById(R.id.drawerLayout);
         toolbar=findViewById(R.id.toolBar);
         navigationView =findViewById(R.id.navigation);
+
+//        spinner = findViewById(R.id.spinnerPhieuKham) (phần Tú comment - cần sửa lại tên để không trùng);
+
         spinner = findViewById(R.id.spinnerPhieuKham);
         btnDatKham = findViewById(R.id.btnDatKham);
+
 
     }
 
@@ -101,12 +104,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int itemId = item.getItemId();
         if(itemId==R.id.nav_paper)
         {
-            
+            Intent i = new Intent(MainActivity.this, screen_hoso_moi.class);
+            startActivity(i);
         }
         else if (itemId==R.id.nav_phieuKham) {
+            Intent i = new Intent(MainActivity.this, screen_phieukham.class);
+            startActivity(i);
         }
         else if(itemId==R.id.nav_noti){
-
+            Intent i = new Intent(MainActivity.this, screen_thongbao.class);
+            startActivity(i);
         }
         return true;
     }
