@@ -7,19 +7,22 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-
 import android.annotation.SuppressLint;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
-
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.adapter.CustomAdapter;
 import com.example.function.Function;
