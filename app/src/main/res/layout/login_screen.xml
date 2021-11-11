@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECE3E3"
+    android:background="#E5E5E5"
     android:orientation="vertical"
 
     tools:context=".MainActivity">
@@ -13,7 +13,7 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#00a8c7"
+        android:background="#E5E5E5"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,14 +23,14 @@
             android:id="@+id/toolBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#00a8c7">
+            android:background="#E5E5E5">
 
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_keyboard_backspace_24"
-            android:backgroundTint="#00a8c7"/>
+            android:backgroundTint="#E5E5E5"/>
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:text="Có lỗi xảy ra vui vòng thử lại sau."
-        android:textColor="#E91E63"
+        android:textColor="#FF0000"
         android:textSize="15sp" />
 
     <Button
