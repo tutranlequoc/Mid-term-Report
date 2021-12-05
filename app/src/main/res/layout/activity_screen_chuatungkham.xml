@@ -9,7 +9,8 @@
     >
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"
+        android:background="#5cc034">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,6 +22,7 @@
                 android:layout_gravity="center"
                 android:drawableLeft="@drawable/ic_baseline_keyboard_backspace_24"
                 android:layout_marginRight="60dp"
+                android:background="#5cc034"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -52,10 +54,6 @@
         android:textSize="12sp"
         android:textColor="#00E60F0F"
         android:layout_marginBottom="30dp"/>
-<!--        android:text="Vui lòng cung cấp thông tin chính xác để được phục vụ tốt nhất.-->
-<!--Trong trường hợp cung cấp sai thông tin bệnh nhân &amp; điện thoại, việc xác nhận cuộc hẹn se4k hông có hiệu lực trước khi đặt khám-->
-<!--(*) Yêu cầu vui lòng nhập đầy đủ thông tin bên dưới"-->
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -92,6 +90,7 @@
         android:text="Ngày sinh*"
         android:textStyle="bold"/>
     <Spinner
+        android:id="@+id/spinnerNgaySinh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"/>
@@ -111,6 +110,7 @@
         android:text="Dân tộc*"
         android:textStyle="bold"/>
     <Spinner
+        android:id="@+id/spinnerDanToc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"/>
@@ -120,6 +120,7 @@
         android:text="Nghề nghiệp"
         android:textStyle="bold"/>
     <Spinner
+        android:id="@+id/spinnerNgheNghiep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"/>
@@ -139,6 +140,7 @@
         android:text="Tỉnh/ TP*"
         android:textStyle="bold"/>
     <Spinner
+        android:id="@+id/spinnerTinh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"/>
@@ -148,6 +150,7 @@
         android:text="Quận/ Huyện*"
         android:textStyle="bold"/>
     <Spinner
+        android:id="@+id/spinnerQuan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"/>
@@ -157,6 +160,7 @@
         android:text="Phường/ Xã*"
         android:textStyle="bold"/>
     <Spinner
+        android:id="@+id/spinnerPhuong"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"/>

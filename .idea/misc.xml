@@ -25,14 +25,19 @@
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_hoso.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_hoso_moi.xml" value="0.2" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_phieukham.xml" value="0.264" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_phuongthucthanhtoan.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_quydinh.xml" value="0.19791666666666666" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_thongbao.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_thongtinthanhtoan.xml" value="0.264" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_screen_xoahoso.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/bottom_sheet_background.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/bottom_sheet_themhoso.xml" value="0.17916666666666667" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/bottomsheet.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/button_dangnhap.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/confirm_delete_file.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/confirm_payment_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/dialog_payment_success.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/fragment_nhaphoso.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/function.xml" value="0.19114583333333332" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/item_list_quen_ma_hs.xml" value="0.25416666666666665" />
@@ -43,7 +48,7 @@
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/screen_quenmaso.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/screen_thongbao.xml" value="0.25416666666666665" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/toolbar_view.xml" value="0.25416666666666665" />
-        <entry key="..\:/AppBenhVienLocal/app/src/main/res/menu/menu_navigation.xml" value="0.25416666666666665" />
+        <entry key="..\:/AppBenhVienLocal/app/src/main/res/menu/menu_navigation.xml" value="0.264" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/menu/toolbar.xml" value="0.264" />
         <entry key="..\:/Desktop/Mid-term-Report/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Desktop/Mid-term-Report/app/src/main/res/layout/layout_header_navigation.xml" value="0.25416666666666665" />

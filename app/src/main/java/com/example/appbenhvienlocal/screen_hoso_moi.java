@@ -30,7 +30,29 @@ public class screen_hoso_moi extends AppCompatActivity {
                         findViewById(R.id.bottomSheetContainer));
                 bottomSheetDialog.setContentView(bottomSheetView);
                 bottomSheetDialog.show();
+                Button btnChuaTungKham = bottomSheetDialog.findViewById(R.id.btnQuetMa);
+                Button btnDaTungKham = bottomSheetDialog.findViewById(R.id.btnNhapHS);
+                Button btnQuetMa = bottomSheetDialog.findViewById(R.id.btnDKMoi);
+                btnChuaTungKham.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent screen_chuatungkham = new Intent(screen_hoso_moi.this, com.example.appbenhvienlocal.screen_chuatungkham.class);
+                        startActivity(screen_chuatungkham);
+                    }
+                });
+                btnDaTungKham.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent screen_datungkham = new Intent(screen_hoso_moi.this, com.example.appbenhvienlocal.screen_datungkham.class);
+                        startActivity(screen_datungkham);
+                    }
+                });
+                btnQuetMa.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
 
+                    }
+                });
             }
 
 

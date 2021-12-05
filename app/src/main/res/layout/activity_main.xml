@@ -34,7 +34,7 @@
                 android:id="@+id/toolBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#00a8c7">
+                android:background="#0B8DD5">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
