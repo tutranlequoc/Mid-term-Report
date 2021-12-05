@@ -7,12 +7,8 @@
     <item android:id="@+id/nav_login"
         android:title="Đăng nhập ngay:"
         app:actionLayout="@layout/button_dangnhap"
-        app:showAsAction="ifRoom"
-        />
-<!--        android:actionLayout="@layout/button_dangnhap"-->
-
-    </group>
-
+        app:showAsAction="ifRoom"/>
+    </group> 
     <group android:checkableBehavior="single"
         android:id="@+id/group1">
         <item android:id="@+id/nav_paper"
