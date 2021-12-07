@@ -6,6 +6,40 @@
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/layout/layout_header_navigation.xml" value="0.4" />
         <entry key="..\:/AppBenhVienLocal/app/src/main/res/menu/menu_navigation.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/border_edittext.xml" value="0.14635416666666667" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/bottom_sheet.xml" value="0.14635416666666667" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/bottom_sheet_background.xml" value="0.14635416666666667" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/button_border.xml" value="0.14635416666666667" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/calendar_round_day.xml" value="0.14635416666666667" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/custom_background_da_thanh_toan.xml" value="0.14635416666666667" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/custom_button_chon.xml" value="0.14635416666666667" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/custom_radiobutton.xml" value="0.14635416666666667" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/custom_thanh_toan_bgr.xml" value="0.14635416666666667" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/customborder.xml" value="0.14635416666666667" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/divider_khai_baoyt_hor.xml" value="0.2703125" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/navigation_background.xml" value="0.2703125" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/round_txt.xml" value="0.2703125" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/round_txt_red.xml" value="0.2703125" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/rounded_corner.xml" value="0.2703125" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/drawable/rounded_edittext.xml" value="0.2703125" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/activity_chon_ngay_kham.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/activity_ho_so_dat_kham.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/activity_khai_bao_yte.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/activity_quan_ly_ho_so.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/activity_screen_chuatungkham.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/activity_screen_thongbao.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/activity_screen_thongtinthanhtoan.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/activity_vui_long_chon_chuyen_khoa.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/activity_vui_long_chon_giokham.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/activity_vui_long_chon_giokham_test.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/activity_xac_nhan_thong_tin.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/calendar_cell.xml" value="0.264" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/chon_thong_tin_kham.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/custom_dialog_ho_so.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/listview_chon_thong_tin_kham.xml" value="0.25416666666666665" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/layout/test.xml" value="0.4" />
+        <entry key="..\:/Desktop/Source-Code/Mid-term-Report/app/src/main/res/menu/menu_navigation.xml" value="0.25416666666666665" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/drawable-v24/rounded_button.xml" value="0.2755208333333333" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/drawable-v24/rounded_chuathanhtoan.xml" value="0.15" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/drawable-v24/rounded_dathanhtoan.xml" value="0.15" />

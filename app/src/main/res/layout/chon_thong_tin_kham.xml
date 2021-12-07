@@ -43,7 +43,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarTTKham"/>
+        app:layout_constraintTop_toBottomOf="@+id/appBarTTKham"
+        android:divider="#BFB1B1"
+        android:dividerHeight="1dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

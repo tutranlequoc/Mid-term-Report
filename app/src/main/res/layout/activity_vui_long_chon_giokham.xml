@@ -73,14 +73,14 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="07:30 - 08:30"
+                    android:text="08:30 - 09:30"
                     android:background="@drawable/giokham_button"
                     android:padding="10dp"
                     android:layout_marginLeft="20dp"/>
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="07:30 - 08:30"
+                    android:text="09:30 - 10:30"
                     android:background="@drawable/giokham_button"
                     android:padding="10dp"
                     android:layout_marginLeft="20dp"/>
@@ -106,6 +106,12 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="10dp">
             </TextView>
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
