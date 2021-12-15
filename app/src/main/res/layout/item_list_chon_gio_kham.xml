@@ -4,12 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnGioKham"
+    <TextView
+        android:id="@+id/txtGioKham"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="text"
         android:textColor="#5CC0AB"
+        android:padding="15dp"
+        android:gravity="center"
         android:background="@drawable/gio_kham_item_line"/>
 
 </LinearLayout>

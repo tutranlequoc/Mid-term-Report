@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.adapter.GioKhamAdapter;
 import com.example.function.ThongTin;
@@ -71,6 +73,7 @@ public class VuiLongChonGiokham extends AppCompatActivity {
     }
 
     private void addEvents() {
+
         btnGK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,28 +94,36 @@ public class VuiLongChonGiokham extends AppCompatActivity {
        gvMor.setOnItemClickListener(new AdapterView.OnItemClickListener() {
            @Override
            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                 ThoiGianKham time = (ThoiGianKham) adapterMor.getItem(i);
-                 LocalTime startTime = time.getThoiGianBĐ();
-                 LocalTime endTime = time.getThoiGianKT();
-                 ketQuaTraVe.get(index).setResult(timeFromLocalTime(startTime) + " - " + timeFromLocalTime(endTime));
-                 intent = new Intent(VuiLongChonGiokham.this, ChonThongTinKham.class);
-                 intent.putExtra(Constant.THONGTIN, ketQuaTraVe);
-                 intent.putExtra(Constant.INDEX_THONGTIN, index);
-                 startActivity(intent);
+               try{
+                   ThoiGianKham time = (ThoiGianKham) adapterMor.getItem(i);
+                   LocalTime startTime = time.getThoiGianBĐ();
+                   LocalTime endTime = time.getThoiGianKT();
+                   ketQuaTraVe.get(index).setResult(timeFromLocalTime(startTime) + " - " + timeFromLocalTime(endTime));
+                   intent = new Intent(VuiLongChonGiokham.this, ChonThongTinKham.class);
+                   intent.putExtra(Constant.THONGTIN, ketQuaTraVe);
+                   intent.putExtra(Constant.INDEX_THONGTIN, index);
+                   startActivity(intent);
+               } catch (Exception e){
+                   Log.e("Error:", e.toString());
+               }
            }
        });
 
        gvEve.setOnItemClickListener(new AdapterView.OnItemClickListener() {
            @Override
            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-               ThoiGianKham time = (ThoiGianKham) adapterEve.getItem(i);
-               LocalTime startTime = time.getThoiGianBĐ();
-               LocalTime endTime = time.getThoiGianKT();
-               ketQuaTraVe.get(index).setResult(timeFromLocalTime(startTime) + " - " + timeFromLocalTime(endTime));
-               intent = new Intent(VuiLongChonGiokham.this, ChonThongTinKham.class);
-               intent.putExtra(Constant.THONGTIN, ketQuaTraVe);
-               intent.putExtra(Constant.INDEX_THONGTIN, index);
-               startActivity(intent);
+               try{
+                   ThoiGianKham time = (ThoiGianKham) adapterEve.getItem(i);
+                   LocalTime startTime = time.getThoiGianBĐ();
+                   LocalTime endTime = time.getThoiGianKT();
+                   ketQuaTraVe.get(index).setResult(timeFromLocalTime(startTime) + " - " + timeFromLocalTime(endTime));
+                   intent = new Intent(VuiLongChonGiokham.this, ChonThongTinKham.class);
+                   intent.putExtra(Constant.THONGTIN, ketQuaTraVe);
+                   intent.putExtra(Constant.INDEX_THONGTIN, index);
+                   startActivity(intent);
+               }catch (Exception e){
+                   Log.e("Error:", e.toString());
+               }
            }
        });
     }
