@@ -41,6 +41,20 @@
     <string name="vui_l_ng_nh_p_m_x_c_th_c"><font color="#0032C7">Vui lòng nhập mã xác thực</font> <font color="#FF0000">(*)</font>:</string>
     <string name="benh_nhan_den_quay">Bệnh nhân đến QUẦY CHĂM SÓC KHÁCH HÀNG tại tầng trệt khu A để được hướng dẫn đến phòng khám bệnh.</string>
     <string name="khong_hoan_tra">Phiếu khám không hoàn trả tiền và chỉ có giá trị trong ngày.</string>
+    <string name="th_ng_tin_thanh_to_n">THÔNG TIN THANH TOÁN</string>
+    <string name="m_n_h_ng">Mã đơn hàng</string>
+    <string name="s_ti_n">Số tiền</string>
+    <string name="tt211101yqbyn5h4uxzd">TT211101YQBYN5H4UXZD</string>
+    <string name="_80_000">80.000 đ</string>
+    <string name="g_i_t_m_b_o_hi_m">GỢI Ý TÌM BẢO HIỂM</string>
+    <string name="ng">ĐÓNG</string>
+    <string name="xinchao">Xin chào!</string>
+    <string name="VuiLongNhapMa">Vui lòng nhập mã 6 số \n đã gửi cho bạn qua số điện thoại</string>
+    <string name="KhôngNhanDuocMa">Bạn không nhận được mã xác nhận?</string>
+    <string name="KhongNhanDuocMa2">Nếu bạn không nhận được mã</string>
+    <string name="XacMinhSoDiDong">Xác mình số di động của bạn</string>
+    <string name="XacMinhSoDiDong">Xác mình số di động của bạn</string>
+    <string name="DayKhongPhaiSDienThoaiCuaToi">Đây không phải là số điện thoại của tôi</string>
     <string-array name="spinner">
         <item>Tất cả</item>
         <item>Đã khám</item>
