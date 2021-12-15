@@ -81,7 +81,7 @@ public class VuiLongChonGiokham extends AppCompatActivity {
                 }else {
                     Intent backToFirstScreen = new Intent(VuiLongChonGiokham.this, ChonThongTinKham.class);
                     backToFirstScreen.putExtra(Constant.THONGTIN, ketQuaTraVe);
-                    backToFirstScreen.putExtra(Constant.INDEX_THONGTIN, index + 1);
+                    backToFirstScreen.putExtra(Constant.INDEX_THONGTIN, index - 1);
                     startActivity(backToFirstScreen);
                 }
 
@@ -97,7 +97,7 @@ public class VuiLongChonGiokham extends AppCompatActivity {
                  ketQuaTraVe.get(index).setResult(timeFromLocalTime(startTime) + " - " + timeFromLocalTime(endTime));
                  intent = new Intent(VuiLongChonGiokham.this, ChonThongTinKham.class);
                  intent.putExtra(Constant.THONGTIN, ketQuaTraVe);
-                 intent.putExtra(Constant.INDEX_THONGTIN, index + 1);
+                 intent.putExtra(Constant.INDEX_THONGTIN, index);
                  startActivity(intent);
            }
        });
@@ -111,7 +111,7 @@ public class VuiLongChonGiokham extends AppCompatActivity {
                ketQuaTraVe.get(index).setResult(timeFromLocalTime(startTime) + " - " + timeFromLocalTime(endTime));
                intent = new Intent(VuiLongChonGiokham.this, ChonThongTinKham.class);
                intent.putExtra(Constant.THONGTIN, ketQuaTraVe);
-               intent.putExtra(Constant.INDEX_THONGTIN, index + 1);
+               intent.putExtra(Constant.INDEX_THONGTIN, index);
                startActivity(intent);
            }
        });

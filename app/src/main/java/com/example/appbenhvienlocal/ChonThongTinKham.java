@@ -64,7 +64,7 @@ public class ChonThongTinKham extends AppCompatActivity {
             ArrayList<ThongTin> ketQua = result.getParcelableArrayListExtra(Constant.THONGTIN);
             try {
                 int no_elements_changes = result.getIntExtra(Constant.INDEX_THONGTIN, 0);
-                for(int i =0; i < no_elements_changes; i++){
+                for(int i =0; i <= no_elements_changes; i++){
                     thongTin.get(i).setResult(ketQua.get(i).getResult());
                 }
                 adapter.notifyDataSetChanged();
