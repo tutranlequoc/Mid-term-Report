@@ -21,7 +21,7 @@
             android:id="@+id/appBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#00a8c7"
+            android:background="#5CC0AB"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
                 android:id="@+id/toolBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#00a8c7">
+                android:background="#5CC0AB">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -127,7 +127,6 @@
                 android:id="@+id/btnDatKham"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:backgroundTint="#00a8c7"
                 android:text="@string/dat_kham"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -135,7 +134,8 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 app:layout_constraintBottom_toTopOf="@+id/tblFunction"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_button_dat_kham"/>
 
             <TableLayout
                 android:id="@+id/tblFunction"
@@ -193,6 +193,7 @@
                             android:textSize="14sp" />
 
                         <ImageButton
+                            android:id="@+id/imbtnZalo"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:scaleType="fitXY"

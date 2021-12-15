@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     //Spinner spinner;
     Button btnDatKham;
+    ImageButton imgbtnZalo;
 //    ArrayAdapter<String> spinnerAdapter= new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.spinner));
 
     private DrawerLayout drawerLayout;
@@ -65,6 +67,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ChonThongTinKham.class);
                 startActivity(intent);
+            }
+        });
+
+        imgbtnZalo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent = getPackageManager().getLaunchIntentForPackage("com.zalo");
+//                if(intent != null){
+//                    startActivity(intent);
+//                }
+//                Cài app trước
             }
         });
 
@@ -98,6 +111,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //spinner = findViewById(R.id.spinnerPhieuKham);
         btnDatKham = findViewById(R.id.btnDatKham);
+        imgbtnZalo = findViewById(R.id.imbtnZalo);
 
 
     }

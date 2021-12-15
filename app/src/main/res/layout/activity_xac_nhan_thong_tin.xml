@@ -9,7 +9,7 @@
         android:id="@+id/appBarXacNhan"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#00a8c7"
+        android:background="#5CC0AB"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,7 @@
             android:id="@+id/toolBarXacNhan"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#00a8c7">
+            android:background="#5CC0AB">
             <ImageButton
                 android:id="@+id/btnBackXacNhan"
                 android:layout_width="30dp"
@@ -380,7 +380,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="#00a8c7"
+        android:background="#5CC0AB"
         android:text="ĐẶT KHÁM"
         android:textColor="#FFFFFF"
         android:textSize="20sp"/>
