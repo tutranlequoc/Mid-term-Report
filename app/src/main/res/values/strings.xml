@@ -53,7 +53,7 @@
     <string name="KhôngNhanDuocMa">Bạn không nhận được mã xác nhận?</string>
     <string name="KhongNhanDuocMa2">Nếu bạn không nhận được mã</string>
     <string name="XacMinhSoDiDong">Xác mình số di động của bạn</string>
-    <string name="XacMinhSoDiDong">Xác mình số di động của bạn</string>
+
     <string name="DayKhongPhaiSDienThoaiCuaToi">Đây không phải là số điện thoại của tôi</string>
     <string name="thong_bao">Bạn có muốn xóa hồ sơ này không? <font color="#FF0000"><b>Có</b></font></string>
     <string-array name="spinner">

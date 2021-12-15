@@ -42,7 +42,7 @@ public class VuiLongChonGiokham extends AppCompatActivity {
 
     private void loadApdater() {
         timesMor = new ArrayList<>();
-        timesMor = new ArrayList<>();
+        timesEve = new ArrayList<>();
         timesMor.add(new ThoiGianKham(Constant.BUOI_SANG, LocalTime.of(7,30,0), LocalTime.of(8,30,0)));
         timesMor.add(new ThoiGianKham(Constant.BUOI_SANG, LocalTime.of(8,30,0), LocalTime.of(9,30,0)));
         timesMor.add(new ThoiGianKham(Constant.BUOI_SANG, LocalTime.of(9,30,0), LocalTime.of(10,30,0)));
