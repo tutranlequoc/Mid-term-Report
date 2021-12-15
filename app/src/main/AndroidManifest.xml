@@ -52,7 +52,11 @@
         <activity
             android:name=".VuiLongChonGiokham"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".VuiLongChonDichVu"
@@ -65,11 +69,7 @@
         <activity
             android:name=".ChonThongTinKham"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".screen_faq"
