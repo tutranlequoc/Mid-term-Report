@@ -3,7 +3,7 @@
     <style name="Theme.AppBenhVienLocal" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">#00a8c7</item>
+        <item name="colorPrimaryVariant">#5CC0AB</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

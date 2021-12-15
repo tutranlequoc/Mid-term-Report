@@ -10,7 +10,7 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#00a8c7"
+        android:background="#5CC0AB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,13 +20,13 @@
             android:id="@+id/toolBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#00a8c7">
+            android:background="#5CC0AB">
 
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#00a8c7"
+                android:backgroundTint="#5CC0AB"
                 android:src="@drawable/ic_baseline_keyboard_backspace_24" />
 
             <TextView
@@ -60,12 +60,13 @@
         app:maskColor="#77000000" />
 
     <TextView
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Xin vui lòng quét mã QRcode trên Bảo hiểm Y tế "
         android:textColor="@color/black"
-        android:textSize="24sp" />
+        android:textSize="19sp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -79,7 +80,10 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
-        android:text="NHẬP MÃ BẢO HIỂM Y TÉ"
-        android:textSize="20sp" />
+        android:backgroundTint="#5CC0AB"
+        android:text="NHẬP MÃ BHYT"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"/>
 </LinearLayout>

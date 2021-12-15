@@ -15,7 +15,7 @@ import com.example.appbenhvienlocal.R;
 public class CustomDiaLogHoSo extends Dialog {
 
     Activity context;
-    TextView txtHuy, txtXoa;
+    TextView txtHuy, txtXoa, txtNoiDung;
 
     public CustomDiaLogHoSo(@NonNull Context context) {
         super(context);
@@ -42,10 +42,14 @@ public class CustomDiaLogHoSo extends Dialog {
         });
     }
 
-    private void linkViews() {
+    public TextView getTxtNoiDung() {
+        return txtNoiDung;
+    }
 
-       txtXoa = findViewById(R.id.txtXoa);
-       txtHuy = findViewById(R.id.txtHuy);
+    private void linkViews() {
+        txtNoiDung = findViewById(R.id.txtNoiDung);
+        txtXoa = findViewById(R.id.txtXoa);
+        txtHuy = findViewById(R.id.txtHuy);
     }
 }
 

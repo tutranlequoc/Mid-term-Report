@@ -13,7 +13,7 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#00a8c7"
+        android:background="#5CC0AB"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,13 +23,13 @@
             android:id="@+id/toolBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#00a8c7">
+            android:background="#5CC0AB">
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_keyboard_backspace_24"
-                android:backgroundTint="#00a8c7"/>
+                android:backgroundTint="#5CC0AB"/>
 
 
             <TextView
@@ -51,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="15dp"
-        android:backgroundTint="#8ED4F4"
+        android:backgroundTint="#805CC0AB"
         android:drawableLeft="@drawable/search"
         android:drawableRight="@drawable/right_vector"
         android:text="Xem cách tìm mã bảo hiểm "
@@ -128,7 +128,7 @@
         android:text="TIẾP TỤC"
         android:textSize="24sp"
         android:textColor="@color/white"
-        android:background="#36D9ED"
+        android:background="#5CC0AB"
        />
 
 </LinearLayout>
