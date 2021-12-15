@@ -110,10 +110,7 @@
         <activity
             android:name=".screen_datungkham"
             android:exported="true"></activity>
-        <activity
-            android:name=".MainActivity2"
-            android:exported="true">
-        </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true" />
