@@ -6,9 +6,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.ListView;
 
+import com.example.adapter.GioKhamAdapter;
 import com.example.function.ThongTin;
+import com.example.models.ThoiGianKham;
 import com.example.ultis.Constant;
 
 import java.time.LocalDate;
@@ -17,17 +21,39 @@ import java.util.ArrayList;
 
 public class VuiLongChonGiokham extends AppCompatActivity {
 
+
+
     private ImageButton btnGK;
     ArrayList<ThongTin> ketQuaTraVe;
+    ArrayList<ThoiGianKham> timesMor, timesEve ;
+    GridView gvMor, gvEve;
     Intent intent;
+    GioKhamAdapter adapterMor, adapterEve;
     int index;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vui_long_chon_giokham);
         linkViews();
+        loadApdater();
         addEvents();
         getData();
+    }
+
+    private void loadApdater() {
+        timesMor = new ArrayList<>();
+        timesMor = new ArrayList<>();
+        timesMor.add(new ThoiGianKham(Constant.BUOI_SANG, LocalTime.of(7,30,0), LocalTime.of(8,30,0)));
+        timesMor.add(new ThoiGianKham(Constant.BUOI_SANG, LocalTime.of(8,30,0), LocalTime.of(9,30,0)));
+        timesMor.add(new ThoiGianKham(Constant.BUOI_SANG, LocalTime.of(9,30,0), LocalTime.of(10,30,0)));
+        timesEve.add(new ThoiGianKham(Constant.BUOI_TOI, LocalTime.of(13,0,0), LocalTime.of(14,0,0)));
+        timesEve.add(new ThoiGianKham(Constant.BUOI_TOI, LocalTime.of(14,0,0), LocalTime.of(15,0,0)));
+        timesEve.add(new ThoiGianKham(Constant.BUOI_TOI, LocalTime.of(15,0,0), LocalTime.of(16,0,0)));
+        adapterMor = new GioKhamAdapter(this, R.layout.item_list_chon_gio_kham, timesMor);
+        gvMor.setAdapter(adapterMor);
+        adapterEve = new GioKhamAdapter(this, R.layout.item_list_chon_gio_kham, timesEve);
+        gvEve.setAdapter(adapterEve);
+
     }
 
     private void getData() {
@@ -57,6 +83,8 @@ public class VuiLongChonGiokham extends AppCompatActivity {
     }
 
     private void linkViews() {
+        gvMor = findViewById(R.id.gvMor);
+        gvEve = findViewById(R.id.gvEve);
         btnGK = findViewById(R.id.btnGK);
     }
 }

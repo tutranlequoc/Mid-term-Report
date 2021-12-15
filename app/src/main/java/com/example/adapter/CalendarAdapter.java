@@ -43,6 +43,7 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
     }
 
 
+
     @Override
     public void onBindViewHolder(@NonNull CalendarViewHolder holder, int position) {
         LocalDate date = daysOfMonth.get(position);

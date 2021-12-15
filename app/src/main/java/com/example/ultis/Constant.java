@@ -14,4 +14,6 @@ public class Constant {
     public static final String CHUYENKHOA = "chuyenkhoa";
     public static final String REQUEST_TAG = "REQUEST";
     public static final int REQUEST_CODE = 9;
+    public static final String BUOI_SANG = "Buổi sáng";
+    public static final String BUOI_TOI = "Buổi tối";
 }

@@ -120,7 +120,13 @@ public class CustomAdapter extends ArrayAdapter {
     }
 
     @Override
+    public boolean areAllItemsEnabled() {
+        return true;
+    }
+
+    @Override
     public boolean isEnabled(int position) {
+        //Hàm của adapter return true nếu muốn enable one specific item, false ngược lại
         if (thongTins != null){
             if(position == 0)
             {
@@ -138,7 +144,6 @@ public class CustomAdapter extends ArrayAdapter {
         }else {
             return true;
         }
-
     }
 
     @NonNull
