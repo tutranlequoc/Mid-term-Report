@@ -75,11 +75,7 @@
         <activity
             android:name=".screen_thongtinthanhtoan"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity
@@ -108,10 +104,18 @@
 
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity2"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"/>
         <activity
             android:name=".GoiYTimMaBHYT"
             android:exported="true" />
