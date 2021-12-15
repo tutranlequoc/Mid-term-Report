@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
@@ -120,6 +121,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         return true;
     }
+
+
     //xử lý tình huống ng dùng chưa đóng navigation nhưng thoát app
     @Override
     public void onBackPressed() {

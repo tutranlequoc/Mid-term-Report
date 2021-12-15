@@ -41,6 +41,7 @@
     <string name="vui_l_ng_nh_p_m_x_c_th_c"><font color="#0032C7">Vui lòng nhập mã xác thực</font> <font color="#FF0000">(*)</font>:</string>
     <string name="benh_nhan_den_quay">Bệnh nhân đến QUẦY CHĂM SÓC KHÁCH HÀNG tại tầng trệt khu A để được hướng dẫn đến phòng khám bệnh.</string>
     <string name="khong_hoan_tra">Phiếu khám không hoàn trả tiền và chỉ có giá trị trong ngày.</string>
+    <string name="thong_bao">Bạn có muốn xóa hồ sơ này không? <font color="#FF0000"><b>Có</b></font></string>
     <string-array name="spinner">
         <item>Tất cả</item>
         <item>Đã khám</item>
