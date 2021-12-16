@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -56,7 +57,7 @@ public class GioKhamAdapter extends ArrayAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(resoure, null);
             holder = new ViewHolder();
-            holder.btnGioKham = convertView.findViewById(R.id.btnGioKham);
+            holder.txtGioKham = convertView.findViewById(R.id.txtGioKham);
             convertView.setTag(holder);
         }else {
             holder = (ViewHolder) convertView.getTag();
@@ -64,7 +65,7 @@ public class GioKhamAdapter extends ArrayAdapter {
 
         LocalTime thoiGianBĐ = times.get(position).getThoiGianBĐ();
         LocalTime thoiGianKT = times.get(position).getThoiGianKT();
-        holder.btnGioKham.setText(timeFromLocalTime(thoiGianBĐ)+ " - " + timeFromLocalTime(thoiGianKT));
+        holder.txtGioKham.setText(timeFromLocalTime(thoiGianBĐ)+ " - " + timeFromLocalTime(thoiGianKT));
         return convertView;
     }
 
@@ -74,6 +75,6 @@ public class GioKhamAdapter extends ArrayAdapter {
     }
 
     public class ViewHolder{
-        Button btnGioKham;
+        TextView txtGioKham;
     }
 }
