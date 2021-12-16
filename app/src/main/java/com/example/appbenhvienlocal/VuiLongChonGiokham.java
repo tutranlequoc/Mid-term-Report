@@ -92,15 +92,15 @@ public class VuiLongChonGiokham extends AppCompatActivity {
         gvMor.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                ThoiGianKham time = (ThoiGianKham) adapterMor.getItem(i);
-//                LocalTime startTime = time.getThoiGianBĐ();
-//                LocalTime endTime = time.getThoiGianKT();
-//                ketQuaTraVe.get(index).setResult(timeFromLocalTime(startTime) + " - " + timeFromLocalTime(endTime));
-//                Intent intent2 = new Intent(VuiLongChonGiokham.this, ChonThongTinKham.class);
-//                intent2.putParcelableArrayListExtra(Constant.THONGTIN, ketQuaTraVe);
-//                intent2.putExtra(Constant.INDEX_THONGTIN, index);
-//                startActivity(intent2);
-                Toast.makeText(VuiLongChonGiokham.this, "Hello", Toast.LENGTH_SHORT).show();
+                ThoiGianKham time = (ThoiGianKham) adapterMor.getItem(i);
+                LocalTime startTime = time.getThoiGianBĐ();
+                LocalTime endTime = time.getThoiGianKT();
+                ketQuaTraVe.get(index).setResult(timeFromLocalTime(startTime) + " - " + timeFromLocalTime(endTime));
+                Intent intent2 = new Intent(VuiLongChonGiokham.this, ChonThongTinKham.class);
+                intent2.putParcelableArrayListExtra(Constant.THONGTIN, ketQuaTraVe);
+                intent2.putExtra(Constant.INDEX_THONGTIN, index);
+                startActivity(intent2);
+
             }
         });
 
