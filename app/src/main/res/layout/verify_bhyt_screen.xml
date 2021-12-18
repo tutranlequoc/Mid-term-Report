@@ -24,13 +24,13 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#5CC0AB">
-
             <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_keyboard_backspace_24"
-                android:backgroundTint="#5CC0AB"/>
-
+                android:id="@+id/btnNK"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/back"
+                android:background="@android:color/transparent"/>
 
             <TextView
                 android:layout_width="wrap_content"
