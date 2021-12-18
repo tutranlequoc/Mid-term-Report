@@ -7,7 +7,7 @@
     android:background="#E5E5E5"
     android:orientation="vertical"
 
-    tools:context=".MainActivity">
+    tools:context=".LoginScreen">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -48,6 +48,7 @@
 
     <TextView
         android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -70,6 +71,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"/>
     <EditText
+        android:id="@+id/edtSdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -80,14 +82,20 @@
         android:textSize="20sp" />
 </LinearLayout>
     <TextView
+        android:id="@+id/txtLoi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:text="Có lỗi xảy ra vui vòng thử lại sau."
         android:textColor="#FF0000"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:visibility="gone"/>
 
     <Button
+        android:layout_marginTop="15dp"
+        android:id="@+id/btnContinue"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
