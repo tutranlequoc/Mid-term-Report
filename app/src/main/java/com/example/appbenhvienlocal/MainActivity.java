@@ -11,6 +11,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -51,13 +52,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Constant.database = new BenhVienSQLiteHelper(this);
-        Constant.database.onCreate(Constant.database.getReadableDatabase());
-
+        prepareDB();
         linkViews();
         initData();
         loadData();
         addEvents();
+    }
+
+    private void prepareDB() {
+        Constant.database = new BenhVienSQLiteHelper(this);
+        Constant.database.createDefaultUser();
     }
 
     private void addEvents() {
@@ -137,6 +141,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if(itemId==R.id.nav_noti){
             Intent i = new Intent(MainActivity.this, screen_thongbao.class);
             startActivity(i);
+        }else if(itemId == R.id.nav_login){
+            Intent i = new Intent(MainActivity.this, LoginScreen.class);
+            startActivity(i);
+            Log.e("Click", "run");
         }
         return true;
     }
