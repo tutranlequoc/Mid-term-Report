@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#E5E5E5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#E5E5E5">
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#E5E5E5"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_main" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Xin chào!"
+        android:textColor="#5CC0AB"
+        android:textSize="30sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Vui lòng nhập mã 6 số \n đã gửi cho bạn qua số điện thoại"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Spinner
+            android:id="@+id/spRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtSdtOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:gravity="left"
+            android:hint="Số điện thoại"
+            android:inputType="phone"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        >
+
+        <EditText
+            android:id="@+id/edtOtp1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_otp"
+            android:gravity="center"
+            android:maxLength="1" />
+        <EditText
+            android:id="@+id/edtOtp2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_otp"
+            android:gravity="center"
+            android:maxLength="1" />
+        <EditText
+            android:id="@+id/edtOtp3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_otp"
+            android:gravity="center"
+            android:maxLength="1" />
+        <EditText
+            android:id="@+id/edtOtp4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_otp"
+            android:gravity="center"
+            android:maxLength="1" />
+        <EditText
+            android:id="@+id/edtOtp5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_otp"
+            android:gravity="center"
+            android:maxLength="1" />
+        <EditText
+            android:id="@+id/edtOtp6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_otp"
+            android:gravity="center"
+            android:maxLength="1" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginStart="28dp"
+        android:drawableStart="@drawable/triangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bạn không nhận được mã xác nhận?"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="5dp"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Nếu bạn không nhận được mã "
+        android:textColor="#5CC0AB"
+        android:textSize="20sp" />
+
+
+        <TextView
+           android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xác mình số di động của bạn "
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="28dp"/>
+
+
+    <TextView
+        android:id="@+id/txtSdtNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:text="0343696969"
+        android:textColor="#5CC0AB"
+        android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtMoSMS"
+           android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/messege"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhấn vào đây để mở hộp thư SMS của bạn "
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="28dp"/>
+
+
+    <TextView
+        android:id="@+id/txtGuilaiMa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Gửi lại mã"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_textview2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/txtNotMyPhone"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Đây không phải là số điện thoại của tôi"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_textview2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        />
+
+</LinearLayout>

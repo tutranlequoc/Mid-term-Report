@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#5CC0AB"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#5CC0AB">
+            <ImageButton
+                android:id="@+id/btnNK"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/back"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Xác mình  mã BHYT"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <Button
+        android:id="@+id/btnTimMaBHYT"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#805CC0AB"
+        android:drawableLeft="@drawable/search"
+        android:drawableRight="@drawable/right_vector"
+        android:text="Xem cách tìm mã bảo hiểm "
+        android:textColor="#434242"
+        android:textSize="15sp" />
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    android:padding="10dp"
+        android:layout_weight="1">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Họ và tên"
+        android:textSize="24sp"
+        android:textColor="#067E72"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nhập họ và tên"
+        android:textColor="#A19F9F"
+        android:textSize="24sp"
+       android:paddingLeft="20dp"
+        android:background="@drawable/border_edittext"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vui lòng nhập ngày sinh"
+        android:textSize="24sp"
+        android:textColor="#067E72"
+        android:textStyle="bold"/>
+    <EditText
+        android:inputType="datetime"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="DD/MM/YYYY hoặc YYYY"
+        android:textColor="#A19F9F"
+        android:textSize="24sp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/border_edittext"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vui lòng nhập mã bảo hiểm"
+        android:textSize="24sp"
+        android:textColor="#067E72"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="BT123456789"
+        android:textColor="#A19F9F"
+        android:textSize="24sp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/border_edittext"/>
+
+</LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="TIẾP TỤC"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:background="#5CC0AB"
+       />
+
+</LinearLayout>

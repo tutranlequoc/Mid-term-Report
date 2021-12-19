@@ -11,7 +11,7 @@
         android:id="@+id/appBarGK"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#00a8c7"
+        android:background="#5CC0AB"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
             android:id="@+id/toolBarGK"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#00a8c7">
+            android:background="#5CC0AB">
             <ImageButton
                 android:id="@+id/btnGK"
                 android:layout_width="30dp"
@@ -38,183 +38,97 @@
                 android:textStyle="bold"/>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:id="@+id/linear_layout1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp">
+
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:text="Buổi sáng"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"/>
+
+        <GridView
+            android:id="@+id/gvMor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:horizontalSpacing="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buổi tối"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"/>
+
+        <GridView
+            android:id="@+id/gvEve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:horizontalSpacing="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Chú thích:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:gravity="center">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background= "@drawable/round_txt_blue"/>
+
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Buổi sáng:"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="10dp">
-            </TextView>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="07:30 - 08:30"
-                    android:background="@drawable/giokham_button"
-                    android:padding="10dp"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="07:30 - 08:30"
-                    android:background="@drawable/giokham_button"
-                    android:padding="10dp"
-                    android:layout_marginLeft="20dp"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="07:30 - 08:30"
-                    android:background="@drawable/giokham_button"
-                    android:padding="10dp"
-                    android:layout_marginLeft="20dp"/>
-            </LinearLayout>
+                android:text="Khung giờ có thể đặt khám online"
+                android:layout_marginLeft="10dp"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linear_layout2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear_layout1">
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:gravity="center">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Buổi tối:"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="10dp">
-            </TextView>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="13:00 - 14:00"
-                    android:background="@drawable/giokham_button"
-                    android:padding="10dp"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="14:00 - 15:00"
-                    android:background="@drawable/giokham_button"
-                    android:padding="10dp"
-                    android:layout_marginLeft="20dp"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="15:00 - 16:00"
-                    android:background="@drawable/giokham_button"
-                    android:padding="10dp"
-                    android:layout_marginLeft="20dp"/>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center"
-            app:layout_constraintStart_toStartOf="@id/linear_layout1"
-            app:layout_constraintEnd_toEndOf="@id/linear_layout2"
-            app:layout_constraintTop_toBottomOf="@+id/linear_layout2">
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background= "@drawable/round_txt"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chú thích:"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="16sp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:padding="10dp">
-                <TextView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:background= "@drawable/round_txt"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ngày không được chọn khám"
-                    android:layout_marginLeft="10dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:padding="10dp">
-                <TextView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:background= "@drawable/round_txt_blue"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ngày hiện tại"
-                    android:layout_marginLeft="10dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:padding="10dp">
-                <TextView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:background= "@drawable/round_txt_red"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ngày cuối tuần"
-                    android:layout_marginLeft="10dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:padding="10dp">
-                <TextView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:background= "@drawable/round_txt_green"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ngày lễ trong năm"
-                    android:layout_marginLeft="10dp"/>
-            </LinearLayout>
+                android:text="Khung giờ đặt khám online đã kín. Bạn vui lòng chọn khung giờ khác để tiếp tục"
+                android:layout_marginLeft="10dp"/>
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

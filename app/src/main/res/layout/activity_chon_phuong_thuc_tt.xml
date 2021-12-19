@@ -9,7 +9,7 @@
         android:id="@+id/appBarCPTTT"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#00a8c7"
+        android:background="#5CC0AB"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,7 @@
             android:id="@+id/toolBarCPTTT"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#00a8c7">
+            android:background="#5CC0AB">
             <ImageButton
                 android:id="@+id/btnBackCPTTT"
                 android:layout_width="30dp"

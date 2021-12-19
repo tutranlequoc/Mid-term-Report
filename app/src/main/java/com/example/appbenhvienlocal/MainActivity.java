@@ -7,19 +7,23 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-
 import android.annotation.SuppressLint;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
-
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 import android.widget.GridView;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.adapter.CustomAdapter;
 import com.example.function.Function;
@@ -34,8 +38,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     CustomAdapter adapter;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
-  //  Spinner spinner;
+    //Spinner spinner;
     Button btnDatKham;
+    ImageButton imgbtnZalo;
 //    ArrayAdapter<String> spinnerAdapter= new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.spinner));
 
     private DrawerLayout drawerLayout;
@@ -62,6 +67,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ChonThongTinKham.class);
                 startActivity(intent);
+            }
+        });
+
+        imgbtnZalo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent = getPackageManager().getLaunchIntentForPackage("com.zalo");
+//                if(intent != null){
+//                    startActivity(intent);
+//                }
+//                Cài app trước
             }
         });
 
@@ -93,11 +109,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 //        spinner = findViewById(R.id.spinnerPhieuKham) (phần Tú comment - cần sửa lại tên để không trùng);
 
-        spinner = findViewById(R.id.spinnerPhieuKham);
+        //spinner = findViewById(R.id.spinnerPhieuKham);
         btnDatKham = findViewById(R.id.btnDatKham);
+        imgbtnZalo = findViewById(R.id.imbtnZalo);
 
 
     }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -117,6 +135,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         return true;
     }
+
+
     //xử lý tình huống ng dùng chưa đóng navigation nhưng thoát app
     @Override
     public void onBackPressed() {
