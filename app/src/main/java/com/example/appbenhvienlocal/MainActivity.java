@@ -26,7 +26,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.adapter.CustomAdapter;
+import com.example.database.BenhVienSQLiteHelper;
 import com.example.function.Function;
+import com.example.ultis.Constant;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -49,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Constant.database = new BenhVienSQLiteHelper(this);
+        Constant.database.onCreate(Constant.database.getReadableDatabase());
+
         linkViews();
         initData();
         loadData();
