@@ -77,10 +77,10 @@ public class LoginScreen extends AppCompatActivity {
                     txtLoi.setVisibility(View.VISIBLE);
                 }else {
                     if(Constant.database.checkUserPhone(phone) == 1){
-//                        intent = new Intent(LoginScreen.this, ManHinhNhapPassWord.class);
-//                        String sdt = edtSdt.getText().toString();
-//                        intent.putExtra("Sdt", sdt);
-//                        startActivity(intent);
+                        intent = new Intent(LoginScreen.this, ManHinhNhapPassWord.class);
+                        String sdt = edtSdt.getText().toString();
+                        intent.putExtra("Sdt", sdt);
+                        startActivity(intent);
                     }else {
 
                     }

@@ -35,7 +35,8 @@ public class OTPScreen extends AppCompatActivity {
 
     private void getData() {
         Intent intent = getIntent();
-        String sdt = intent.getStringExtra("Sdt1");
+
+        String sdt = intent.getStringExtra("SdtDKi");
         txtSdtOtp.setText(sdt);
         txtSdtNumber.setText(sdt);
     }

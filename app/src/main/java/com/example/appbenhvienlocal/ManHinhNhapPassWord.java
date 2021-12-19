@@ -40,7 +40,7 @@ public class ManHinhNhapPassWord extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentDangNhap = new Intent(ManHinhNhapPassWord.this,OTPScreen.class);
+                Intent intentDangNhap = new Intent(ManHinhNhapPassWord.this,MainActivity.class);
                 String sdt1 = txtSdt.getText().toString();
                 intentDangNhap.putExtra("Sdt1",sdt1);
                 startActivity(intentDangNhap);
@@ -49,7 +49,7 @@ public class ManHinhNhapPassWord extends AppCompatActivity {
         txtDangKi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentDangKi = new Intent(ManHinhNhapPassWord.this,Fill_Infor_Screen.class);
+                Intent intentDangKi = new Intent(ManHinhNhapPassWord.this,ManHinhDangKy.class);
                 startActivity(intentDangKi);
             }
         });
