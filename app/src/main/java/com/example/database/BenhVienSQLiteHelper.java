@@ -1,8 +1,10 @@
 package com.example.database;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteStatement;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
@@ -71,6 +73,72 @@ public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        try{
+            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TBL_NAME_PHIEUKHAM);
+            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TBL_NAME_HOSODATKHAM);
+            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TBL_NAME_USER);
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+        }
+        onCreate(sqLiteDatabase);
+    }
+
+    public void queryExec(String sql){
+        SQLiteDatabase db = getWritableDatabase();
+        try{
+            db.execSQL(sql);
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+        }
 
     }
+
+    public Cursor getData(String sql){
+        SQLiteDatabase db = getReadableDatabase();
+        try{
+            return db.rawQuery(sql, null);
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+            return null;
+        }
+    }
+
+    public int checkUserPhone(String phone){
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor =  db.rawQuery("SELECT * FROM " + TBL_NAME_USER + " WHERE " + COL_USER_PHONE + " =?", new String[]{phone});
+        return cursor.getCount();
+    }
+
+    public int getCount(String tableName){
+        int count;
+        Cursor cursor = getData("SELECT * FROM " + tableName);
+        count = cursor.getCount();
+        cursor.close();
+        return count;
+    }
+
+    public void createDefaultUser(){
+        if(getCount(TBL_NAME_USER) == 0){
+            insertDataForUser("0963075062", "Lê Hoàng Giáp", "123456");
+            insertDataForUser("0326213055", "Nguyễn Đăng Bắc", "123456");
+        }
+    }
+
+    public boolean insertDataForUser(String phone, String userName, String password){
+        try{
+            SQLiteDatabase db = getWritableDatabase();
+            String sql = "INSERT INTO " + TBL_NAME_USER + " VALUES(?,?,?)";
+            SQLiteStatement statement = db.compileStatement(sql);
+            statement.bindString(1, phone);
+            statement.bindString(2, userName);
+            statement.bindString(3, password);
+            statement.executeInsert();
+            return true;
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+            return false;
+        }
+    }
+
+
 }
