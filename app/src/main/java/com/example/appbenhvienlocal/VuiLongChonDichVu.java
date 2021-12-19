@@ -96,8 +96,8 @@ public class VuiLongChonDichVu extends AppCompatActivity {
 
     private void initData() {
         ArrayList<DichVu> dichVus = new ArrayList<DichVu>();
-        dichVus.add(new DichVu("KHÁM DỊCH VỤ","Lịch khám: thứ 2 - thứ 6", 80000));
-        dichVus.add(new DichVu("KHÁM VIP","Lịch khám: thứ 2 - thứ 6", 300000));
+        dichVus.add(new DichVu(Constant.DICH_VU,"Lịch khám: thứ 2 - thứ 6", 80000));
+        dichVus.add(new DichVu(Constant.VIP,"Lịch khám: thứ 2 - thứ 6", 300000));
         adapter = new CustomAdapter(VuiLongChonDichVu.this, R.layout.listview_chon_dich_vu, dichVus);
     }
 

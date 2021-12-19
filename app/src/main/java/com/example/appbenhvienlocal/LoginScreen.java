@@ -4,6 +4,7 @@ import  androidx.appcompat.app.AppCompatActivity;
 
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,7 +16,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.adapter.RegionAdapter;
+import com.example.database.BenhVienSQLiteHelper;
 import com.example.models.Region;
+import com.example.ultis.Constant;
 
 import org.w3c.dom.Text;
 
@@ -35,7 +38,8 @@ public class LoginScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
-
+        Constant.database = new BenhVienSQLiteHelper(this);
+        Constant.database.createDefaultUser();
         linkView();
         loadData();
         addEvents();
@@ -58,19 +62,28 @@ public class LoginScreen extends AppCompatActivity {
 
     }
 
+    public Boolean checkFormatPhone(String phoneNumber){
+        String reg = "^(0|\\+84)(\\s|\\.)?((3[2-9])|(5[689])|(7[06-9])|(8[1-689])|(9[0-46-9]))(\\d)(\\s|\\.)?(\\d{3})(\\s|\\.)?(\\d{3})$";
+        boolean flag = phoneNumber.matches(reg);
+        return flag;
+    }
+
     private void addEvents() {
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (edtSdt.getText().toString().equals("") ) {
+                String phone = edtSdt.getText().toString();
+                if (phone.equals("") || checkFormatPhone(phone) == false) {
                     txtLoi.setVisibility(View.VISIBLE);
-
                 }else {
-                    intent = new Intent(LoginScreen.this, ManHinhNhapPassWord.class);
-                    String sdt = edtSdt.getText().toString();
-                    intent.putExtra("Sdt", sdt);
-                    startActivity(intent);
+                    if(Constant.database.checkUserPhone(phone) == 1){
+//                        intent = new Intent(LoginScreen.this, ManHinhNhapPassWord.class);
+//                        String sdt = edtSdt.getText().toString();
+//                        intent.putExtra("Sdt", sdt);
+//                        startActivity(intent);
+                    }else {
 
+                    }
 
                 }
             }

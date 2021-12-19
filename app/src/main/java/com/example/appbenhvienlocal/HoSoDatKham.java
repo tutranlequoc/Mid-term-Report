@@ -20,6 +20,7 @@ public class HoSoDatKham extends AppCompatActivity {
     private ListView lvHoSo;
     CustomAdapter adapter;
     ImageButton btnBackHS, btnThem;;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
