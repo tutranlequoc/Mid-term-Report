@@ -29,6 +29,7 @@ public class KhaiBaoYTe extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 noiKhaiBao.showDropDown();
+                imvDropDownNoiKhaiBao.animate().rotation(imvDropDownNoiKhaiBao.getRotation()-90).start();
             }
         });
         imvQuocTich.setOnClickListener(new View.OnClickListener() {

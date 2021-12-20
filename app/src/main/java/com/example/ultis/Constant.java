@@ -21,4 +21,5 @@ public class Constant {
     public static final String DICH_VU = "KHÁM DỊCH VỤ";
     public static final String VIP = "KHÁM VIP";
     public static BenhVienSQLiteHelper database;
+    public static final String PHONE_NUMBER = "phoneNumber";
 }
