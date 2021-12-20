@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             android:gravity="left">
             <Button
-                android:id="@+id/imbBackDTK"
+                android:id="@+id/btnBackDTK"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
@@ -60,6 +60,7 @@
         android:text="Họ và chữ lót (có dấu)*"
         android:textStyle="bold"/>
     <EditText
+        android:id="@+id/edtFullName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Họ và chữ lót"
@@ -70,6 +71,7 @@
         android:text="Tên người bệnh (có dấu)*"
         android:textStyle="bold"/>
     <EditText
+        android:id="@+id/edtPatientName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Tên người bệnh"
@@ -80,6 +82,7 @@
         android:text="Ngày sinh*"
         android:textStyle="bold"/>
     <EditText
+        android:id="@+id/edtDateBirth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ngày/Tháng/Năm"
@@ -87,10 +90,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ngày sinh*"
+        android:text="Giới tính*"
         android:textStyle="bold"/>
     <Spinner
-        android:id="@+id/spinnerNgaySinh"
+        android:id="@+id/spinnerGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"/>
@@ -100,6 +103,7 @@
         android:text="CMND/Passport"
         android:textStyle="bold"/>
     <EditText
+        android:id="@+id/edtIDNumber_Passport"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="CMND/Passport"
@@ -130,6 +134,7 @@
         android:text="Số điện thoại (có dấu)*"
         android:textStyle="bold"/>
     <EditText
+        android:id="@+id/edtPhoneNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="09xxxxxxxx"
@@ -139,12 +144,14 @@
         android:layout_height="wrap_content"
         android:text="Tỉnh/ TP*"
         android:textStyle="bold"/>
-    <Spinner
-        android:id="@+id/spinnerTinh"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"/>
-    <TextView
+
+        <Spinner
+            android:id="@+id/spinnerTinh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Quận/ Huyện*"
@@ -170,6 +177,7 @@
         android:text="Địa chỉ*"
         android:textStyle="bold"/>
     <EditText
+        android:id="@+id/edtAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ấp, thôn, tổ, khóm, tên đường..."/>

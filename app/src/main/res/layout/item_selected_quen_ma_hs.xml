@@ -7,7 +7,7 @@
         android:id="@+id/txtSelectedHS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nam"
+        android:text=""
         android:textSize="15sp"
         android:padding="10dp"/>
 
