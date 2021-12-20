@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ultis.Constant;
+
 public class ManHinhNhapPassWord extends AppCompatActivity {
 
     TextView txtSdt,txtDangKi,txtQuenMk;

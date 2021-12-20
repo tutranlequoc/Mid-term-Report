@@ -78,13 +78,14 @@ public class LoginScreen extends AppCompatActivity {
                 }else {
                     if(Constant.database.checkUserPhone(phone) == 1){
                         intent = new Intent(LoginScreen.this, ManHinhNhapPassWord.class);
-                        String sdt = edtSdt.getText().toString();
-                        intent.putExtra("Sdt", sdt);
-                        startActivity(intent);
+                        Cursor cursor =  Constant.database.getReadableDatabase().rawQuery("SELECT * FROM " + BenhVienSQLiteHelper.TBL_NAME_USER + " WHERE " + BenhVienSQLiteHelper.COL_USER_PHONE + " =?", new String[]{phone});
+                        cursor.moveToFirst();
+                        cursor.getString(1);
                     }else {
-
+                        intent = new Intent(LoginScreen.this, Fill_Infor_Screen.class);
                     }
-
+                    intent.putExtra(Constant.PHONE_NUMBER, phone);
+                    startActivity(intent);
                 }
             }
         });
