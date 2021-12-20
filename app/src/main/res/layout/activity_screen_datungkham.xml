@@ -11,18 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#5cc0ab">
-        <LinearLayout
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="left">
+            android:layout_height="match_parent">
             <Button
                 android:paddingLeft="5dp"
                 android:id="@+id/imbBackDTK"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:drawableLeft="@drawable/ic_baseline_keyboard_backspace_24"
-                android:layout_marginRight="60dp"
+                android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+                android:scaleType="fitXY"
                 android:background="#5cc0ab"
                 />
             <TextView
@@ -34,7 +32,7 @@
                 android:textStyle="bold"
                 android:textSize="22sp"/>
 
-        </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
     <com.google.android.material.tabs.TabLayout

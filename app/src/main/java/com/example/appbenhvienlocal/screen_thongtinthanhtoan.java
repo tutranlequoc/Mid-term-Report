@@ -79,18 +79,6 @@ public class screen_thongtinthanhtoan extends AppCompatActivity {
         lineTop = dialogConfirm.findViewById(R.id.lineTop);
         divider=dialogConfirm.findViewById(R.id.divider);
 
-//        Intent i = getIntent();
-//        Bundle bundle = new Bundle();
-//        bundle = i.getBundleExtra("method1");
-//        txtThongBaoTToan.setText(bundle.getString("momo"));
-//        if(bundle == i.getBundleExtra("method1")){
-//            txtThongBaoTToan.setText(bundle.getString("atm"));
-//        }
-//        else {
-//            txtThongBaoTToan.setText(bundle.getString("momo"));
-//        }
-
-
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,6 +88,7 @@ public class screen_thongtinthanhtoan extends AppCompatActivity {
         btnAgreePay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                dialogConfirm.dismiss();
                 dialogSuccess();
             }
         });
@@ -118,6 +107,7 @@ public class screen_thongtinthanhtoan extends AppCompatActivity {
                 dialogSuccess.dismiss();
             }
         });
+        dialogSuccess.show();
     }
 
     private void linkViews() {

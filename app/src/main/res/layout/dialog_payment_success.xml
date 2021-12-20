@@ -5,14 +5,15 @@
     android:layout_height="200dp"
     android:layout_weight="1">
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:text="THÔNG BÁO"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textAlignment="center"
         android:layout_weight="0.3"
-        android:gravity="center"/>
+        android:paddingTop="10dp"
+        android:layout_gravity="center"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"

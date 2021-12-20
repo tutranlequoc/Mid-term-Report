@@ -3,6 +3,7 @@ package com.example.appbenhvienlocal;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ import android.widget.TextView;
 
 public class screen_xoahoso extends AppCompatActivity {
 
-    Button btnDeleteFile, btnCancelDelete, btnAgreeDelete;
+    Button btnDeleteFile, btnCancelDelete, btnAgreeDelete, btnBackXacNhan;
     View deleteFileLine, deleteFileDiv;
 
     @Override
@@ -31,6 +32,13 @@ public class screen_xoahoso extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openConfirmDialog(Gravity.CENTER);
+            }
+        });
+        btnBackXacNhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(screen_xoahoso.this, screen_hoso_moi.class);
+                startActivity(i);
             }
         });
 
@@ -76,5 +84,6 @@ public class screen_xoahoso extends AppCompatActivity {
 
     private void linkViews() {
         btnDeleteFile = findViewById(R.id.btnXoaHoSo);
+        btnBackXacNhan = findViewById(R.id.btnBackXacNhanTT);
     }
 }

@@ -24,7 +24,7 @@
         android:id="@+id/btnQuetMa"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:backgroundTint="#0E7EED"
+        android:backgroundTint="#5CC0AB"
         android:text="CHƯA TỪNG KHÁM, ĐĂNG KÝ MỚI"
         android:textColor="#FFFFFF"
         android:textSize="10sp"
@@ -35,7 +35,7 @@
         android:layout_height="40dp"
         android:background="@drawable/button_border"
         android:text="ĐÃ TỪNG KHÁM, NHẬP SỐ HỒ SƠ"
-        android:textColor="#0C90D8"
+        android:textColor="#5CC0AB"
         android:textSize="10sp"
         android:layout_marginBottom="10dp"/>
     <Button
@@ -44,7 +44,7 @@
         android:layout_height="40dp"
         android:text="QUÉT MÃ BHYT"
         android:background="@drawable/button_border"
-        android:textColor="#0C90D8"
+        android:textColor="#5CC0AB"
         android:textSize="10sp"/>
 
 </LinearLayout>
