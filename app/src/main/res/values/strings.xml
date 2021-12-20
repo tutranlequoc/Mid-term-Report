@@ -15,14 +15,14 @@
     <string name="close_navigation_drawer">Close Navigation</string>
     <string name="noi_khai_bao"><font color="#0032C7"><b>Nơi khai báo</b></font> <font color="#FF0000">(*)</font><font color="#0032C7"><b>:</b></font></string>
     <string name="so_dien_thoai"><font color="#0032C7"><b>Số điện thoại</b></font> <font color="#FF0000">(*)</font><font color="#0032C7"><b>:</b></font></string>
-    <string name="ho_va_ten"><font color="#0032C7"><b>Họ và tên</b></font> <font color="#FF0000">(*)</font>:</string>
-    <string name="ngay_sinh"><font color="#0032C7"><b>Ngày sinh</b></font> <font color="#FF0000">(*)</font>:</string>
-    <string name="quoc_tich"><font color="#0032C7"><b>Quốc tịch</b></font> <font color="#FF0000">(*)</font>:</string>
-    <string name="tinh_thanh"><font color="#0032C7"><b>Tỉnh thành</b></font> <font color="#FF0000">(*)</font>:</string>
-    <string name="quan_huyen"><font color="#0032C7"><b>Quận huyện</b></font> <font color="#FF0000">(*)</font>:</string>
-    <string name="xa_phuong"><font color="#0032C7"><b>Xã Phường</b></font> <font color="#FF0000">(*)</font>:</string>
-    <string name="so_nha_ten_duong"><font color="#0032C7"><b>Số nhà, tên đường</b></font> <font color="#FF0000">(*)</font>:</string>
-    <string name="cau_hoi_bieu_hien"><font color="#0032C7"><b>Ông/ bà hiện có những triệu chứng hay biểu hiện nào sau đây không?</b></font> <font color="#FF0000">(*)</font>:</string>
+    <string name="ho_va_ten"><font color="#0032C7"><b>Họ và tên</b></font> <font color="#FF0000">(*)</font><font color="#0032C7"><b>:</b></font></string>
+    <string name="ngay_sinh"><font color="#0032C7"><b>Ngày sinh</b></font> <font color="#FF0000">(*)</font><font color="#0032C7"><b>:</b></font></string>
+    <string name="quoc_tich"><font color="#0032C7"><b>Quốc tịch</b></font> <font color="#FF0000">(*)</font><font color="#0032C7"><b>:</b></font></string>
+    <string name="tinh_thanh"><font color="#0032C7"><b>Tỉnh thành</b></font> <font color="#FF0000">(*)</font><font color="#0032C7"><b>:</b></font></string>
+    <string name="quan_huyen"><font color="#0032C7"><b>Quận huyện</b></font> <font color="#FF0000">(*)</font><font color="#0032C7"><b>:</b></font></string>
+    <string name="xa_phuong"><font color="#0032C7"><b>Xã Phường</b></font> <font color="#FF0000">(*)</font><font color="#0032C7"><b>:</b></font></string>
+    <string name="so_nha_ten_duong"><font color="#0032C7"><b>Số nhà, tên đường</b></font> <font color="#FF0000">(*)</font><font color="#0032C7"><b>:</b></font></string>
+    <string name="cau_hoi_bieu_hien"><font color="#0032C7"><b>Ông/ bà hiện có những triệu chứng hay biểu hiện nào sau đây không?</b></font> <font color="#FF0000">(*)</font><font color="#0032C7"><b>:</b></font></string>
     <string name="sot"><font color="#0032C7"><b>Sốt</b></font> <font color="#FF0000">(*)</font></string>
     <string name="ho"><font color="#0032C7"><b>Ho</b></font> <font color="#FF0000">(*)</font></string>
     <string name="dau_hong"><font color="#0032C7"><b>Đau họng</b></font> <font color="#FF0000">(*)</font></string>
@@ -30,7 +30,7 @@
     <string name="cam_giac_met"><font color="#0032C7"><b>Cảm giác mệt</b></font> <font color="#FF0000">(*)</font></string>
     <string name="kh_tho"><font color="#0032C7"><b>Khó thở</b></font> <font color="#FF0000">(*)</font></string>
     <string name="trieu_chung_khac"><font color="#0032C7"><b>Triệu chứng khác</b></font> <font color="#FF0000">(*)</font></string>
-    <string name="trong_th_i_gian_v_a_qua"><font color="#0032C7"><b>Trong thời gian vừa qua</b></font> <font color="#FF0000">(*)</font>:</string>
+    <string name="trong_th_i_gian_v_a_qua"><font color="#0032C7"><b>Trong thời gian vừa qua</b></font> <font color="#FF0000">(*)</font><font color="#0032C7"><b><font color="#0032C7"><b>:</b></font></b></font></string>
     <string name="b_n_c_ang_m_c_covid_19_kh_ng"><font color="#0032C7"><b>1.Bạn có đang mắc COVID-19 không</b></font> <font color="#FF0000">(*)</font></string>
     <string name="tiep_xuc"><font color="#0032C7"><b>2. Tiếp xúc gần ca nhiễm, ca nghi nghiễm COVID-19 trong vòng 14 ngày qua</b></font> <font color="#FF0000">(*)</font></string>
     <string name="di_tu_quoc_gia"><font color="#0032C7"><b>3. Đi từ quốc gia hoặc vùng lãnh thổ khác trong vòng 14 ngày qua</b></font> <font color="#FF0000">(*)</font></string>
@@ -38,7 +38,7 @@
     <string name="trong_vong_14_ngay"><font color="#0032C7"><b>5. Trong vòng 14 ngày qua, trong gia đình/ cơ quan bạn có ai sốt hay ho không?</b></font> <font color="#FF0000">(*)</font></string>
     <string name="ban_da_xuat_hien"><font color="#0032C7"><b>6. Bạn đã xuất viện do điều trị COVID-19 trong vòng 14 ngày qua không?</b></font> <font color="#FF0000">(*)</font></string>
     <string name="vui_long_cung_cap">Vui lòng cung cấp thêm thông tin về triệu chứng hay dấu hiệu khác nếu có</string>
-    <string name="vui_l_ng_nh_p_m_x_c_th_c"><font color="#0032C7">Vui lòng nhập mã xác thực</font> <font color="#FF0000">(*)</font>:</string>
+    <string name="vui_l_ng_nh_p_m_x_c_th_c"><font color="#0032C7">Vui lòng nhập mã xác thực</font> <font color="#FF0000">(*)</font><font color="#0032C7"><b>:</b></font></string>
     <string name="benh_nhan_den_quay">Bệnh nhân đến QUẦY CHĂM SÓC KHÁCH HÀNG tại tầng trệt khu A để được hướng dẫn đến phòng khám bệnh.</string>
     <string name="khong_hoan_tra">Phiếu khám không hoàn trả tiền và chỉ có giá trị trong ngày.</string>
     <string name="th_ng_tin_thanh_to_n">THÔNG TIN THANH TOÁN</string>
