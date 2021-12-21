@@ -28,11 +28,7 @@
         <activity
             android:name=".LoginScreen"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ManHinhNhapPassWord"
@@ -46,6 +42,11 @@
         <activity
             android:name=".KhaiBaoYTe"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".PhieuKhamBenh"

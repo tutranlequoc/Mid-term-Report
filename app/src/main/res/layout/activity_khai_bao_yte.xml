@@ -41,9 +41,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#0032C7"
+        android:background="#1A4CFF"
         android:gravity="center"
         android:paddingBottom="5dp"
+        android:paddingTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarKBYT">
@@ -71,6 +72,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_percent="0.6"
             android:gravity="center"/>
+        <ImageView
+            android:id="@+id/imvMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_dehaze"
+            app:layout_constraintWidth_percent="0.2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="10dp"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
     <ScrollView
         android:layout_width="match_parent"
@@ -110,110 +123,96 @@
                 android:background="@drawable/customborder_hosodatkham"
                 android:layout_margin="5dp"
                 android:padding="10dp">
-                <RadioGroup
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <RadioButton
-                            android:id="@+id/rtnBenhNhan"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:text="Bệnh nhân/Người nhà"
-                            android:textColor="#0032C7"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintWidth_percent="0.55"
-                            android:textStyle="bold"
-                            android:button="@drawable/custom_radiobutton"/>
-                        <RadioButton
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:text="Nhân viên bệnh viện"
-                            android:textColor="#0032C7"
-                            app:layout_constraintStart_toEndOf="@+id/rtnBenhNhan"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintWidth_percent="0.45"
-                            android:textStyle="bold"
-                            android:button="@drawable/custom_radiobutton"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <RadioButton
-                            android:id="@+id/rbnKhach"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:text="Khách đến liên hệ công tác"
-                            android:textColor="#0032C7"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintWidth_percent="0.55"
-                            android:textStyle="bold"
-                            android:button="@drawable/custom_radiobutton"/>
-                        <RadioButton
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:text="Xét nghiệm COVID-19"
-                            android:textColor="#0032C7"
-                            app:layout_constraintStart_toEndOf="@+id/rbnKhach"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintWidth_percent="0.45"
-                            android:textStyle="bold"
-                            android:button="@drawable/custom_radiobutton"/>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tiêm chủng vắc xin"
-                        android:textColor="#0032C7"
-                        android:textStyle="bold"
-                        android:button="@drawable/custom_radiobutton"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Theo dõi sức khỏe tại nhà"
-                            android:textColor="#0032C7"
-                            android:textStyle="bold"
-                            android:button="@drawable/custom_radiobutton"
-                            android:layout_weight="1"/>
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:background="@drawable/nhap_lai"
-                            android:padding="5dp">
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:src="@drawable/restart"
-                                android:layout_gravity="center"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Nhập lại"
-                                android:textColor="#0032C7"
-                                android:layout_marginLeft="2dp"/>
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </RadioGroup>
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                     <RadioGroup
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1">
+                         <RadioButton
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Bệnh nhân/Người nhà"
+                             android:textColor="#0032C7"
+                             android:textStyle="bold"
+                             android:background="@null"
+                             android:button= "@drawable/custom_radiobutton"
+                             android:layout_marginBottom="10dp"/>
+                         <RadioButton
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Khách đến liên hệ công tác"
+                             android:textColor="#0032C7"
+                             android:textStyle="bold"
+                             android:background="@null"
+                             android:button= "@drawable/custom_radiobutton"
+                             android:layout_marginBottom="10dp"/>
+                         <RadioButton
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Tiêm chủng vắc xin"
+                             android:textColor="#0032C7"
+                             android:textStyle="bold"
+                             android:background="@null"
+                             android:button= "@drawable/custom_radiobutton"
+                             android:layout_marginBottom="10dp"/>
+                         <RadioButton
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Theo dõi sức khỏe tại nhà"
+                             android:textColor="#0032C7"
+                             android:textStyle="bold"
+                             android:background="@null"
+                             android:button= "@drawable/custom_radiobutton"
+                             android:layout_marginBottom="10dp"/>
+                     </RadioGroup>
+                     <RadioGroup
+                         android:layout_width="0dp"
+                         android:layout_height="match_parent"
+                         android:layout_weight="1"
+                         android:layout_marginLeft="10dp">
+                         <RadioButton
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Nhân viên bệnh viện"
+                             android:textColor="#0032C7"
+                             android:textStyle="bold"
+                             android:background="@null"
+                             android:button= "@drawable/custom_radiobutton"
+                             android:layout_marginBottom="55dp"/>
+                         <RadioButton
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Xét nghiệm COVID-19"
+                             android:textColor="#0032C7"
+                             android:textStyle="bold"
+                             android:background="@null"
+                             android:button= "@drawable/custom_radiobutton"
+                             android:layout_marginBottom="10dp"/>
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:orientation="horizontal"
+                             android:background="@drawable/nhap_lai"
+                             android:padding="5dp"
+                             android:layout_gravity="end">
+                             <ImageView
+                                 android:layout_width="15dp"
+                                 android:layout_height="15dp"
+                                 android:src="@drawable/restart"
+                                 android:layout_gravity="center"/>
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="Nhập lại"
+                                 android:textColor="#0032C7"
+                                 android:layout_marginLeft="2dp"/>
+                         </LinearLayout>
+                     </RadioGroup>
+                </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -239,7 +238,9 @@
                         android:textSize="16sp"
                         android:completionThreshold="1"
                         android:focusable="false"
-                        android:padding="5dp">
+                        android:padding="5dp"
+                        android:scrollbars="vertical"
+                        android:dropDownHeight="100dp">
                     </AutoCompleteTextView>
                     <ImageView
                         android:id="@+id/imvDropDownKhaiBao"
@@ -251,7 +252,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1"
-                        android:layout_marginRight="5dp"/>
+                        android:layout_marginRight="5dp"
+                        />
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <TextView
                     android:layout_width="wrap_content"
@@ -348,12 +350,14 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintWidth_percent="0.8"
+                        app:layout_constraintWidth_percent="1"
                         android:dropDownSelector="#AEE8DE"
                         android:textSize="16sp"
                         android:completionThreshold="1"
                         android:focusable="false"
-                        android:padding="5dp">
+                        android:padding="5dp"
+                        android:scrollbars="vertical"
+                        android:dropDownHeight="100dp">
                     </AutoCompleteTextView>
                     <ImageView
                         android:id="@+id/imvQuocTich"
@@ -388,12 +392,14 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintWidth_percent="0.8"
+                        app:layout_constraintWidth_percent="1"
                         android:dropDownSelector="#AEE8DE"
                         android:textSize="16sp"
                         android:completionThreshold="1"
                         android:focusable="false"
-                        android:padding="5dp">
+                        android:padding="5dp"
+                        android:scrollbars="vertical"
+                        android:dropDownHeight="100dp">
                     </AutoCompleteTextView>
                     <ImageView
                         android:id="@+id/imvTinhThanh"
@@ -428,12 +434,14 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintWidth_percent="0.8"
+                        app:layout_constraintWidth_percent="1"
                         android:dropDownSelector="#AEE8DE"
                         android:textSize="16sp"
                         android:completionThreshold="1"
                         android:focusable="false"
-                        android:padding="5dp">
+                        android:padding="5dp"
+                        android:scrollbars="vertical"
+                        android:dropDownHeight="100dp">
                     </AutoCompleteTextView>
                     <ImageView
                         android:id="@+id/imvQuanHuyen"
@@ -468,12 +476,14 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintWidth_percent="0.8"
+                        app:layout_constraintWidth_percent="1"
                         android:dropDownSelector="#AEE8DE"
                         android:textSize="16sp"
                         android:completionThreshold="1"
                         android:focusable="false"
-                        android:padding="5dp">
+                        android:padding="5dp"
+                        android:scrollbars="vertical"
+                        android:dropDownHeight="100dp">
                     </AutoCompleteTextView>
                     <ImageView
                         android:id="@+id/imvXaPhuong"
@@ -509,24 +519,13 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintWidth_percent="0.8"
+                        app:layout_constraintWidth_percent="1"
                         android:dropDownSelector="#AEE8DE"
                         android:textSize="16sp"
                         android:completionThreshold="1"
                         android:focusable="false"
                         android:padding="5dp">
                     </AutoCompleteTextView>
-                    <ImageView
-                        android:id="@+id/imvSoNhaTenDuong"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/expand"
-                        app:layout_constraintStart_toEndOf="@+id/actSoNhaTenDuong"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="1"
-                        android:layout_marginRight="5dp"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <TextView
                     android:layout_width="wrap_content"

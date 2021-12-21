@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mnKhaiBao" android:title="Khai báo y tế" />
+    <item android:id="@+id/mnLichSu" android:title="Lịch sử khai báo"/>
+</menu>

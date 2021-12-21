@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="NGUYỄN VĂN A"
+        android:textColor="#1A4CFF"
+        android:layout_weight="1"
+        android:gravity="left"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1999"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="20/12/2021"
+        android:textColor="@color/black"
+        android:layout_weight="1"
+        android:gravity="left"/>
+</LinearLayout>
