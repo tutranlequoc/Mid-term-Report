@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.adapter.RegionAdapter;
 import com.example.database.BenhVienSQLiteHelper;
 import com.example.models.Region;
+import com.example.models.User;
 import com.example.ultis.Constant;
 
 import org.w3c.dom.Text;
@@ -34,6 +35,7 @@ public class LoginScreen extends AppCompatActivity {
     EditText edtSdt;
     Intent intent;
     TextView txtLoi;
+    int REQUEST_CODE_FOR_LOGIN = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +44,12 @@ public class LoginScreen extends AppCompatActivity {
         Constant.database.createDefaultUser();
         linkView();
         loadData();
+        getData();
         addEvents();
+
     }
+
+
 
     private void linkView() {
         spRegion= findViewById(R.id.spRegion);
@@ -68,6 +74,16 @@ public class LoginScreen extends AppCompatActivity {
         return flag;
     }
 
+    private void getData() {
+        intent = getIntent();
+        if(intent!=null){
+            if(intent.getIntExtra(Constant.REQUEST_TAG,0) == Constant.REQUEST_CODE_FOR_LOGIN){
+                REQUEST_CODE_FOR_LOGIN = Constant.REQUEST_CODE_FOR_LOGIN;
+            }
+        }
+
+    }
+
     private void addEvents() {
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,14 +94,20 @@ public class LoginScreen extends AppCompatActivity {
                 }else {
                     if(Constant.database.checkUserPhone(phone) == 1){
                         intent = new Intent(LoginScreen.this, ManHinhNhapPassWord.class);
-                        Cursor cursor =  Constant.database.getReadableDatabase().rawQuery("SELECT * FROM " + BenhVienSQLiteHelper.TBL_NAME_USER + " WHERE " + BenhVienSQLiteHelper.COL_USER_PHONE + " =?", new String[]{phone});
-                        cursor.moveToFirst();
-                        cursor.getString(1);
+
                     }else {
                         intent = new Intent(LoginScreen.this, Fill_Infor_Screen.class);
                     }
                     intent.putExtra(Constant.PHONE_NUMBER, phone);
-                    startActivity(intent);
+                    if(REQUEST_CODE_FOR_LOGIN != 0){
+                        intent.putExtra(Constant.REQUEST_TAG, REQUEST_CODE_FOR_LOGIN);
+                        startActivity(intent);
+                        finish();
+                    }else {
+                        startActivity(intent);
+                    }
+
+
                 }
             }
         });
