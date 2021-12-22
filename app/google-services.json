@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1058899993247",
+    "project_id": "appbenhvienlocal-5f4e1",
+    "storage_bucket": "appbenhvienlocal-5f4e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058899993247:android:201e6847947c9e3e8738aa",
+        "android_client_info": {
+          "package_name": "com.example.appbenhvienlocal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058899993247-lqhnt3itt5j667f4nd21avk2cin4aob4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBScIxw9fG8qoO6wRxh-uYmW8zqv1ArLdo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058899993247-lqhnt3itt5j667f4nd21avk2cin4aob4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
