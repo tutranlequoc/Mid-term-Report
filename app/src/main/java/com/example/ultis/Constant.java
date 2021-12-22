@@ -1,6 +1,7 @@
 package com.example.ultis;
 
 import com.example.database.BenhVienSQLiteHelper;
+import com.example.models.User;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -22,4 +23,9 @@ public class Constant {
     public static final String VIP = "KHÁM VIP";
     public static BenhVienSQLiteHelper database;
     public static final String PHONE_NUMBER = "phoneNumber";
+    public static final String HO_SO = "Hồ sơ";
+    public static final String PHIEU_KHAM = "Phiếu khám";
+    public static final String KIEM_TRA = "Kiểm tra";
+    public static User user;
+    public static int REQUEST_CODE_FOR_LOGIN = 8;
 }

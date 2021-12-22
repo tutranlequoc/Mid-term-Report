@@ -109,6 +109,13 @@ public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
         return cursor.getCount();
     }
 
+    public String getUserName(String phone){
+        SQLiteDatabase db  = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_USER + " WHERE " + COL_USER_PHONE + " =?", new String[]{phone});
+        cursor.moveToFirst();
+        return cursor.getString(1);
+    }
+
     public int checkUserPhoneAndPass(String phone, String password){
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_USER + " WHERE " + COL_USER_PHONE + " =?" + " AND " + COL_PASSWORD + " =?", new String[]{phone,password});

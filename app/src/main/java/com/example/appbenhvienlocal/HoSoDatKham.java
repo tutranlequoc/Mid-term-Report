@@ -35,7 +35,7 @@ public class HoSoDatKham extends AppCompatActivity {
         btnBackHS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                finish();
             }
         });
         btnThem.setOnClickListener(new View.OnClickListener() {
