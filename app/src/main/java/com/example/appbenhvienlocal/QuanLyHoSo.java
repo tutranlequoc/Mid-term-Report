@@ -3,12 +3,14 @@ package com.example.appbenhvienlocal;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.dialog.CustomDiaLogHoSo;
 
@@ -28,6 +30,20 @@ public class QuanLyHoSo extends AppCompatActivity {
     private void initData() {
         customDiaLogHoSo = new CustomDiaLogHoSo(this);
         customDiaLogHoSo.setCancelable(false);
+        customDiaLogHoSo.getTxtXoa().setTextColor(Color.parseColor("#5CC0AB"));
+        customDiaLogHoSo.getTxtXoa().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(QuanLyHoSo.this, "click", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        customDiaLogHoSo.getTxtHuy().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                customDiaLogHoSo.dismiss();
+            }
+        });
         Window window = customDiaLogHoSo.getWindow();
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
     }

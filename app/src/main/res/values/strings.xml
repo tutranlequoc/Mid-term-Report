@@ -55,7 +55,7 @@
     <string name="XacMinhSoDiDong">Xác mình số di động của bạn</string>
 
     <string name="DayKhongPhaiSDienThoaiCuaToi">Đây không phải là số điện thoại của tôi</string>
-    <string name="thong_bao">Bạn có muốn xóa hồ sơ này không? <font color="#FF0000"><b>Có</b></font></string>
+    <string name="thong_bao">Bạn có muốn xóa hồ sơ này không?</string>
     <string-array name="spinner">
         <item>Tất cả</item>
         <item>Đã khám</item>
@@ -70,4 +70,6 @@
         <item>Khám và tư vấn thẩm mỹ da</item>
         <item>Khám và tư vấn tạo hình thẩm mỹ</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
