@@ -7,7 +7,7 @@
     android:background="#E5E5E5"
     android:orientation="vertical"
 
-    tools:context=".MainActivity">
+    tools:context=".Fill_Infor_Screen">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -133,7 +133,8 @@
         android:gravity="center"
         android:textSize="24sp"
         android:background="@drawable/rounded_button"
-        android:text="Đăng kí" />
+        android:text="Đăng kí"
+        android:textColor="@color/white"/>
 
 
 </LinearLayout>

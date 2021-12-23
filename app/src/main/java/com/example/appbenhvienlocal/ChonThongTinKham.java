@@ -13,6 +13,7 @@ import android.os.Parcel;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -31,7 +32,9 @@ public class ChonThongTinKham extends AppCompatActivity {
     private CustomAdapter adapter;
     private ImageButton btnTTK;
     private ArrayList<ThongTin> thongTin;
-    private ActivityResultLauncher<Intent> activityResultLauncher;
+    private ActivityResultLauncher<Intent> activityResultLauncher, activityResultLauncherHSDK;
+    private Button btnTiepTuc;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +59,7 @@ public class ChonThongTinKham extends AppCompatActivity {
         });
         addEvents();
         loadData();
+
     }
 
     private void getData() {
@@ -128,6 +132,29 @@ public class ChonThongTinKham extends AppCompatActivity {
 
             }
         });
+
+        if(thongTin.get(thongTin.size() - 1).getResult().equals("")){
+            btnTiepTuc.setClickable(false);
+            Toast.makeText(ChonThongTinKham.this, "Vui lòng chọn đủ thông tin", Toast.LENGTH_SHORT).show();
+        }else if(!thongTin.get(thongTin.size()-1).getResult().equals("")){
+            btnTiepTuc.setClickable(true);
+            btnTiepTuc.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(Constant.user == null){
+                        Intent toLogin = new Intent(ChonThongTinKham.this, LoginScreen.class);
+                        toLogin.putExtra(Constant.REQUEST_TAG, Constant.REQUEST_CODE_FOR_LOGIN);
+                        startActivity(toLogin);
+                    }else {
+                        Intent toHoSoDK = new Intent(ChonThongTinKham.this, HoSoDatKham.class);
+                        startActivity(toHoSoDK);
+                    }
+
+                }
+            });
+        }
+
+
     }
 
     private void loadData() {
@@ -146,6 +173,7 @@ public class ChonThongTinKham extends AppCompatActivity {
     private void linkViews() {
         lvOptions = findViewById(R.id.lvOptions);
         btnTTK = findViewById(R.id.btnTTK);
+        btnTiepTuc = findViewById(R.id.btnTiepTuc);
     }
 
 }

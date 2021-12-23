@@ -24,8 +24,27 @@
         </activity>
         <activity
             android:name=".QuenMatKhau"
+            android:name=".NhapMkMoi"
             android:exported="true" />
         <activity
+            android:name=".ManHinhDangKy"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".QuenMatKhau"
+            android:exported="true" />
+        <activity
+            android:name=".ManHinhThongBao"
+            android:exported="true" />
+        <activity
+            android:name=".LoginScreen"
+            android:exported="true">
+
             android:name=".ManHinhThongBao"
             android:exported="true"></activity>
         <activity
@@ -43,7 +62,9 @@
             android:exported="true" />
         <activity
             android:name=".KhaiBaoYTe"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".PhieuKhamBenh"
             android:exported="true" />
@@ -61,19 +82,21 @@
             android:exported="true" />
         <activity
             android:name=".ChonNgayKham"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".VuiLongChonGiokham"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".VuiLongChonDichVu"
             android:exported="true" />
         <activity
             android:name=".VuiLongChonChuyenKhoa"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ChonThongTinKham"
-            android:exported="true"></activity>
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".screen_faq"
             android:exported="true" />
@@ -96,9 +119,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity2"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".OTPScreen"
             android:exported="true" />
@@ -124,11 +148,19 @@
             android:exported="true">
 
         </activity>
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".GoiYTimMaBHYT"
             android:exported="true">
 
         </activity>
+            android:exported="true" />
         <activity
             android:name=".Fill_Infor_Screen"
             android:exported="true" />

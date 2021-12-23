@@ -20,6 +20,7 @@ public class HoSoDatKham extends AppCompatActivity {
     private ListView lvHoSo;
     CustomAdapter adapter;
     ImageButton btnBackHS, btnThem;;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +35,7 @@ public class HoSoDatKham extends AppCompatActivity {
         btnBackHS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                finish();
             }
         });
         btnThem.setOnClickListener(new View.OnClickListener() {

@@ -49,6 +49,11 @@ public class GioKhamAdapter extends ArrayAdapter {
         return super.getItemId(position);
     }
 
+//    @Override
+//    public boolean isEnabled(int position) {
+//        return super.isEnabled(position);
+//    }
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

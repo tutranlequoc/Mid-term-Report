@@ -13,8 +13,8 @@ import java.util.ArrayList;
 public class DanhSachPhieuKhamScreen extends AppCompatActivity {
 
     ListView lvDanhSachPhieuKham;
-PhieuKhamAdapter adapter;
-ArrayList<Danhsachphieukham> phieuKhamList;
+    PhieuKhamAdapter adapter;
+    ArrayList<Danhsachphieukham> phieuKhamList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

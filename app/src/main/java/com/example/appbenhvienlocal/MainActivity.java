@@ -11,10 +11,12 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 
@@ -26,7 +28,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.adapter.CustomAdapter;
+import com.example.database.BenhVienSQLiteHelper;
 import com.example.function.Function;
+import com.example.ultis.Constant;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -49,10 +53,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        prepareDB();
         linkViews();
         initData();
         loadData();
         addEvents();
+    }
+
+    private void prepareDB() {
+        Constant.database = new BenhVienSQLiteHelper(this);
+        Constant.database.createDefaultUser();
     }
 
     private void addEvents() {
@@ -85,6 +95,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void loadData() {
         gvFunction.setAdapter(adapter);
+        gvFunction.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Function function = (Function) adapter.getItem(i);
+                Intent toFunctionScreen;
+                if(Constant.user == null){
+                    toFunctionScreen = new Intent(MainActivity.this, LoginScreen.class);
+                    toFunctionScreen.putExtra(Constant.REQUEST_TAG, Constant.REQUEST_CODE_FOR_LOGIN);
+                    startActivity(toFunctionScreen);
+                }else {
+                    switch (function.getFunction()){
+                        case Constant.HO_SO:
+                            toFunctionScreen = new Intent(MainActivity.this, HoSoDatKham.class);
+                            startActivity(toFunctionScreen);
+                            break;
+                        case Constant.PHIEU_KHAM:
+                            toFunctionScreen = new Intent(MainActivity.this, DanhSachPhieuKhamScreen.class);
+                            startActivity(toFunctionScreen);
+                            break;
+                    }
+                }
+
+            }
+        });
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
 //        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -94,9 +128,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void initData() {
         listFunction = new ArrayList<Function>();
-        listFunction.add(new Function(getResources().getString(R.string.ho_so), R.drawable.iconhoso));
-        listFunction.add(new Function(getResources().getString(R.string.phieu_kham), R.drawable.iconphieukham));
-        listFunction.add(new Function(getResources().getString(R.string.kiem_tra), R.drawable.iconkiemtra));
+        listFunction.add(new Function(Constant.HO_SO, R.drawable.iconhoso));
+        listFunction.add(new Function(Constant.PHIEU_KHAM, R.drawable.iconphieukham));
+        listFunction.add(new Function(Constant.KIEM_TRA, R.drawable.iconkiemtra));
         adapter = new CustomAdapter(getApplicationContext(), R.layout.function, listFunction);
     }
 
@@ -132,6 +166,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if(itemId==R.id.nav_noti){
             Intent i = new Intent(MainActivity.this, screen_thongbao.class);
             startActivity(i);
+        }else if(itemId == R.id.nav_login){
+            Intent i = new Intent(MainActivity.this, LoginScreen.class);
+            startActivity(i);
+            Log.e("Click", "run");
         }
         return true;
     }
