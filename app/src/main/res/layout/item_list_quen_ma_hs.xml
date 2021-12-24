@@ -10,9 +10,6 @@
         android:textSize="15sp"
         android:text="Nữ"
         android:padding="10dp"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#102B3A"/>
+
 
 </LinearLayout>

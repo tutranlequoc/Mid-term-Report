@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screen_chuatungkham"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -38,6 +37,10 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -181,14 +184,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ấp, thôn, tổ, khóm, tên đường..."/>
+
+    </LinearLayout>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TẠO MỚI HỒ SƠ"
-            android:backgroundTint="#5CC0AB"
+            android:background="#5CC0AB"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
-    </LinearLayout>
+        </LinearLayout>
     </ScrollView>
-
 </LinearLayout>

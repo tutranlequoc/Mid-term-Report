@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screen_phuongthucthanhtoan"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/linearMethods">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -35,6 +36,11 @@
         android:text="Thanh toán bằng thẻ ATM nội địa/Internet banking"
         android:gravity="left"
         android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"/>
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:id="@+id/gvBanks"/>
     <Button
         android:id="@+id/btnThanhToanMomo"
         android:layout_width="match_parent"
