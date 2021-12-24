@@ -180,6 +180,15 @@ public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
 
     }
 
+    public void deleteDocument(String code){
+        SQLiteDatabase db = getWritableDatabase();
+        try{
+            queryExec("DELETE FROM " + TBL_NAME_HOSODATKHAM + " WHERE " + COL_CODE + " = " + code);
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+        }
+    }
+
     public Document getInForFromDocumentByCode(String code){
         SQLiteDatabase db = getReadableDatabase();
         try{
@@ -220,6 +229,8 @@ public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
         }
 
     }
+
+
 
     public void createDefaultUser(){
         if(getCount(TBL_NAME_USER) == 0){

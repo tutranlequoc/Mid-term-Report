@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void prepareDB() {
         Constant.database = new BenhVienSQLiteHelper(this);
-        Constant.database.createDefaultUser();
+//        Constant.database.createDefaultUser();
     }
 
     private void addEvents() {
