@@ -14,11 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppBenhVienLocal">
         <activity
+            android:name=".QRCode_Bhyt"
+            android:exported="true" >
+
+        </activity>
+        <activity
             android:name=".NhapMkMoi"
             android:exported="true" />
         <activity
             android:name=".ManHinhDangKy"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,9 +38,7 @@
             android:exported="true" />
         <activity
             android:name=".LoginScreen"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ManHinhNhapPassWord"
             android:exported="true" />
@@ -49,9 +52,7 @@
             android:exported="true" />
         <activity
             android:name=".KhaiBaoYTe"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".PhieuKhamBenh"
             android:exported="true" />
@@ -85,9 +86,7 @@
             android:exported="true" />
         <activity
             android:name=".ChonThongTinKham"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".screen_faq"
             android:exported="true" />
@@ -108,7 +107,9 @@
             android:exported="true" />
         <activity
             android:name=".OTPScreen"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".screen_hoso_moi"
             android:exported="true">
@@ -128,12 +129,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+
         <activity
             android:name=".GoiYTimMaBHYT"
             android:exported="true" />

@@ -96,61 +96,63 @@
         android:padding="10dp"
         >
 
-<!--        <EditText-->
-<!--            android:id="@+id/edtOtp1"-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:background="@drawable/rounded_edittext_otp"-->
-<!--            android:gravity="center"-->
-<!--            android:maxLength="1" />-->
-<!--        <EditText-->
-<!--            android:id="@+id/edtOtp2"-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:background="@drawable/rounded_edittext_otp"-->
-<!--            android:gravity="center"-->
-<!--            android:maxLength="1" />-->
-<!--        <EditText-->
-<!--            android:id="@+id/edtOtp3"-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:background="@drawable/rounded_edittext_otp"-->
-<!--            android:gravity="center"-->
-<!--            android:maxLength="1" />-->
-<!--        <EditText-->
-<!--            android:id="@+id/edtOtp4"-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:background="@drawable/rounded_edittext_otp"-->
-<!--            android:gravity="center"-->
-<!--            android:maxLength="1" />-->
-<!--        <EditText-->
-<!--            android:id="@+id/edtOtp5"-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:background="@drawable/rounded_edittext_otp"-->
-<!--            android:gravity="center"-->
-<!--            android:maxLength="1" />-->
-<!--        <EditText-->
-<!--            android:id="@+id/edtOtp6"-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:background="@drawable/rounded_edittext_otp"-->
-<!--            android:gravity="center"-->
-<!--            android:maxLength="1" />-->
         <EditText
-            android:id="@+id/edtCode"
-            android:layout_margin="10dp"
-            android:layout_width="match_parent"
+            android:id="@+id/edtOtp1"
+            android:layout_width="40dp"
             android:layout_height="40dp"
-            android:maxLength="6"
-            android:background="@drawable/rounded_edittext_otp"/>
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_otp"
+            android:gravity="center"
+            android:maxLength="1"
+            />
+        <EditText
+            android:id="@+id/edtOtp2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_otp"
+            android:gravity="center"
+            android:maxLength="1"
+           />
+        <EditText
+            android:id="@+id/edtOtp3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_otp"
+            android:gravity="center"
+            android:maxLength="1"
+            />
+        <EditText
+            android:id="@+id/edtOtp4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_otp"
+            android:gravity="center"
+            android:maxLength="1"
+            />
+
+        <EditText
+            android:id="@+id/edtOtp5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_otp"
+            android:gravity="center"
+            android:maxLength="1"
+            />
+
+        <EditText
+            android:id="@+id/edtOtp6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_otp"
+            android:gravity="center"
+            android:maxLength="1"
+            />
+
 
 
     </LinearLayout>
