@@ -13,10 +13,12 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.dialog.CustomDiaLogHoSo;
+import com.example.ultis.Constant;
 
 public class QuanLyHoSo extends AppCompatActivity {
 
     ImageButton btnDelete;
+    Button btnBackToMain, btnUpdate;
     CustomDiaLogHoSo customDiaLogHoSo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,11 @@ public class QuanLyHoSo extends AppCompatActivity {
         customDiaLogHoSo.getTxtXoa().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(QuanLyHoSo.this, "click", Toast.LENGTH_SHORT).show();
+                if(Constant.doc != null){
+                    Constant.database.deleteDocument(Constant.doc.getMaSo());
+                }
+                customDiaLogHoSo.dismiss();
+                finish();
             }
         });
 
@@ -55,9 +61,26 @@ public class QuanLyHoSo extends AppCompatActivity {
                 customDiaLogHoSo.show();
             }
         });
+        btnBackToMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent backToMain = new Intent(QuanLyHoSo.this, MainActivity.class);
+                startActivity(backToMain);
+            }
+        });
+
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toEditScreen = new Intent(QuanLyHoSo.this, screen_chuatungkham.class);
+                startActivity(toEditScreen);
+            }
+        });
     }
 
     private void linkViews() {
+        btnBackToMain = findViewById(R.id.btnBackToMain);
         btnDelete = findViewById(R.id.btnDelete);
+        btnUpdate = findViewById(R.id.btnUpdate);
     }
 }

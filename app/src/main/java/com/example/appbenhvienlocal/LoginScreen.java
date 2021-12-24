@@ -52,7 +52,7 @@ public class LoginScreen extends AppCompatActivity {
 
 
     private void linkView() {
-        spRegion= findViewById(R.id.spRegion);
+//        spRegion= findViewById(R.id.spRegion);
         btnContinue = findViewById(R.id.btnContinue);
         edtSdt = findViewById(R.id.edtSdt);
         txtLoi = findViewById(R.id.txtLoi);
@@ -64,7 +64,7 @@ public class LoginScreen extends AppCompatActivity {
         region.add(new Region(R.drawable.ukflag));
         region.add(new Region(R.drawable.usflag));
         adapter = new RegionAdapter(this,region);
-        spRegion.setAdapter(adapter);
+//        spRegion.setAdapter(adapter);
 
     }
 

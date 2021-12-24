@@ -27,7 +27,7 @@ public class Fill_Infor_Screen extends AppCompatActivity {
     }
 
     private void linkView() {
-        spRegion= findViewById(R.id.spRegion);
+
     }
 
     private void loadData() {

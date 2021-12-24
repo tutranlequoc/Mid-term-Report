@@ -27,7 +27,7 @@ public class NhapPassWordScreen extends AppCompatActivity {
     }
 
     private void linkView() {
-        spRegion= findViewById(R.id.spRegion);
+//        spRegion= findViewById(R.id.spRegion);
     }
 
     private void loadData() {
@@ -36,7 +36,7 @@ public class NhapPassWordScreen extends AppCompatActivity {
         region.add(new Region(R.drawable.ukflag));
         region.add(new Region(R.drawable.usflag));
         adapter = new RegionAdapter(this,region);
-        spRegion.setAdapter(adapter);
+//        spRegion.setAdapter(adapter);
 
     }
 }
