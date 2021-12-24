@@ -36,12 +36,6 @@
         <activity
             android:name=".LoginScreen"
             android:exported="true">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ManHinhNhapPassWord"
@@ -78,7 +72,9 @@
         </activity>
         <activity
             android:name=".ChonNgayKham"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".VuiLongChonGiokham"
             android:exported="true">
@@ -92,7 +88,9 @@
             android:exported="true" />
         <activity
             android:name=".ChonThongTinKham"
-            android:exported="true"></activity>
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".screen_faq"
             android:exported="true" />
@@ -135,7 +133,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity

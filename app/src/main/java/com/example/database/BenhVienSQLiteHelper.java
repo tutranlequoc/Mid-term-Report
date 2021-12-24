@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 
 import com.example.appbenhvienlocal.R;
 import com.example.function.HoSoDK;
+import com.example.models.Document;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -115,45 +116,109 @@ public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
 
     public int checkUserPhone(String phone){
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor =  db.rawQuery("SELECT * FROM " + TBL_NAME_USER + " WHERE " + COL_USER_PHONE + " =?", new String[]{phone});
-        return cursor.getCount();
+        try{
+            Cursor cursor =  db.rawQuery("SELECT * FROM " + TBL_NAME_USER + " WHERE " + COL_USER_PHONE + " =?", new String[]{phone});
+            return cursor.getCount();
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+            return -1;
+        }
+
     }
 
     public String getUserName(String phone){
         SQLiteDatabase db  = getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_USER + " WHERE " + COL_USER_PHONE + " =?", new String[]{phone});
-        cursor.moveToFirst();
-        return cursor.getString(1);
+        try{
+            Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_USER + " WHERE " + COL_USER_PHONE + " =?", new String[]{phone});
+            cursor.moveToFirst();
+            return cursor.getString(1);
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+            return "";
+        }
+
     }
 
     public int checkUserPhoneAndPass(String phone, String password){
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_USER + " WHERE " + COL_USER_PHONE + " =?" + " AND " + COL_PASSWORD + " =?", new String[]{phone,password});
-        return cursor.getCount();
+        try{
+            Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_USER + " WHERE " + COL_USER_PHONE + " =?" + " AND " + COL_PASSWORD + " =?", new String[]{phone,password});
+            return cursor.getCount();
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+            return -1;
+        }
+
     }
 
     public int getCount(String tableName){
         int count;
-        Cursor cursor = getData("SELECT * FROM " + tableName);
-        count = cursor.getCount();
-        cursor.close();
-        return count;
+        try{
+            Cursor cursor = getData("SELECT * FROM " + tableName);
+            count = cursor.getCount();
+            cursor.close();
+            return count;
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+            return -1;
+        }
     }
 
     public ArrayList<HoSoDK> getInForFromDocument(String phoneNumber){
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_HOSODATKHAM + " WHERE " + COL_USER_PHONE + " =?", new String[]{phoneNumber});
-        ArrayList<HoSoDK> documents = new ArrayList<>();
-        while (cursor.moveToNext()){
-            documents.add(new HoSoDK(cursor.getString(1), cursor.getString(2), cursor.getString(0), cursor.getString(14), cursor.getString(8)));
+        try{
+            Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_HOSODATKHAM + " WHERE " + COL_USER_PHONE + " =?", new String[]{phoneNumber});
+            ArrayList<HoSoDK> documents = new ArrayList<>();
+            while (cursor.moveToNext()){
+                documents.add(new HoSoDK(cursor.getString(1), cursor.getString(2), cursor.getString(0), cursor.getString(14), cursor.getString(8)));
+            }
+            return documents;
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+            return null;
         }
-        return documents;
+
+    }
+
+    public Document getInForFromDocumentByCode(String code){
+        SQLiteDatabase db = getReadableDatabase();
+        try{
+            Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_HOSODATKHAM + " WHERE " + COL_CODE + " =?", new String[]{code});
+            cursor.moveToFirst();
+            Document document = new Document();
+            document.setCode(cursor.getString(0));
+            document.setFullName(cursor.getString(1));
+            document.setDateOfBirth(cursor.getString(2));
+            document.setGender(cursor.getString(3));
+            document.setIdentity(cursor.getString(4));
+            document.setInsurance(cursor.getString(5));
+            document.setEthnic(cursor.getString(6));
+            document.setJob(cursor.getString(7));
+            document.setPhoneNumber_booking(cursor.getString(8));
+            document.setEmail(cursor.getString(9));
+            document.setCountry(cursor.getString(10));
+            document.setCity(cursor.getString(11));
+            document.setDistrict(cursor.getString(12));
+            document.setWard(cursor.getString(13));
+            document.setAddress(cursor.getString(14));
+            return document;
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+            return null;
+        }
+
     }
 
     public int checkExistDocument(String phoneNumber){
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_HOSODATKHAM + " WHERE " + COL_USER_PHONE + " =?", new String[]{phoneNumber});
-        return cursor.getCount();
+        try{
+            Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_HOSODATKHAM + " WHERE " + COL_USER_PHONE + " =?", new String[]{phoneNumber});
+            return cursor.getCount();
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+            return -1;
+        }
+
     }
 
     public void createDefaultUser(){
@@ -163,11 +228,6 @@ public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
         }
     }
 
-    public void createDefaultDoc(){
-        if(getCount(TBL_NAME_HOSODATKHAM) == 0){
-
-        }
-    }
 
     public boolean insertDataForDocuments(String code, String fullName, String dateOfBirth, String gender, String identity,
                                           String insurrance, String ethnic, String job, String phone_booking, String email, String country,
