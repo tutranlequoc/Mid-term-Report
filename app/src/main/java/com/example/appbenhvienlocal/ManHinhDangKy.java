@@ -67,7 +67,7 @@ public class ManHinhDangKy extends AppCompatActivity {
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
                         .setPhoneNumber("+84"+sdt)       // Phone number to verify
-                        .setTimeout(10L, TimeUnit.SECONDS) // Timeout and unit
+                        .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(this)                 // Activity (for callback binding)
                         .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                             @Override

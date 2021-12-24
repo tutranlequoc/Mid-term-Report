@@ -3,6 +3,7 @@
     package="com.example.appbenhvienlocal">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -13,6 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppBenhVienLocal">
+        <activity
+            android:name=".QRCode_Bhyt"
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".screen_phuongthucthanhtoan"
             android:exported="true" >
@@ -27,7 +33,7 @@
             android:exported="true" />
         <activity
             android:name=".ManHinhDangKy"
-            android:exported="true" >
+            android:exported="true">
 
         </activity>
         <activity
@@ -42,18 +48,20 @@
         </activity>
         <activity
             android:name=".ManHinhNhapPassWord"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".QuanLyHoSo"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".PhieuKhamBenhDaThanhToan"
             android:exported="true" />
         <activity
             android:name=".KhaiBaoYTe"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".PhieuKhamBenh"
             android:exported="true" />
@@ -68,13 +76,19 @@
             android:exported="true" />
         <activity
             android:name=".HoSoDatKham"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".ChonNgayKham"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".VuiLongChonGiokham"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".VuiLongChonDichVu"
             android:exported="true" />
@@ -109,7 +123,9 @@
             android:exported="true" />
         <activity
             android:name=".OTPScreen"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".screen_hoso_moi"
             android:exported="true">
@@ -119,28 +135,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".screen_phieukham"
-            android:exported="true" />
-        <activity
-            android:name=".screen_chuatungkham"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".screen_datungkham"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
 
     <activity
-        android:name=".GoiYTimMaBHYT"
+        android:name=".screen_phieukham"
+        android:exported="true" />
+    <activity
+        android:name=".screen_chuatungkham"
         android:exported="true">
 
     </activity>
+    <activity
+        android:name=".screen_datungkham"
+        android:exported="true" />
+    <activity
+        android:name=".MainActivity"
+        android:exported="true">
+
+    </activity>
+
+    <activity
+        android:name=".GoiYTimMaBHYT"
+        android:exported="true" />
     <activity
         android:name=".Fill_Infor_Screen"
         android:exported="true" />

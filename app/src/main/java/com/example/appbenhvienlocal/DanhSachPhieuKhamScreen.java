@@ -1,6 +1,9 @@
 package com.example.appbenhvienlocal;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +18,7 @@ public class DanhSachPhieuKhamScreen extends AppCompatActivity {
     ListView lvDanhSachPhieuKham;
     PhieuKhamAdapter adapter;
     ArrayList<Danhsachphieukham> phieuKhamList;
+    ImageButton btnNK;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +26,16 @@ public class DanhSachPhieuKhamScreen extends AppCompatActivity {
         linkView();
         initData();
         loadData();
+        addEvents();
+    }
+
+    private void addEvents() {
+        btnNK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void linkView() {
@@ -41,6 +55,7 @@ phieuKhamList.add(new Danhsachphieukham("AFGW421","ABC","11/11/2021","8:30 (Buá»
     private void loadData() {
  adapter = new PhieuKhamAdapter(DanhSachPhieuKhamScreen.this,R.layout.phieu_kham_layout,phieuKhamList);
 lvDanhSachPhieuKham.setAdapter(adapter);
+btnNK = findViewById(R.id.btnNK);
 
     }
 }

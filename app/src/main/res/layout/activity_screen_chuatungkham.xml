@@ -7,10 +7,16 @@
     tools:context=".screen_chuatungkham"
     android:orientation="vertical">
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarHoSo"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#5cc0ab">
         <LinearLayout
+        android:layout_height="?attr/actionBarSize"
+        android:background="#5CC0AB"
+            android:layout_width="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBarHoSo"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <Button
@@ -23,20 +29,163 @@
                 android:layout_marginLeft="10dp"
                 android:background="#5cc0ab"
                 />
+            <ImageButton
+                android:id="@+id/imgBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/back"
+                android:background="@android:color/transparent"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tạo mới hồ sơ"
-                android:layout_gravity="center"
+                android:textSize="18sp"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="22sp"/>
-
+                android:layout_gravity="center"
+                android:textStyle="bold"/>
+        </androidx.appcompat.widget.Toolbar>
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Họ và tên (có dấu)*"
+                    android:textStyle="bold"/>
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Tên người bệnh (có dấu)*"-->
+<!--                    android:textStyle="bold"/>-->
+<!--                <EditText-->
+<!--                    android:id="@+id/edtPatientName"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Tên người bệnh"-->
+<!--                    android:layout_marginBottom="20dp"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày sinh*"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Giới tính*"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CMND/Passport"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mã BHYT"
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/edtBHYT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mã bảo hiểm y tế"
+                    android:layout_marginBottom="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dân tộc*"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nghề nghiệp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Số điện thoại (có dấu)*"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:layout_marginBottom="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quốc gia"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/edtCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Quốc gia"
+                    android:layout_marginBottom="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tỉnh/ TP*"
+                    android:textStyle="bold"/>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quận/ Huyện*"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phường/ Xã*"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Địa chỉ*"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnCreateDoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TẠO MỚI HỒ SƠ"
+                android:background="#5CC0AB"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -195,4 +344,5 @@
             android:textStyle="bold"/>
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>

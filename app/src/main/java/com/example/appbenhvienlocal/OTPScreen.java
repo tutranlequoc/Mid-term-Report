@@ -5,8 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.provider.Settings;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -33,9 +38,10 @@ public class OTPScreen extends AppCompatActivity {
     public static final String TAG = OTPScreen.class.getName();
 
     TextView txtSdtOtp,txtSdtNumber,txtMoSMS,txtGuiLaiMa,txtNotMyPhone;
-    EditText edtOtp1,edtOtp2,edtOtp3,edtOtp4,edtOtp5,edtOtp6,edtCode;
+    EditText edtOtp1,edtOtp2,edtOtp3,edtOtp4,edtOtp5,edtOtp6;
     String sdt,mVerificationId;
     FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +49,15 @@ public class OTPScreen extends AppCompatActivity {
         setContentView(R.layout.activity_otpscreen);
 
         linkView();
+//
         getData();
         mAuth = FirebaseAuth.getInstance();
-
+        mAuth.getFirebaseAuthSettings().setAppVerificationDisabledForTesting(true);
+        CheckValue();
         addEvents();
 
     }
+
 
     private void linkView() {
         txtSdtOtp = findViewById(R.id.txtSdtOtp);
@@ -56,13 +65,13 @@ public class OTPScreen extends AppCompatActivity {
         txtMoSMS = findViewById(R.id.txtMoSMS);
         txtGuiLaiMa = findViewById(R.id.txtGuilaiMa);
         txtNotMyPhone = findViewById(R.id.txtNotMyPhone);
-//        edtOtp1 = findViewById(R.id.ed);
-//        edtOtp2 = findViewById(R.id.edtOtp2);
-//        edtOtp3 = findViewById(R.id.edtOtp3);
-//        edtOtp4 = findViewById(R.id.edtOtp4);
-//        edtOtp5 = findViewById(R.id.edtOtp5);
-//        edtOtp6 = findViewById(R.id.edtOtp6);
-        edtCode = findViewById(R.id.edtCode);
+        edtOtp1 = findViewById(R.id.edtOtp1);
+        edtOtp2 = findViewById(R.id.edtOtp2);
+        edtOtp3 = findViewById(R.id.edtOtp3);
+        edtOtp4 = findViewById(R.id.edtOtp4);
+        edtOtp5 = findViewById(R.id.edtOtp5);
+        edtOtp6 = findViewById(R.id.edtOtp6);
+
     }
 
     private void getData() {
@@ -96,6 +105,7 @@ public class OTPScreen extends AppCompatActivity {
 
                         txtGuiLaiMa.setText("Vui lòng thử lại sau " + timeConvert);
                         txtGuiLaiMa.setClickable(false);
+                        sendOTPAgain();
                     }
 
                     @Override
@@ -109,29 +119,165 @@ public class OTPScreen extends AppCompatActivity {
         txtNotMyPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(OTPScreen.this,LoginScreen.class);
-//                startActivity(intent);
-                String otpCode = edtCode.getText().toString();
-                sendOTPCode(otpCode);
+                Intent intent = new Intent(OTPScreen.this,LoginScreen.class);
+                startActivity(intent);
+
+            }
+        });
+        txtMoSMS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_APP_MESSAGING);
+                startActivity(intent);
             }
         });
     }
 
-//    private void verifyCode() {
-//        if (    edtOtp1.getText().toString()!=null
-//                &&edtOtp2.getText().toString()!=null
-//                &&edtOtp3.getText().toString()!= null
-//                &&edtOtp4.getText().toString()!= null
-//                &&edtOtp5.getText().toString()!=null
-//                &&edtOtp6.getText().toString()!=null
-//
-//        )
-//        {
-//            String otpCode = edtOtp1.getText().toString() + edtOtp2.getText().toString()
-//                    + edtOtp3.getText().toString() + edtOtp4.getText().toString() + edtOtp5.getText().toString() + edtOtp6.getText().toString()  ;
-//            sendOTPCode(otpCode);
-//        }
-//    }
+    private void sendOTPAgain() {
+        PhoneAuthOptions options =
+                PhoneAuthOptions.newBuilder(mAuth)
+                        .setPhoneNumber("+84"+sdt)       // Phone number to verify
+                        .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+                        .setActivity(this)                 // Activity (for callback binding)
+                        .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                            @Override
+                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+                                signInWithPhoneAuthCredential(phoneAuthCredential);
+                            }
+
+                            @Override
+                            public void onVerificationFailed(@NonNull FirebaseException e) {
+                                Toast.makeText(OTPScreen.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                            }
+                            public void onCodeSent(String verifycationID, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                                super.onCodeSent(verifycationID, forceResendingToken);
+
+                            }
+                        })          // OnVerificationStateChangedCallbacks
+                        .build();
+        PhoneAuthProvider.verifyPhoneNumber(options);
+    }
+
+    private void CheckValue(){
+
+        edtOtp1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (!edtOtp1.getText().toString().trim().isEmpty()){
+                    edtOtp2.requestFocus();
+
+                }
+            }
+        });
+        edtOtp2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (!edtOtp2.getText().toString().trim().isEmpty()){
+                    edtOtp3.requestFocus();
+
+                }
+            }
+        });
+        edtOtp3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (!edtOtp3.getText().toString().trim().isEmpty()){
+                    edtOtp4.requestFocus();
+
+                }
+            }
+        });
+        edtOtp4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (!edtOtp4.getText().toString().trim().isEmpty()){
+                    edtOtp5.requestFocus();
+
+                }
+            }
+        });
+        edtOtp5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (!edtOtp5.getText().toString().trim().isEmpty()){
+                    edtOtp6.requestFocus();
+
+                }
+            }
+        });
+        edtOtp6.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (!edtOtp6.getText().toString().trim().isEmpty()){
+                    String otpCode = edtOtp1.getText().toString() + edtOtp2.getText().toString()
+                            + edtOtp3.getText().toString() + edtOtp4.getText().toString() + edtOtp5.getText().toString() + edtOtp6.getText().toString()  ;
+                    sendOTPCode(otpCode);
+
+                }
+            }
+        });
+    }
 
     private void sendOTPCode(String otpCode) {
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId,otpCode);

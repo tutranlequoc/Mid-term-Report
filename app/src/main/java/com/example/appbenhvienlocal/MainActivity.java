@@ -108,10 +108,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     switch (function.getFunction()){
                         case Constant.HO_SO:
                             toFunctionScreen = new Intent(MainActivity.this, HoSoDatKham.class);
+                            toFunctionScreen.putExtra(Constant.REQUEST_TAG, Constant.REQUEST_CODE_FOR_DOCUMENT_FROM_MAIN);
                             startActivity(toFunctionScreen);
                             break;
                         case Constant.PHIEU_KHAM:
                             toFunctionScreen = new Intent(MainActivity.this, DanhSachPhieuKhamScreen.class);
+                            startActivity(toFunctionScreen);
+                            break;
+                        case Constant.KIEM_TRA:
+                            toFunctionScreen = new Intent(MainActivity.this, QRCode_Bhyt.class);
                             startActivity(toFunctionScreen);
                             break;
                     }
@@ -156,20 +161,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int itemId = item.getItemId();
         if(itemId==R.id.nav_paper)
         {
-            Intent i = new Intent(MainActivity.this, screen_hoso_moi.class);
+            Intent i;
+            if(Constant.user == null) {
+                i = new Intent(MainActivity.this, LoginScreen.class);
+                i.putExtra(Constant.REQUEST_TAG, Constant.REQUEST_CODE_FOR_LOGIN);
+            }else {
+                i = new Intent(MainActivity.this, HoSoDatKham.class);
+            }
             startActivity(i);
         }
         else if (itemId==R.id.nav_phieuKham) {
-            Intent i = new Intent(MainActivity.this, screen_phieukham.class);
+            Intent i;
+            if(Constant.user == null) {
+                i = new Intent(MainActivity.this, LoginScreen.class);
+                i.putExtra(Constant.REQUEST_TAG, Constant.REQUEST_CODE_FOR_LOGIN);
+            }else {
+                i = new Intent(MainActivity.this, screen_phieukham.class);
+            }
             startActivity(i);
         }
         else if(itemId==R.id.nav_noti){
             Intent i = new Intent(MainActivity.this, screen_thongbao.class);
             startActivity(i);
-        }else if(itemId == R.id.nav_login){
+        }else if (itemId == R.id.nav_login){
             Intent i = new Intent(MainActivity.this, LoginScreen.class);
             startActivity(i);
-            Log.e("Click", "run");
+        }else if (itemId == R.id.nav_policy){
+            Intent i = new Intent(MainActivity.this, screen_dieukhoan.class);
+            startActivity(i);
+        }else if (itemId == R.id.nav_faq){
+            Intent i = new Intent(MainActivity.this, screen_faq.class);
+            startActivity(i);
         }
         return true;
     }

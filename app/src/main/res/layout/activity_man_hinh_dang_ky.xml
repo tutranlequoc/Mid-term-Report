@@ -67,10 +67,11 @@
 
         >
 
-        <Spinner
-            android:id="@+id/spRegion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <ImageView
+
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/vietnam"/>
 
         <EditText
             android:id="@+id/edtSdtDKi"

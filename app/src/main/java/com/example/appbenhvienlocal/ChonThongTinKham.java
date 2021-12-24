@@ -22,6 +22,7 @@ import com.example.adapter.CustomAdapter;
 import com.example.function.Function;
 import com.example.function.ThongTin;
 import com.example.models.BackScreenClick;
+import com.example.models.CodePatient;
 import com.example.ultis.Constant;
 
 import java.util.ArrayList;
@@ -39,6 +40,8 @@ public class ChonThongTinKham extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chon_thong_tin_kham);
+
+
         Log.e("oncreate","run");
         linkViews();
         initData();
@@ -97,8 +100,9 @@ public class ChonThongTinKham extends AppCompatActivity {
         btnTTK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChonThongTinKham.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(ChonThongTinKham.this, MainActivity.class);
+//                startActivity(intent);
+                finish();
             }
         });
 
@@ -135,7 +139,6 @@ public class ChonThongTinKham extends AppCompatActivity {
 
         if(thongTin.get(thongTin.size() - 1).getResult().equals("")){
             btnTiepTuc.setClickable(false);
-            Toast.makeText(ChonThongTinKham.this, "Vui lòng chọn đủ thông tin", Toast.LENGTH_SHORT).show();
         }else if(!thongTin.get(thongTin.size()-1).getResult().equals("")){
             btnTiepTuc.setClickable(true);
             btnTiepTuc.setOnClickListener(new View.OnClickListener() {
