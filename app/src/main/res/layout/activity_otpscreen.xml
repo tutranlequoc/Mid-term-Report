@@ -104,6 +104,7 @@
             android:background="@drawable/rounded_edittext_otp"
             android:gravity="center"
             android:maxLength="1"
+            android:inputType="number"
             />
         <EditText
             android:id="@+id/edtOtp2"
@@ -113,6 +114,7 @@
             android:background="@drawable/rounded_edittext_otp"
             android:gravity="center"
             android:maxLength="1"
+            android:inputType="number"
            />
         <EditText
             android:id="@+id/edtOtp3"
@@ -122,6 +124,7 @@
             android:background="@drawable/rounded_edittext_otp"
             android:gravity="center"
             android:maxLength="1"
+            android:inputType="number"
             />
         <EditText
             android:id="@+id/edtOtp4"
@@ -131,6 +134,7 @@
             android:background="@drawable/rounded_edittext_otp"
             android:gravity="center"
             android:maxLength="1"
+            android:inputType="number"
             />
 
         <EditText
@@ -141,6 +145,7 @@
             android:background="@drawable/rounded_edittext_otp"
             android:gravity="center"
             android:maxLength="1"
+            android:inputType="number"
             />
 
         <EditText
@@ -151,6 +156,7 @@
             android:background="@drawable/rounded_edittext_otp"
             android:gravity="center"
             android:maxLength="1"
+            android:inputType="number"
             />
 
 

@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.provider.Settings;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -49,6 +52,7 @@ public class OTPScreen extends AppCompatActivity {
 //
         getData();
         mAuth = FirebaseAuth.getInstance();
+        mAuth.getFirebaseAuthSettings().setAppVerificationDisabledForTesting(true);
         CheckValue();
         addEvents();
 
@@ -101,6 +105,7 @@ public class OTPScreen extends AppCompatActivity {
 
                         txtGuiLaiMa.setText("Vui lòng thử lại sau " + timeConvert);
                         txtGuiLaiMa.setClickable(false);
+                        sendOTPAgain();
                     }
 
                     @Override
@@ -119,7 +124,41 @@ public class OTPScreen extends AppCompatActivity {
 
             }
         });
+        txtMoSMS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_APP_MESSAGING);
+                startActivity(intent);
+            }
+        });
     }
+
+    private void sendOTPAgain() {
+        PhoneAuthOptions options =
+                PhoneAuthOptions.newBuilder(mAuth)
+                        .setPhoneNumber("+84"+sdt)       // Phone number to verify
+                        .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+                        .setActivity(this)                 // Activity (for callback binding)
+                        .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                            @Override
+                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+                                signInWithPhoneAuthCredential(phoneAuthCredential);
+                            }
+
+                            @Override
+                            public void onVerificationFailed(@NonNull FirebaseException e) {
+                                Toast.makeText(OTPScreen.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                            }
+                            public void onCodeSent(String verifycationID, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                                super.onCodeSent(verifycationID, forceResendingToken);
+
+                            }
+                        })          // OnVerificationStateChangedCallbacks
+                        .build();
+        PhoneAuthProvider.verifyPhoneNumber(options);
+    }
+
     private void CheckValue(){
 
         edtOtp1.addTextChangedListener(new TextWatcher() {
