@@ -156,6 +156,7 @@
                     android:showDividers="middle">
 
                     <LinearLayout
+                        android:id="@+id/layoutPhone"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
@@ -179,6 +180,7 @@
                             android:minHeight="0dp"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/layoutZalo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
@@ -203,6 +205,7 @@
                             android:layout_gravity="center"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/layoutMap"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">

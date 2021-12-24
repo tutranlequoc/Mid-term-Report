@@ -28,9 +28,6 @@ import java.util.ArrayList;
 
 public class LoginScreen extends AppCompatActivity {
 
-    Spinner spRegion;
-    ArrayList<Region> region;
-    RegionAdapter adapter;
     Button btnContinue;
     EditText edtSdt;
     Intent intent;
@@ -43,7 +40,7 @@ public class LoginScreen extends AppCompatActivity {
         Constant.database = new BenhVienSQLiteHelper(this);
         Constant.database.createDefaultUser();
         linkView();
-        loadData();
+
         getData();
         addEvents();
 
@@ -52,21 +49,13 @@ public class LoginScreen extends AppCompatActivity {
 
 
     private void linkView() {
-        spRegion= findViewById(R.id.spRegion);
+
         btnContinue = findViewById(R.id.btnContinue);
         edtSdt = findViewById(R.id.edtSdt);
         txtLoi = findViewById(R.id.txtLoi);
     }
 
-    private void loadData() {
-        region = new ArrayList<>();
-        region.add(new Region(R.drawable.vietnam));
-        region.add(new Region(R.drawable.ukflag));
-        region.add(new Region(R.drawable.usflag));
-        adapter = new RegionAdapter(this,region);
-        spRegion.setAdapter(adapter);
 
-    }
 
     public Boolean checkFormatPhone(String phoneNumber){
         String reg = "^(0|\\+84)(\\s|\\.)?((3[2-9])|(5[689])|(7[06-9])|(8[1-689])|(9[0-46-9]))(\\d)(\\s|\\.)?(\\d{3})(\\s|\\.)?(\\d{3})$";

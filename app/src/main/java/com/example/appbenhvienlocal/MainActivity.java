@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -23,6 +24,7 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     //Spinner spinner;
     Button btnDatKham;
     ImageButton imgbtnZalo;
+    LinearLayout layoutPhone,layoutZalo, layoutMap;
 //    ArrayAdapter<String> spinnerAdapter= new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.spinner));
 
     private DrawerLayout drawerLayout;
@@ -90,6 +93,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //                Cài app trước
             }
         });
+        layoutPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:"+"19002115"));//change the number.
+                startActivity(callIntent);
+            }
+        });
+
+
 
     }
 
@@ -146,6 +159,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //spinner = findViewById(R.id.spinnerPhieuKham);
         btnDatKham = findViewById(R.id.btnDatKham);
         imgbtnZalo = findViewById(R.id.imbtnZalo);
+
+        layoutPhone = findViewById(R.id.layoutPhone);
+        layoutZalo = findViewById(R.id.layoutZalo);
+        layoutMap = findViewById(R.id.layoutMap);
 
 
     }

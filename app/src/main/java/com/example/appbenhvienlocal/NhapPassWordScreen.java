@@ -15,28 +15,18 @@ import java.util.ArrayList;
 
 public class NhapPassWordScreen extends AppCompatActivity {
 
-    Spinner spRegion;
-    ArrayList<Region> region;
-    RegionAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
         linkView();
-        loadData();
+
     }
 
     private void linkView() {
-        spRegion= findViewById(R.id.spRegion);
-    }
-
-    private void loadData() {
-        region = new ArrayList<>();
-        region.add(new Region(R.drawable.vietnam));
-        region.add(new Region(R.drawable.ukflag));
-        region.add(new Region(R.drawable.usflag));
-        adapter = new RegionAdapter(this,region);
-        spRegion.setAdapter(adapter);
 
     }
+
+
 }
