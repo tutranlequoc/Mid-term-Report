@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screen_dieukhoan"
-    android:orientation="vertical">
+    tools:context=".screen_xoahoso">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -15,7 +14,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="#5cc0ab">
             <Button
-                android:id="@+id/btnBackDK"
+                android:id="@+id/btnBackXacNhanTT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
@@ -23,15 +22,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Điều khoản dịch vụ"
+                android:text="Xác nhận thông tin"
                 android:textSize="25dp"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"/>
             <Button
-                android:id="@+id/btnBackHome"
+                android:id="@+id/btnXoaHoSo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableRight="@drawable/ic_baseline_home_24"
+                android:drawableRight="@drawable/ic_baseline_restore_from_trash_24"
                 android:background="#5cc0ab"/>
 
         </androidx.appcompat.widget.Toolbar>

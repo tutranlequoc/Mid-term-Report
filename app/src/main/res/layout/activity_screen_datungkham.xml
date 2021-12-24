@@ -10,20 +10,18 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#00a8c7">
-        <LinearLayout
+        android:background="#5cc0ab">
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="left">
+            android:layout_height="match_parent">
             <Button
                 android:paddingLeft="5dp"
                 android:id="@+id/imbBackDTK"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:drawableLeft="@drawable/ic_baseline_keyboard_backspace_24"
-                android:layout_marginRight="60dp"
-                android:background="#00a8c7"
+                android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+                android:scaleType="fitXY"
+                android:background="#5cc0ab"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -34,7 +32,7 @@
                 android:textStyle="bold"
                 android:textSize="22sp"/>
 
-        </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
     <com.google.android.material.tabs.TabLayout
@@ -51,14 +49,15 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="490dp">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
     </androidx.viewpager.widget.ViewPager>
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="TIẾP TỤC"
-        android:background="#109EEC"
+        android:background="#5cc0ab"
         android:textSize="22sp"/>
 
 </LinearLayout>
