@@ -17,17 +17,20 @@ import com.example.appbenhvienlocal.fragment.DanhSachHoSo;
 import com.example.appbenhvienlocal.fragment.KhongCoHoSo;
 import com.example.function.DichVu;
 import com.example.function.HoSoDK;
+import com.example.models.onItemFragmentClick;
 import com.example.ultis.Constant;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 
-public class HoSoDatKham extends AppCompatActivity {
+public class HoSoDatKham extends AppCompatActivity implements onItemFragmentClick {
 
     private ListView lvHoSo;
     CustomAdapter adapter;
     ImageButton btnBackHS, btnThem;
     private FragmentManager manager;
+    Intent changeScreen;
+    int code;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,16 @@ public class HoSoDatKham extends AppCompatActivity {
         linkViews();
         addEvents();
         replaceFragment();
+        getData();
+
+    }
+
+
+    private void getData() {
+       changeScreen = getIntent();
+       if(changeScreen != null){
+           code = changeScreen.getIntExtra(Constant.REQUEST_TAG, 0);
+       }
     }
 
     private void replaceFragment() {
@@ -95,5 +108,18 @@ public class HoSoDatKham extends AppCompatActivity {
     private void linkViews() {
         btnBackHS = findViewById(R.id.btnBackHS);
         btnThem = findViewById(R.id.btnBoVao);
+    }
+
+    @Override
+    public void click(HoSoDK doc) {
+        if(code == Constant.REQUEST_CODE_FOR_DOCUMENT_FROM_MAIN){
+            changeScreen = new Intent(HoSoDatKham.this, QuanLyHoSo.class);
+            Constant.doc = doc;
+            startActivity(changeScreen);
+        }else {
+            changeScreen = new Intent(HoSoDatKham.this, XacNhanThongTin.class);
+            Constant.doc = doc;
+            startActivity(changeScreen);
+        }
     }
 }

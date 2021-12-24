@@ -121,10 +121,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     switch (function.getFunction()){
                         case Constant.HO_SO:
                             toFunctionScreen = new Intent(MainActivity.this, HoSoDatKham.class);
+                            toFunctionScreen.putExtra(Constant.REQUEST_TAG, Constant.REQUEST_CODE_FOR_DOCUMENT_FROM_MAIN);
                             startActivity(toFunctionScreen);
                             break;
                         case Constant.PHIEU_KHAM:
                             toFunctionScreen = new Intent(MainActivity.this, DanhSachPhieuKhamScreen.class);
+                            startActivity(toFunctionScreen);
+                            break;
+                        case Constant.KIEM_TRA:
+                            toFunctionScreen = new Intent(MainActivity.this, QRCode_Bhyt.class);
                             startActivity(toFunctionScreen);
                             break;
                     }
