@@ -18,6 +18,15 @@
             android:name=".QRCode_Bhyt"
             android:exported="true"></activity>
         <activity
+            android:name=".screen_phuongthucthanhtoan"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".screen_xoahoso"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".NhapMkMoi"
             android:exported="true" />
         <activity
@@ -88,13 +97,16 @@
             android:exported="true" />
         <activity
             android:name=".screen_dieukhoan"
-            android:exported="true" />
+            android:exported="true">
+        </activity>
         <activity
             android:name=".screen_thongbao"
             android:exported="true" />
         <activity
             android:name=".screen_thongtinthanhtoan"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
@@ -125,5 +137,5 @@
             android:name=".Fill_Infor_Screen"
             android:exported="true" />
     </application>
-
+       
 </manifest>

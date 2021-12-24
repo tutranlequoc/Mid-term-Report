@@ -68,8 +68,8 @@
         android:orientation="horizontal"
 
         >
-        <ImageView
-
+        <Spinner
+            android:id="@+id/spRegion"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:src="@drawable/vietnam"/>
