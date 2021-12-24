@@ -12,10 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.models.User;
 import com.example.ultis.Constant;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class ManHinhNhapPassWord extends AppCompatActivity {
 
-    TextView txtSdt,txtDangKi,txtQuenMk;
+    TextView txtSdt,txtDangKi,txtQuenMk,txtSaiMk;
     EditText edtPass;
     Intent intent;
     Button btnLogin;
@@ -33,6 +34,7 @@ public class ManHinhNhapPassWord extends AppCompatActivity {
     private void linkView() {
         txtSdt = findViewById(R.id.txtSdt);
         txtDangKi = findViewById(R.id.txtDangKi);
+        txtSaiMk = findViewById(R.id.txtSaiMk);
         txtQuenMk = findViewById(R.id.txtQuenMK);
         btnLogin = findViewById(R.id.btnLogin);
         edtPass = findViewById(R.id.edtPass);
@@ -67,11 +69,15 @@ public class ManHinhNhapPassWord extends AppCompatActivity {
                             finish();
                         }
                     }else {
-                        Toast.makeText(ManHinhNhapPassWord.this, "Sai mật khâu", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(ManHinhNhapPassWord.this, "Sai mật khâu", Toast.LENGTH_SHORT).show();
+                        txtSaiMk.setText("Sai mật khẩu");
+                        txtSaiMk.setVisibility(View.VISIBLE);
                     }
 
                 }else if(pass.equals("")){
-                    Toast.makeText(ManHinhNhapPassWord.this,"Vui lòng nhập mật khẩu", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(ManHinhNhapPassWord.this,"Vui lòng nhập mật khẩu", Toast.LENGTH_SHORT).show();
+                    txtSaiMk.setText("Vui lòng nhập mật khẩu");
+                    txtSaiMk.setVisibility(View.VISIBLE);
                 }
 
             }
@@ -91,5 +97,11 @@ public class ManHinhNhapPassWord extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        txtSaiMk.setVisibility(View.GONE);
     }
 }
