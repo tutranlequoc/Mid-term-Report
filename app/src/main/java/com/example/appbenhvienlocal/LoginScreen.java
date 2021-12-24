@@ -96,7 +96,7 @@ public class LoginScreen extends AppCompatActivity {
                         intent = new Intent(LoginScreen.this, ManHinhNhapPassWord.class);
 
                     }else {
-                        intent = new Intent(LoginScreen.this, Fill_Infor_Screen.class);
+                        intent = new Intent(LoginScreen.this, OTPScreen.class);
                     }
                     intent.putExtra(Constant.PHONE_NUMBER, phone);
                     if(REQUEST_CODE_FOR_LOGIN != 0){
@@ -106,8 +106,6 @@ public class LoginScreen extends AppCompatActivity {
                     }else {
                         startActivity(intent);
                     }
-
-
                 }
             }
         });

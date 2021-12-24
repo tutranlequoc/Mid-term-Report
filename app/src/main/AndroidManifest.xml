@@ -44,7 +44,9 @@
             android:exported="true" />
         <activity
             android:name=".QuanLyHoSo"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".PhieuKhamBenhDaThanhToan"
             android:exported="true" />
@@ -65,13 +67,17 @@
             android:exported="true" />
         <activity
             android:name=".HoSoDatKham"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".ChonNgayKham"
             android:exported="true" />
         <activity
             android:name=".VuiLongChonGiokham"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".VuiLongChonDichVu"
             android:exported="true" />
@@ -106,13 +112,17 @@
         </activity>
         <activity
             android:name=".screen_hoso_moi"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".screen_phieukham"
             android:exported="true" />
         <activity
             android:name=".screen_chuatungkham"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".screen_datungkham"
             android:exported="true" />
