@@ -1,6 +1,8 @@
 package com.example.ultis;
 
 import com.example.database.BenhVienSQLiteHelper;
+import com.example.function.HoSoDK;
+import com.example.models.Document;
 import com.example.models.User;
 
 import java.time.LocalDate;
@@ -28,4 +30,7 @@ public class Constant {
     public static final String KIEM_TRA = "Kiểm tra";
     public static User user;
     public static int REQUEST_CODE_FOR_LOGIN = 8;
+    public static int REQUEST_CODE_FOR_DOCUMENT_FROM_MAIN = 10;
+    public static HoSoDK doc;
+    public static Document document;
 }

@@ -139,7 +139,6 @@ public class ChonThongTinKham extends AppCompatActivity {
 
         if(thongTin.get(thongTin.size() - 1).getResult().equals("")){
             btnTiepTuc.setClickable(false);
-            Toast.makeText(ChonThongTinKham.this, "Vui lòng chọn đủ thông tin", Toast.LENGTH_SHORT).show();
         }else if(!thongTin.get(thongTin.size()-1).getResult().equals("")){
             btnTiepTuc.setClickable(true);
             btnTiepTuc.setOnClickListener(new View.OnClickListener() {
@@ -151,7 +150,6 @@ public class ChonThongTinKham extends AppCompatActivity {
                         startActivity(toLogin);
                     }else {
                         Intent toHoSoDK = new Intent(ChonThongTinKham.this, HoSoDatKham.class);
-                        toHoSoDK.putExtra(Constant.REQUEST_TAG, Constant.REQUEST_CODE_FOR_LOGIN);
                         startActivity(toHoSoDK);
                     }
 

@@ -97,9 +97,9 @@
             android:padding="5dp"
             android:gravity="center">
             <TextView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background= "@drawable/round_txt_blue"/>
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background= "@drawable/round_txt_blue" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -115,8 +115,8 @@
             android:padding="5dp"
             android:gravity="center">
             <TextView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:background= "@drawable/round_txt"/>
 
             <TextView

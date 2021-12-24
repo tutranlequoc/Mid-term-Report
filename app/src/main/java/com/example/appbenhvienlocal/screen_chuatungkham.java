@@ -59,30 +59,38 @@ public class screen_chuatungkham extends AppCompatActivity {
                 String dateOfBirth = edtDateofBirth.getText().toString();
                 String phone_booking = edtPhoneNumber.getText().toString();
                 ArrayList<String> blankField = new ArrayList<>();
+                String email = edtEmail.getText().toString();
                 if(gender.equals("")||province.equals("")||district == null||ward == null||
                    fullName.equals("")||dateOfBirth.equals("")||phone_booking.equals("")||nation.equals("")){
                     Toast.makeText(screen_chuatungkham.this,"Vui lòng nhập đủ các ô bắt buộc", Toast.LENGTH_SHORT).show();
                 }else {
-                    if(checkFormatPhone(phone_booking)&&checkFormatDate(dateOfBirth)){
-                        Constant.database.insertDataForDocuments(CodePatient.createCode(phone_booking), fullName, dateOfBirth, gender,
-                                edtIDNumberPassport.getText().toString(),edtBHYT.getText().toString(), nation, job, phone_booking,
-                                edtEmail.getText().toString(), edtCountry.getText().toString(),
-                                province, district, ward, edtAddress.getText().toString(), Constant.user.getPhone());
+                    if(!email.equals("")){
+                        if(checkFormatEmail(email)){
+                            if(checkFormatPhone(phone_booking)&&checkFormatDate(dateOfBirth)){
+                                Constant.database.insertDataForDocuments(CodePatient.createCode(phone_booking), fullName, dateOfBirth, gender,
+                                        edtIDNumberPassport.getText().toString(),edtBHYT.getText().toString(), nation, job, phone_booking,
+                                        edtEmail.getText().toString(), edtCountry.getText().toString(),
+                                        province, district, ward, edtAddress.getText().toString(), Constant.user.getPhone());
 
-                        Dialog dialog = new Dialog(screen_chuatungkham.this);
-                        dialog.setContentView(R.layout.custom_dialog_tao_ho_so_thanh_cong);
-                        Window window = dialog.getWindow();
-                        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
-                        dialog.findViewById(R.id.txtAgree).setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                finish();
+                                Dialog dialog = new Dialog(screen_chuatungkham.this);
+                                dialog.setContentView(R.layout.custom_dialog_tao_ho_so_thanh_cong);
+                                Window window = dialog.getWindow();
+                                window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+                                dialog.findViewById(R.id.txtAgree).setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        finish();
+                                    }
+                                });
+                                dialog.show();
+                            }else {
+                                Toast.makeText(screen_chuatungkham.this, "Vui lòng kiểm tra lại định dạng ngày sinh hoặc số điện thoại",Toast.LENGTH_SHORT).show();
                             }
-                        });
-                        dialog.show();
-                    }else {
-                        Toast.makeText(screen_chuatungkham.this, "Vui lòng kiểm tra lại định dạng ngày sinh hoặc số điện thoại",Toast.LENGTH_SHORT).show();
+                        }else {
+                            Toast.makeText(screen_chuatungkham.this, "Vui lòng kiểm tra lại định dạng email",Toast.LENGTH_SHORT).show();
+                        }
                     }
+
                 }
             }
         });
@@ -250,6 +258,12 @@ public class screen_chuatungkham extends AppCompatActivity {
     public Boolean checkFormatDate(String date){
         String reg = "^([0-2][0-9]|(3)[0-1])(\\/)(((0)[0-9])|((1)[0-2]))(\\/)\\d{4}$";
         boolean flag = date.matches(reg);
+        return flag;
+    }
+
+    public Boolean checkFormatEmail(String email){
+        String reg = "^[a-z][a-z0-9_\\.]{5,32}@[a-z0-9]{2,}(?:\\.[a-z0-9]{2,4}){1,2}$";
+        boolean flag = email.matches(reg);
         return flag;
     }
 

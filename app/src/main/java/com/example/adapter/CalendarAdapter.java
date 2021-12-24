@@ -54,14 +54,29 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
         }
         else {
             holder.txtDate.setText(String.valueOf(date.getDayOfMonth()));
-            holder.txtDate.setTextColor(Color.parseColor("#D1C2C2"));
+            holder.txtDate.setTextColor(Color.parseColor("#E5E5E5"));
             if(date.equals(LocalDate.now())){
                 holder.txtDate.setBackgroundResource(R.drawable.calendar_round_day);
                 holder.txtDate.setTextColor(Color.parseColor("#FFFFFF"));
             }
             if(date.getDayOfWeek() == DayOfWeek.SUNDAY){
-                holder.txtDate.setTextColor(Color.parseColor("#E40808"));
+                holder.txtDate.setTextColor(Color.parseColor("#FF0000"));
             }
+
+            ArrayList<LocalDate> holidays = new ArrayList<>();
+            holidays.add(LocalDate.of(0, 4, 30));
+            holidays.add(LocalDate.of(0,9,2));
+            holidays.add(LocalDate.of(0,5,1));
+            holidays.add(LocalDate.of(0,1,1));
+
+            for (LocalDate holiday: holidays) {
+                if(date.getDayOfMonth()== holiday.getDayOfMonth() && date.getMonth() == date.getMonth()){
+                    holder.txtDate.setTextColor(Color.parseColor("#0038FF"));
+                    break;
+                }
+            }
+
+
             LocalDate fiveWeeksAfter = LocalDate.now().plusDays(31);
             int plusDay = fiveWeeksAfter.getDayOfWeek().getValue();
 //            if(plusDay >=1 && plusDay <= 5)
