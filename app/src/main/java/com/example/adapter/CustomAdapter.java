@@ -206,14 +206,14 @@ public class CustomAdapter extends ArrayAdapter {
                 if(isEnabled(position))
                 {
                     holder.txtThongTin.setTypeface(holder.txtThongTin.getTypeface(), Typeface.BOLD);
-                    holder.txtThongTin.setTextColor(Color.parseColor("#00a8c7"));
+                    holder.txtThongTin.setTextColor(Color.parseColor("#5CC0AB"));
                 }
                 if(!t.getResult().equals("")){
                     ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) holder.txtKetQua.getLayoutParams();
                     params.height = ViewGroup.MarginLayoutParams.WRAP_CONTENT;
                     params.topMargin = 10;
                     holder.txtKetQua.setLayoutParams(params);
-                    holder.txtKetQua.setTextColor(Color.parseColor("#00a8c7"));
+                    holder.txtKetQua.setTextColor(Color.parseColor("#5CC0AB"));
                     holder.txtThongTin.setTypeface(null, Typeface.NORMAL);
                     holder.txtThongTin.setTextColor(Color.parseColor("#000000"));
                 }

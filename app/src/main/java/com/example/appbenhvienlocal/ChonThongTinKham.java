@@ -22,6 +22,7 @@ import com.example.adapter.CustomAdapter;
 import com.example.function.Function;
 import com.example.function.ThongTin;
 import com.example.models.BackScreenClick;
+import com.example.models.CodePatient;
 import com.example.ultis.Constant;
 
 import java.util.ArrayList;
@@ -39,6 +40,8 @@ public class ChonThongTinKham extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chon_thong_tin_kham);
+
+
         Log.e("oncreate","run");
         linkViews();
         initData();
@@ -97,8 +100,9 @@ public class ChonThongTinKham extends AppCompatActivity {
         btnTTK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChonThongTinKham.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(ChonThongTinKham.this, MainActivity.class);
+//                startActivity(intent);
+                finish();
             }
         });
 
@@ -147,6 +151,7 @@ public class ChonThongTinKham extends AppCompatActivity {
                         startActivity(toLogin);
                     }else {
                         Intent toHoSoDK = new Intent(ChonThongTinKham.this, HoSoDatKham.class);
+                        toHoSoDK.putExtra(Constant.REQUEST_TAG, Constant.REQUEST_CODE_FOR_LOGIN);
                         startActivity(toHoSoDK);
                     }
 

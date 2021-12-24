@@ -75,7 +75,7 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
                 //logic db lấy từ hồ sơ đặt khám nếu getcount trong ngày đó số bệnh nhân đã full thì thôi
                 //mỗi khung giờ 5-10 bệnh nhân --> 1 ngày có 6 khung giờ -->getcount lớn hơn 60 là out date
                 holder.txtDate.setClickable(true);
-                holder.txtDate.setTextColor(Color.parseColor("#00a8c7"));
+                holder.txtDate.setTextColor(Color.parseColor("#5CC0AB"));
                 holder.txtDate.setTypeface(holder.txtDate.getTypeface(), Typeface.BOLD);
             }
 
