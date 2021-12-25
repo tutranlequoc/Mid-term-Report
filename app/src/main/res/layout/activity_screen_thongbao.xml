@@ -10,7 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#00a8c7">
+        android:background="#5cc0ab">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -24,7 +24,7 @@
                 android:drawableLeft="@drawable/ic_baseline_keyboard_backspace_24"
                 android:layout_marginRight="80dp"
                 android:layout_gravity="left"
-                android:backgroundTint="#00a8c7"/>
+                android:backgroundTint="#5cc0ab"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

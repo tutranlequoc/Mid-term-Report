@@ -25,8 +25,8 @@ public class NhapPassWordScreen extends AppCompatActivity {
     }
 
     private void linkView() {
-
     }
+
 
 
 }

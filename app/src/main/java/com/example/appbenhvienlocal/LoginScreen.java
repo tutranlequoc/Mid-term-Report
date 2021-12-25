@@ -38,7 +38,7 @@ public class LoginScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
         Constant.database = new BenhVienSQLiteHelper(this);
-        Constant.database.createDefaultUser();
+//        Constant.database.createDefaultUser();
         linkView();
 
         getData();
@@ -49,7 +49,6 @@ public class LoginScreen extends AppCompatActivity {
 
 
     private void linkView() {
-
         btnContinue = findViewById(R.id.btnContinue);
         edtSdt = findViewById(R.id.edtSdt);
         txtLoi = findViewById(R.id.txtLoi);

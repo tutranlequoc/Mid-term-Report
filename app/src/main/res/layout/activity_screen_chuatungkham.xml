@@ -69,17 +69,6 @@
                     android:layout_height="wrap_content"
                     android:hint="Họ và chữ lót"
                     android:layout_marginBottom="20dp"/>
-<!--                <TextView-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Tên người bệnh (có dấu)*"-->
-<!--                    android:textStyle="bold"/>-->
-<!--                <EditText-->
-<!--                    android:id="@+id/edtPatientName"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="Tên người bệnh"-->
-<!--                    android:layout_marginBottom="20dp"/>-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

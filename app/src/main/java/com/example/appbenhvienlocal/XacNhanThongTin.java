@@ -40,7 +40,8 @@ public class XacNhanThongTin extends AppCompatActivity {
         btnDatKham.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(XacNhanThongTin.this, screen_phuongthucthanhtoan.class);
+                startActivity(intent);
             }
         });
     }

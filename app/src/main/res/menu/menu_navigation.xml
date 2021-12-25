@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:drawable="@drawable/navigation_background">
+    >
     <group android:checkableBehavior="single"
         android:id="@+id/groupButton">
     <item android:id="@+id/nav_login"
-        android:title="Đăng nhập ngay:"
-        app:actionLayout="@layout/button_dangnhap"
+        android:title="ĐĂNG NHẬP"
+        app:itemBackground="@drawable/login_out_background"
+        app:itemTextColor="#FFA000"
+        android:icon="@drawable/login"
         app:showAsAction="ifRoom"/>
     </group> 
     <group android:checkableBehavior="single"
         android:id="@+id/group1">
         <item android:id="@+id/nav_paper"
             android:title="@string/ho_so"
-            android:icon="@drawable/ic_baseline_addchart_24"/>
+            android:icon="@drawable/hoso"/>
         <item android:id="@+id/nav_phieuKham"
             android:title="@string/phieu_kham"
             android:icon="@drawable/ic_baseline_addchart_24"/>
@@ -29,7 +31,7 @@
             android:icon="@drawable/dieukhoan"/>
         <item android:id="@+id/nav_regu"
             android:title="Quy định"
-            android:icon="@drawable/dieukhoan"/>
+            android:icon="@drawable/quydinh"/>
         <item android:id="@+id/nav_faq"
             android:icon="@drawable/faq"
             android:title="Câu hỏi thường gặp"/>

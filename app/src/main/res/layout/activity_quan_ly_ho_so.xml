@@ -391,6 +391,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
         <Button
+            android:id="@+id/btnBackToMain"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/round_button"
@@ -400,6 +401,7 @@
             android:layout_weight="1"
             android:layout_marginRight="0.5dp"/>
         <Button
+            android:id="@+id/btnUpdate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/round_button"

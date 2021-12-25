@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void prepareDB() {
         Constant.database = new BenhVienSQLiteHelper(this);
-        Constant.database.createDefaultUser();
+//        Constant.database.createDefaultUser();
     }
 
     private void addEvents() {
@@ -83,16 +83,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        imgbtnZalo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Intent intent = getPackageManager().getLaunchIntentForPackage("com.zalo");
-//                if(intent != null){
-//                    startActivity(intent);
-//                }
-//                Cài app trước
-            }
-        });
+
         layoutPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -163,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //spinner = findViewById(R.id.spinnerPhieuKham);
         btnDatKham = findViewById(R.id.btnDatKham);
-        imgbtnZalo = findViewById(R.id.imbtnZalo);
+
 
         layoutPhone = findViewById(R.id.layoutPhone);
         layoutZalo = findViewById(R.id.layoutZalo);
@@ -199,6 +190,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if(itemId==R.id.nav_noti){
             Intent i = new Intent(MainActivity.this, screen_thongbao.class);
+            startActivity(i);
+        }else if (itemId == R.id.nav_login){
+            Intent i = new Intent(MainActivity.this, LoginScreen.class);
+            i.putExtra(Constant.REQUEST_TAG, Constant.REQUEST_CODE_FOR_LOGIN);
+            startActivity(i);
+        }else if (itemId == R.id.nav_policy){
+            Intent i = new Intent(MainActivity.this, screen_dieukhoan.class);
+            startActivity(i);
+        }else if (itemId == R.id.nav_faq){
+            Intent i = new Intent(MainActivity.this, screen_faq.class);
             startActivity(i);
         }
         return true;

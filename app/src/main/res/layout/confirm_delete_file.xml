@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/navigation_background"
+    android:layout_margin="40dp">
+
+    <TextView
+        android:id="@+id/txtXacNhan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XÁC NHẬN"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/txtBanCoMuon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bạn có muốn xóa hồ sơ này không?"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"/>
+    <View android:id="@+id/deleteFileLineTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnCancelDelete"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Hủy"
+            android:textSize="18sp"
+            android:textColor="#A1AFBC"
+            android:background="@drawable/navigation_background"
+            android:textStyle="bold"/>
+        <View
+            android:id="@+id/deleteFileDivider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@color/black"
+            />
+        <Button
+            android:id="@+id/btnAgreeDelete"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Xóa"
+            android:textSize="18sp"
+            android:textColor="#73E113"
+            android:background="@drawable/navigation_background"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>

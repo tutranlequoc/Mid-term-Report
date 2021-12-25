@@ -70,7 +70,7 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
             holidays.add(LocalDate.of(0,1,1));
 
             for (LocalDate holiday: holidays) {
-                if(date.getDayOfMonth()== holiday.getDayOfMonth() && date.getMonth() == date.getMonth()){
+                if(date.getDayOfMonth()== holiday.getDayOfMonth() && date.getMonth() == holiday.getMonth()){
                     holder.txtDate.setTextColor(Color.parseColor("#0038FF"));
                     break;
                 }

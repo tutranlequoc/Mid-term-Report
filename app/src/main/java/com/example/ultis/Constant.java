@@ -33,4 +33,17 @@ public class Constant {
     public static int REQUEST_CODE_FOR_DOCUMENT_FROM_MAIN = 10;
     public static HoSoDK doc;
     public static Document document;
+    public static final String DATABASE_NAME_ADMINISTRATIVE_UNITS = "dvhcvn.db";
+    public static final String DB_PATH_SUFFIX = "/databases/";
+    public static final String TBL_NAME_PROVINCE = "province";
+    public static final String PROVINCE_ID = "id";
+    public static final String PROVINCE_NAME = "name";
+    public static final String TBL_NAME_DISTRICT = "district";
+    public static final String DISTRICT_ID = "id";
+    public static final String DISTRICT_NAME = "name";
+    public static final String DISTRICT_PROVINCE_ID = "province_id";
+    public static final String TBL_NAME_WARD = "ward";
+    public static final String WARD_NAME = "name";
+    public static final String WARE_DISTRICT_ID = "district_id";
+
 }
