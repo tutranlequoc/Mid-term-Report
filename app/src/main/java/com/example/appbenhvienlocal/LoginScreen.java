@@ -49,7 +49,6 @@ public class LoginScreen extends AppCompatActivity {
 
 
     private void linkView() {
-
         btnContinue = findViewById(R.id.btnContinue);
         edtSdt = findViewById(R.id.edtSdt);
         txtLoi = findViewById(R.id.txtLoi);

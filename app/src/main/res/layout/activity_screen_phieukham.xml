@@ -10,8 +10,8 @@
 <com.google.android.material.appbar.AppBarLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#00a8c7">
-    <LinearLayout
+    android:background="#5cc0ab">
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
@@ -21,20 +21,20 @@
             android:id="@+id/btnBackPhieuKham"
             android:layout_width="40dp"
             android:layout_height="45dp"
-            android:drawableLeft="@drawable/ic_baseline_keyboard_backspace_24"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
             android:layout_marginRight="50dp"
             android:layout_gravity="center"
-            android:backgroundTint="#00a8c7"/>
+            android:backgroundTint="#5cc0ab"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Danh sách Phiếu khám"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:layout_gravity="center"
             android:layout_marginRight="60dp"/>
-    </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
 </com.google.android.material.appbar.AppBarLayout>
     <Spinner

@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void prepareDB() {
         Constant.database = new BenhVienSQLiteHelper(this);
-        Constant.database.createDefaultUser();
+//        Constant.database.createDefaultUser();
     }
 
     private void addEvents() {
@@ -190,6 +190,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if(itemId==R.id.nav_noti){
             Intent i = new Intent(MainActivity.this, screen_thongbao.class);
+            startActivity(i);
+        }else if (itemId == R.id.nav_login){
+            Intent i = new Intent(MainActivity.this, LoginScreen.class);
+            startActivity(i);
+        }else if (itemId == R.id.nav_policy){
+            Intent i = new Intent(MainActivity.this, screen_dieukhoan.class);
+            startActivity(i);
+        }else if (itemId == R.id.nav_faq){
+            Intent i = new Intent(MainActivity.this, screen_faq.class);
             startActivity(i);
         }
         return true;

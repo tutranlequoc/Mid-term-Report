@@ -37,7 +37,6 @@ public class Fill_Infor_Screen extends AppCompatActivity {
         edtNhapMk = findViewById(R.id.edtNhapMK);
         edtXacNhanMk = findViewById(R.id.edtXacNhanMk);
         btnDangKi = findViewById(R.id.btnDangKiFinal);
-
     }
 
     private void addEvents() {

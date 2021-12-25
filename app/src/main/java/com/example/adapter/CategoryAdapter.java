@@ -21,6 +21,7 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
         super(context, resource, objects);
     }
 
+
     //set layout cho phần item chọn từ spinner
     @NonNull
     @Override
