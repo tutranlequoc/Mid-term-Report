@@ -27,9 +27,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Danh sách phiếu khám"
-            android:textSize="18sp"
-            android:textColor="@color/white"
+            android:text="Danh sách Phiếu khám"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
             android:layout_gravity="center"
             android:textStyle="bold"/>
     </androidx.appcompat.widget.Toolbar>

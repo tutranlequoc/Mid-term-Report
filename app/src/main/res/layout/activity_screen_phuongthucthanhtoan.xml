@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".screen_phuongthucthanhtoan"
     android:orientation="vertical"
-    android:id="@+id/linearMethods">
+    android:id="@+id/linearMethods"
+    android:weightSum="12">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -54,7 +55,10 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        android:horizontalSpacing="0dp"
+        android:horizontalSpacing="30dp"
+        android:paddingHorizontal="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
        />
     <Button
         android:id="@+id/btnThanhToanMomo"

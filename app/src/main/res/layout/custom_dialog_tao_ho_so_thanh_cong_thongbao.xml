@@ -48,7 +48,7 @@
             android:layout_weight="1"
             android:text="Đồng ý"
             android:textStyle="bold"
-            android:textColor="@color/MainColor"
+            android:textColor="#5CC0AB"
             android:textSize="20sp"
             android:gravity="center"
             android:padding="15dp"/>

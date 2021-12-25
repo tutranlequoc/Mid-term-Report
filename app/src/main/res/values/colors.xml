@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green_layout">#665CC0AB</color>
+    <color name="main_color">#5CC0AB</color>
     <color name="MainColor">#5CC0AB</color>
     <color name="BackgroundColor">#E5E5E5</color>
     <color name="Red">#FF0000</color>
@@ -33,7 +34,6 @@
     <color name="color_805CC0AB">#805CC0AB</color>
     <color name="color_067E72">#067E72</color>
     <color name="color_A19F9F">#A19F9F</color>
-
 
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
 
