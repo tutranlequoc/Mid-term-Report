@@ -32,6 +32,7 @@ import android.widget.Toast;
 import com.example.adapter.CustomAdapter;
 import com.example.database.BenhVienSQLiteHelper;
 import com.example.function.Function;
+import com.example.models.BookingInfor;
 import com.example.ultis.Constant;
 import com.google.android.material.navigation.NavigationView;
 
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void prepareDB() {
         Constant.database = new BenhVienSQLiteHelper(this);
+        Constant.bookingInfor = new BookingInfor();
 //        Constant.database.createDefaultUser();
     }
 

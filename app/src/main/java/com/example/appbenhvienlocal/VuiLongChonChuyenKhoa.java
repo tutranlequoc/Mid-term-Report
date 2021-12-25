@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 import com.example.function.ThongTin;
 import com.example.models.BackScreenClick;
+import com.example.models.BookingInfor;
 import com.example.ultis.Constant;
 
 import java.util.ArrayList;
@@ -61,6 +62,8 @@ public class VuiLongChonChuyenKhoa extends AppCompatActivity {
                     intent = new Intent(VuiLongChonChuyenKhoa.this, VuiLongChonDichVu.class);
                     intent.putParcelableArrayListExtra(Constant.THONGTIN, ketQuaTraVe);
                     intent.putExtra(Constant.INDEX_THONGTIN, index+1);
+                    Constant.bookingInfor = new BookingInfor();
+                    Constant.bookingInfor.setChuyenKhoa(s);
                     startActivity(intent);
                 }catch (Exception e) {
                     Log.e("Lỗi", e.toString());

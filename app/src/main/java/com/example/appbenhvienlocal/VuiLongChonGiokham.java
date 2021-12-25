@@ -102,6 +102,7 @@ public class VuiLongChonGiokham extends AppCompatActivity {
                    intent = new Intent(VuiLongChonGiokham.this, ChonThongTinKham.class);
                    intent.putExtra(Constant.THONGTIN, ketQuaTraVe);
                    intent.putExtra(Constant.INDEX_THONGTIN, index);
+                   Constant.bookingInfor.setGioKham(timeFromLocalTime(startTime) + " - " + timeFromLocalTime(endTime));
                    startActivity(intent);
                } catch (Exception e){
                    Log.e("Error:", e.toString());
@@ -120,6 +121,7 @@ public class VuiLongChonGiokham extends AppCompatActivity {
                    intent = new Intent(VuiLongChonGiokham.this, ChonThongTinKham.class);
                    intent.putExtra(Constant.THONGTIN, ketQuaTraVe);
                    intent.putExtra(Constant.INDEX_THONGTIN, index);
+                   Constant.bookingInfor.setGioKham(timeFromLocalTime(startTime) + " - " + timeFromLocalTime(endTime));
                    startActivity(intent);
                }catch (Exception e){
                    Log.e("Error:", e.toString());
