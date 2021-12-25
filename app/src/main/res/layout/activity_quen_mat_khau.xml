@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E5E5E5"
+    android:background="@color/BackgroundColor"
     android:orientation="vertical"
 
     tools:context=".QuenMatKhau">
@@ -13,7 +13,7 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#E5E5E5"
+        android:background="@color/BackgroundColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,13 +23,13 @@
             android:id="@+id/toolBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#E5E5E5">
+            android:background="@color/BackgroundColor">
 
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#E5E5E5"
+                android:backgroundTint="@color/BackgroundColor"
                 android:src="@drawable/ic_baseline_keyboard_backspace_24" />
 
         </androidx.appcompat.widget.Toolbar>
@@ -97,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:text="Có lỗi xảy ra vui vòng thử lại sau."
-        android:textColor="#FF0000"
+        android:textColor="@color/Red"
         android:textSize="15sp"
         android:visibility="invisible" />
 
@@ -137,7 +137,7 @@
             android:layout_marginLeft="5dp"
             android:gravity="center"
             android:text="Đăng kí"
-            android:textColor="#0E977A"
+            android:textColor="@color/colorr_0E977A"
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>

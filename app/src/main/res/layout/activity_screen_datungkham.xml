@@ -10,27 +10,25 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#5cc0ab">
+        android:background="@color/MainColor">
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <Button
-                android:paddingLeft="5dp"
-                android:id="@+id/imbBackDTK"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+            <ImageButton
+                android:id="@+id/imgBackDKT"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:scaleType="fitXY"
-                android:background="#5cc0ab"
-                />
+                android:src="@drawable/back"
+                android:background="@android:color/transparent"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Thêm hồ sơ đặt khám"
                 android:layout_gravity="center"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="22sp"/>
+                android:textSize="18sp"/>
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -57,7 +55,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="TIẾP TỤC"
-        android:background="#5cc0ab"
-        android:textSize="22sp"/>
+        android:background="@color/MainColor"
+        android:textSize="22sp"
+        android:textColor="@color/white"/>
 
 </LinearLayout>
