@@ -89,11 +89,7 @@
         <activity
             android:name=".ChonThongTinKham"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".screen_faq"
@@ -111,7 +107,11 @@
         <activity
             android:name=".screen_thongtinthanhtoan"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity2"
