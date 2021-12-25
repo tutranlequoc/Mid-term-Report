@@ -25,6 +25,7 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ImageButton imgbtnZalo;
     LinearLayout layoutPhone,layoutZalo, layoutMap;
 //    ArrayAdapter<String> spinnerAdapter= new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.spinner));
+    MenuItem itemLogin;
+    MenuItem itemLogout;
 
     private DrawerLayout drawerLayout;
     Toolbar toolbar;
@@ -159,7 +162,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         layoutPhone = findViewById(R.id.layoutPhone);
         layoutZalo = findViewById(R.id.layoutZalo);
         layoutMap = findViewById(R.id.layoutMap);
-
+        itemLogin = findViewById(R.id.nav_login);
+        itemLogout = findViewById(R.id.nav_logout);
 
     }
 
@@ -192,8 +196,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent i = new Intent(MainActivity.this, screen_thongbao.class);
             startActivity(i);
         }else if (itemId == R.id.nav_login){
-            Intent i = new Intent(MainActivity.this, LoginScreen.class);
-            startActivity(i);
+                Intent i = new Intent(MainActivity.this, LoginScreen.class);
+                startActivity(i);
+
         }else if (itemId == R.id.nav_policy){
             Intent i = new Intent(MainActivity.this, screen_dieukhoan.class);
             startActivity(i);
@@ -202,6 +207,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(i);
         }else if (itemId == R.id.nav_regu){
             Intent i = new Intent(MainActivity.this, screen_quydinh.class);
+            startActivity(i);
+        }else if (itemId == R.id.nav_baomat){
+            Intent i = new Intent(MainActivity.this, chinhsachbaomat.class);
             startActivity(i);
         }
         return true;
@@ -219,9 +227,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
     }
-    //    @Override
+
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        PopupMenu p  = new PopupMenu(MainActivity.this, null);
+//        Menu menu = p.getMenu();
+//        onCreateOptionsMenu(menu);
+//
+//    }
+//    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.toolbar,menu);
-//        return super.onCreateOptionsMenu(menu);
+//        getMenuInflater().inflate(R.menu.menu_navigation,menu);
+//        if(Constant.user != null) {
+//            itemLogin.setTitle(Constant.user.getFullName());
+//            itemLogin.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//                @Override
+//                public boolean onMenuItemClick(MenuItem menuItem) {
+//                    return false;
+//                }
+//            });
+//            itemLogout.setVisible(true);
+//        } else {
+//            super.onResume();
+//        }
+//        return true;
 //    }
 }

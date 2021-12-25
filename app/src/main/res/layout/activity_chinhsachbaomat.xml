@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screen_dieukhoan"
+    tools:context=".chinhsachbaomat"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -13,27 +13,29 @@
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/main_color">
+            android:background="#5cc0ab">
             <Button
-                android:id="@+id/btnBackDK"
+                android:id="@+id/btnBackCS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+                android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
                 android:background="@color/main_color"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Điều khoản dịch vụ"
+                android:text="Chính sách bảo mật"
                 android:textSize="25dp"
                 android:textColor="@color/white"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
             <Button
-                android:id="@+id/btnBackHome"
+                android:id="@+id/btnBackHomeCS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableRight="@drawable/ic_baseline_home_24"
                 android:background="@color/main_color"
-                android:paddingRight="10dp"/>
+                android:paddingRight="10dp"
+                android:layout_gravity="end"/>
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -41,23 +43,23 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GIỚI THIỆU"
-        android:textStyle="bold"
         android:padding="20dp"
-        android:textSize="18sp"/>
+        android:textSize="15sp"
+        android:textStyle="bold"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
-        android:text="@string/introduction"
-        android:paddingRight="5dp"/>
-        </LinearLayout>
+        android:paddingRight="5dp"
+        android:text="@string/security_policy"/>
+    </LinearLayout>
     </ScrollView>
 </LinearLayout>
