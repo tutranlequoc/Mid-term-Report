@@ -83,16 +83,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        imgbtnZalo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Intent intent = getPackageManager().getLaunchIntentForPackage("com.zalo");
-//                if(intent != null){
-//                    startActivity(intent);
-//                }
-//                Cài app trước
-            }
-        });
+
         layoutPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -163,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //spinner = findViewById(R.id.spinnerPhieuKham);
         btnDatKham = findViewById(R.id.btnDatKham);
-        imgbtnZalo = findViewById(R.id.imbtnZalo);
+
 
         layoutPhone = findViewById(R.id.layoutPhone);
         layoutZalo = findViewById(R.id.layoutZalo);

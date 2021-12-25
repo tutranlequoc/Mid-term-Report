@@ -22,7 +22,9 @@
         </activity>
         <activity
             android:name=".NhapMkMoi"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".ManHinhDangKy"
             android:exported="true">
@@ -30,7 +32,13 @@
         </activity>
         <activity
             android:name=".QuenMatKhau"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ManHinhThongBao"
             android:exported="true" />
@@ -38,11 +46,6 @@
             android:name=".LoginScreen"
             android:exported="true">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ManHinhNhapPassWord"
@@ -115,7 +118,10 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity2"
-            android:exported="true" />
+            android:exported="true" >
+
+
+        </activity>
         <activity
             android:name=".OTPScreen"
             android:exported="true" >
@@ -140,11 +146,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
