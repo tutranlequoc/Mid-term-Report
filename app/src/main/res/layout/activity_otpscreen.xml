@@ -44,6 +44,8 @@
         android:layout_gravity="center"
         android:src="@drawable/logo_main" />
 
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -230,19 +232,29 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="10dp"
         />
-    <TextView
-        android:id="@+id/txtNotMyPhone"
-        android:padding="5dp"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Đây không phải là số điện thoại của tôi"
-        android:textSize="20sp"
-        android:background="@drawable/rounded_textview2"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp"
-        android:textColor="@color/white"
-        />
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nen2"
+            android:alpha="0.65"/>
+        <TextView
+            android:id="@+id/txtNotMyPhone"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Đây không phải là số điện thoại của tôi"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_textview2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            />
+    </FrameLayout>
+
 
 </LinearLayout>
