@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="80000 đ"
-            android:textColor="#00a8c7"
+            android:textColor="@color/Blue_00A8C7"
             android:textStyle="bold"/>
     </LinearLayout>
     <TextView

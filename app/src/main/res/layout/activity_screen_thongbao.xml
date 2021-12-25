@@ -6,35 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".screen_thongbao"
     android:orientation="vertical">
-
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarHoSo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#5cc0ab">
-        <LinearLayout
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/MainColor">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBarHoSo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="left"
-            android:padding="3dp">
-            <Button
-                android:id="@+id/btnBackThongBao"
-                android:layout_width="40dp"
-                android:layout_height="45dp"
-                android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
-                android:layout_marginRight="80dp"
-                android:layout_gravity="left"
-                android:backgroundTint="#5cc0ab"/>
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/MainColor">
+            <ImageButton
+                android:id="@+id/imgBackThongBao"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/back"
+                android:background="@android:color/transparent"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Thông báo"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
-                android:layout_marginRight="60dp"/>
-        </LinearLayout>
+                android:textStyle="bold"/>
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
     <LinearLayout

@@ -26,7 +26,14 @@
             android:exported="true"></activity>
         <activity
             android:name=".screen_xoahoso"
-            android:exported="true"></activity>
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ChinhSuaHoSo"
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".NhapMkMoi"
             android:exported="true"></activity>
@@ -68,13 +75,13 @@
             android:exported="true" />
         <activity
             android:name=".HoSoDatKham"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".ChonNgayKham"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".VuiLongChonGiokham"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".VuiLongChonDichVu"
             android:exported="true" />

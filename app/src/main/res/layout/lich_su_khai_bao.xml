@@ -7,7 +7,7 @@
         android:id="@+id/appBarKBYT"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#5CC0AB"
+        android:background="@color/MainColor"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,7 +16,7 @@
             android:id="@+id/toolBarKBYT"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#5CC0AB">
+            android:background="@color/MainColor">
             <ImageButton
                 android:id="@+id/btnBackKBYT"
                 android:layout_width="30dp"
@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:text="Khai báo Y tế"
                 android:textSize="18sp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:textStyle="bold"/>
         </androidx.appcompat.widget.Toolbar>
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#1A4CFF"
+        android:background="@color/color_1A4CFF"
         android:gravity="center"
         android:paddingBottom="5dp"
         android:paddingTop="5dp"
@@ -64,7 +64,7 @@
             android:text="KHAI BÁO Y TẾ ĐIỆN TỬ\nTẠI BỆNH VIỆN"
             android:textStyle="bold"
             android:textSize="16sp"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/imvLogo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:text="LỊCH SỬ KHAI BÁO Y TẾ"
             android:textStyle="bold"
-            android:textColor="#1A4CFF"
+            android:textColor="@color/color_1A4CFF"
             android:textSize="20sp"
             android:gravity="center"
             android:padding="5dp"

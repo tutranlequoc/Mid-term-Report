@@ -55,12 +55,12 @@ public class ProvinceAdapter extends ArrayAdapter<Province> {
 
     @Override
     public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_selected_quen_ma_hs,parent,false);
-        TextView txtSelectedItem = convertView.findViewById(R.id.txtSelectedHS);
+        convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_quen_ma_hs,parent,false);
+        TextView txtItem = convertView.findViewById(R.id.txtItemListHS);
         Province province = provinces.get(position);
         if(province!=null)
         {
-            txtSelectedItem.setText(province.getName());
+            txtItem.setText(province.getName());
         }
         return convertView;
     }

@@ -6,8 +6,9 @@
 
     <ImageView
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="55dp"
         android:id="@+id/imvBankThumb"
+        android:scaleType="fitXY"
         android:src="@drawable/agribank"
         android:layout_gravity="center"/>
     <TextView

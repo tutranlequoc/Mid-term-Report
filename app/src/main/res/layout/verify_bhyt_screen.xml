@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     android:orientation="vertical"
 
     tools:context=".MainActivity">
@@ -13,7 +13,7 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#5CC0AB"
+        android:background="@color/MainColor"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,9 +23,9 @@
             android:id="@+id/toolBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#5CC0AB">
+            android:background="@color/MainColor">
             <ImageButton
-                android:id="@+id/btnNK"
+                android:id="@+id/imvBackBHYT"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:scaleType="fitXY"
@@ -51,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="15dp"
-        android:backgroundTint="#805CC0AB"
+        android:backgroundTint="@color/color_805CC0AB"
         android:drawableLeft="@drawable/search"
         android:drawableRight="@drawable/right_vector"
         android:text="Xem cách tìm mã bảo hiểm "
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:text="Họ và tên"
         android:textSize="24sp"
-        android:textColor="#067E72"
+        android:textColor="@color/color_067E72"
         android:textStyle="bold"/>
     <EditText
         android:layout_marginTop="10dp"
@@ -78,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Nhập họ và tên"
-        android:textColor="#A19F9F"
+        android:textColor="@color/color_A19F9F"
         android:textSize="24sp"
        android:paddingLeft="20dp"
         android:background="@drawable/border_edittext"/>
@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:text="Vui lòng nhập ngày sinh"
         android:textSize="24sp"
-        android:textColor="#067E72"
+        android:textColor="@color/color_067E72"
         android:textStyle="bold"/>
     <EditText
         android:inputType="datetime"
@@ -97,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="DD/MM/YYYY hoặc YYYY"
-        android:textColor="#A19F9F"
+        android:textColor="@color/color_A19F9F"
         android:textSize="24sp"
         android:paddingLeft="20dp"
         android:background="@drawable/border_edittext"/>
@@ -107,7 +107,7 @@
         android:layout_height="wrap_content"
         android:text="Vui lòng nhập mã bảo hiểm"
         android:textSize="24sp"
-        android:textColor="#067E72"
+        android:textColor="@color/color_067E72"
         android:textStyle="bold"/>
     <EditText
         android:layout_marginTop="10dp"
@@ -115,7 +115,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="BT123456789"
-        android:textColor="#A19F9F"
+        android:textColor="@color/color_A19F9F"
         android:textSize="24sp"
         android:paddingLeft="20dp"
         android:background="@drawable/border_edittext"/>
@@ -128,7 +128,7 @@
         android:text="TIẾP TỤC"
         android:textSize="24sp"
         android:textColor="@color/white"
-        android:background="#5CC0AB"
+        android:background="@color/MainColor"
        />
 
 </LinearLayout>

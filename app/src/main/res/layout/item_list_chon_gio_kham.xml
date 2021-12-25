@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="08:30"
-        android:textColor="#5CC0AB"
+        android:textColor="@color/MainColor"
         android:padding="15dp"
         android:gravity="center"
         android:textSize="12sp"

@@ -15,7 +15,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Họ tên"
-            android:textColor="#1A4CFF"
+            android:textColor="@color/color_1A4CFF"
             android:layout_weight="1"
             android:gravity="left"/>
         <TextView

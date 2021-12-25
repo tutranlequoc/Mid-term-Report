@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tạo mới hồ sơ"
+                android:text="Chỉnh sửa hồ sơ"
                 android:textSize="18sp"
                 android:textColor="#FFFFFF"
                 android:layout_gravity="center"
@@ -69,17 +69,6 @@
                     android:layout_height="wrap_content"
                     android:hint="Họ và tên đầy đủ"
                     android:layout_marginBottom="20dp"/>
-                <!--                <TextView-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:text="Tên người bệnh (có dấu)*"-->
-                <!--                    android:textStyle="bold"/>-->
-                <!--                <EditText-->
-                <!--                    android:id="@+id/edtPatientName"-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:hint="Tên người bệnh"-->
-                <!--                    android:layout_marginBottom="20dp"/>-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -231,4 +220,7 @@
                 android:textStyle="bold"/>
         </LinearLayout>
     </ScrollView>
+
+
+
 </LinearLayout>

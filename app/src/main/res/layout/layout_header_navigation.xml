@@ -2,13 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="150dp"
-    android:background="#5cc0ab"
+    android:background="@color/MainColor"
     android:gravity="center">
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/logobv"
-        android:layout_gravity="center"/>
-
+        android:src="@drawable/logobv"/>
 </LinearLayout>

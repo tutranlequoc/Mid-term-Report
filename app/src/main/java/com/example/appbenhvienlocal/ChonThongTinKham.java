@@ -22,6 +22,7 @@ import com.example.adapter.CustomAdapter;
 import com.example.function.Function;
 import com.example.function.ThongTin;
 import com.example.models.BackScreenClick;
+import com.example.models.BookingInfor;
 import com.example.models.CodePatient;
 import com.example.ultis.Constant;
 
@@ -35,6 +36,7 @@ public class ChonThongTinKham extends AppCompatActivity {
     private ArrayList<ThongTin> thongTin;
     private ActivityResultLauncher<Intent> activityResultLauncher, activityResultLauncherHSDK;
     private Button btnTiepTuc;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
