@@ -10,25 +10,12 @@
         android:id="@+id/appBarHoSo"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#5cc0ab">
-        <LinearLayout
-        android:layout_height="?attr/actionBarSize"
-        android:background="#5CC0AB"
-            android:layout_width="match_parent">
+        android:background="#5CC0AB">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolBarHoSo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <Button
-                android:id="@+id/btnBackDTK"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
-                android:layout_marginRight="90dp"
-                android:layout_marginLeft="10dp"
-                android:background="#5cc0ab"
-                />
+            android:layout_height="?attr/actionBarSize"
+            android:background="#5CC0AB">
             <ImageButton
                 android:id="@+id/imgBack"
                 android:layout_width="30dp"
@@ -45,7 +32,7 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"/>
         </androidx.appcompat.widget.Toolbar>
-        </LinearLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
     <ScrollView
         android:layout_width="match_parent"
@@ -61,42 +48,59 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:layout_marginBottom="20dp">
-
+                <TextView
+                    android:id="@+id/txtThongBao"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner"
+                    android:textSize="12sp"
+                    android:textColor="#00E60F0F"
+                    android:layout_marginBottom="30dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Họ và tên (có dấu)*"
                     android:textStyle="bold"/>
-
-<!--                <TextView-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Tên người bệnh (có dấu)*"-->
-<!--                    android:textStyle="bold"/>-->
-<!--                <EditText-->
-<!--                    android:id="@+id/edtPatientName"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="Tên người bệnh"-->
-<!--                    android:layout_marginBottom="20dp"/>-->
+                <EditText
+                    android:id="@+id/edtFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Họ và chữ lót"
+                    android:layout_marginBottom="20dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Ngày sinh*"
                     android:textStyle="bold"/>
-
+                <EditText
+                    android:id="@+id/edtDateBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ngày/Tháng/Năm"
+                    android:layout_marginBottom="20dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Giới tính*"
                     android:textStyle="bold"/>
-
+                <Spinner
+                    android:id="@+id/spinnerGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="CMND/Passport"
                     android:textStyle="bold"/>
-
+                <EditText
+                    android:id="@+id/edtIDNumber_Passport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="CMND/Passport"
+                    android:layout_marginBottom="20dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -113,19 +117,32 @@
                     android:layout_height="wrap_content"
                     android:text="Dân tộc*"
                     android:textStyle="bold"/>
-
+                <Spinner
+                    android:id="@+id/spinnerDanToc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Nghề nghiệp"
                     android:textStyle="bold"/>
-
+                <Spinner
+                    android:id="@+id/spinnerNgheNghiep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Số điện thoại (có dấu)*"
                     android:textStyle="bold"/>
-
+                <EditText
+                    android:id="@+id/edtPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="09xxxxxxxx"
+                    android:layout_marginBottom="20dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -155,26 +172,42 @@
                     android:text="Tỉnh/ TP*"
                     android:textStyle="bold"/>
 
-
+                <Spinner
+                    android:id="@+id/spinnerTinh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Quận/ Huyện*"
                     android:textStyle="bold"/>
-
+                <Spinner
+                    android:id="@+id/spinnerQuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Phường/ Xã*"
                     android:textStyle="bold"/>
-
+                <Spinner
+                    android:id="@+id/spinnerPhuong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Địa chỉ*"
                     android:textStyle="bold"/>
-
+                <EditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ấp, thôn, tổ, khóm, tên đường..."/>
 
             </LinearLayout>
             <Button
@@ -186,163 +219,8 @@
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"/>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp">
-    <TextView
-        android:id="@+id/txtThongBao"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@drawable/rounded_corner"
-        android:textSize="12sp"
-        android:textColor="#00E60F0F"
-        android:layout_marginBottom="30dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Họ và chữ lót (có dấu)*"
-        android:textStyle="bold"/>
-    <EditText
-        android:id="@+id/edtFullName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Họ và chữ lót"
-        android:layout_marginBottom="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tên người bệnh (có dấu)*"
-        android:textStyle="bold"/>
-    <EditText
-        android:id="@+id/edtPatientName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tên người bệnh"
-        android:layout_marginBottom="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ngày sinh*"
-        android:textStyle="bold"/>
-    <EditText
-        android:id="@+id/edtDateBirth"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ngày/Tháng/Năm"
-        android:layout_marginBottom="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Giới tính*"
-        android:textStyle="bold"/>
-    <Spinner
-        android:id="@+id/spinnerGender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CMND/Passport"
-        android:textStyle="bold"/>
-    <EditText
-        android:id="@+id/edtIDNumber_Passport"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="CMND/Passport"
-        android:layout_marginBottom="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dân tộc*"
-        android:textStyle="bold"/>
-    <Spinner
-        android:id="@+id/spinnerDanToc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nghề nghiệp"
-        android:textStyle="bold"/>
-    <Spinner
-        android:id="@+id/spinnerNgheNghiep"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Số điện thoại (có dấu)*"
-        android:textStyle="bold"/>
-    <EditText
-        android:id="@+id/edtPhoneNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="09xxxxxxxx"
-        android:layout_marginBottom="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tỉnh/ TP*"
-        android:textStyle="bold"/>
-
-        <Spinner
-            android:id="@+id/spinnerTinh"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp" />
-
-        <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Quận/ Huyện*"
-        android:textStyle="bold"/>
-    <Spinner
-        android:id="@+id/spinnerQuan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Phường/ Xã*"
-        android:textStyle="bold"/>
-    <Spinner
-        android:id="@+id/spinnerPhuong"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Địa chỉ*"
-        android:textStyle="bold"/>
-    <EditText
-        android:id="@+id/edtAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ấp, thôn, tổ, khóm, tên đường..."/>
-
-    </LinearLayout>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TẠO MỚI HỒ SƠ"
-            android:background="#5CC0AB"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"/>
-        </LinearLayout>
     </ScrollView>
+
+
 
 </LinearLayout>
