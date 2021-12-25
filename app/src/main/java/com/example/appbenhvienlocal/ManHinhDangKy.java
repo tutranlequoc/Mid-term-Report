@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.ultis.Constant;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
@@ -27,9 +28,9 @@ import java.util.concurrent.TimeUnit;
 
 
 public class ManHinhDangKy extends AppCompatActivity {
- Button btnDangKi;
- EditText edtSdtDKi;
- FirebaseAuth mAuth;
+    Button btnDangKi;
+    EditText edtSdtDKi;
+    FirebaseAuth mAuth;
     private static final String TAG = ManHinhDangKy.class.getName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +100,7 @@ public class ManHinhDangKy extends AppCompatActivity {
 
                             FirebaseUser user = task.getResult().getUser();
                             // Update UI
-                           goToMainActivity(user.getPhoneNumber());
+                            goToMainActivity(user.getPhoneNumber());
                         } else {
                             // Sign in failed, display a message and update the UI
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
@@ -114,14 +115,14 @@ public class ManHinhDangKy extends AppCompatActivity {
 
     private void goToMainActivity(String phoneNumber) {
         Intent intent = new Intent(ManHinhDangKy.this,MainActivity.class);
-        intent.putExtra("SdtDKi",phoneNumber);
+        intent.putExtra(Constant.PHONE_NUMBER,phoneNumber);
         startActivity(intent);
     }
 
     private void goToOTPScreen(String sdt, String verifycationID) {
         Intent intent = new Intent(ManHinhDangKy.this,OTPScreen.class);
-        intent.putExtra("SdtDKi",sdt);
-        intent.putExtra("verifyID",verifycationID);
+        intent.putExtra(Constant.PHONE_NUMBER,sdt);
+        intent.putExtra(Constant.VERIFYID,verifycationID);
         startActivity(intent);
     }
 }

@@ -50,4 +50,5 @@ public class Constant {
     public static final String WARE_DISTRICT_ID = "district_id";
     public static BookingInfor bookingInfor;
     public static Bank bank;
+    public static final String VERIFYID = "verifyId";
 }

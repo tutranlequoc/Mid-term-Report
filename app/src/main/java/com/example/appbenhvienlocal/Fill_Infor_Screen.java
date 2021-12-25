@@ -3,6 +3,7 @@ package com.example.appbenhvienlocal;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.adapter.RegionAdapter;
 import com.example.models.Region;
+import com.example.ultis.Constant;
 
 import java.util.ArrayList;
 
@@ -27,6 +29,7 @@ public class Fill_Infor_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fill_infor_screen);
         linkView();
+        getData();
         addEvents();
 
     }
@@ -37,6 +40,11 @@ public class Fill_Infor_Screen extends AppCompatActivity {
         edtNhapMk = findViewById(R.id.edtNhapMK);
         edtXacNhanMk = findViewById(R.id.edtXacNhanMk);
         btnDangKi = findViewById(R.id.btnDangKiFinal);
+    }
+
+    private void getData() {
+       String sdt = getIntent().getStringExtra(Constant.PHONE_NUMBER);
+       txtSdtDki.setText(sdt);
     }
 
     private void addEvents() {
