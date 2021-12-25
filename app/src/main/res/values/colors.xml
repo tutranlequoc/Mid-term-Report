@@ -27,6 +27,12 @@
     <color name="color_077CEF">#077CEF</color>
     <color name="color_4395E6">#4395E6</color>
     <color name="color_CCC1C1">#CCC1C1</color>
+    <color name="color_1A4CFF">#1A4CFF</color>
+    <color name="color_5C6C7C">#5C6C7C</color>
+    <color name="color_065493">#065493</color>
+    <color name="color_805CC0AB">#805CC0AB</color>
+    <color name="color_067E72">#067E72</color>
+    <color name="color_A19F9F">#A19F9F</color>
 
 
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">

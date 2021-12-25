@@ -34,9 +34,9 @@
         android:id="@+id/btnClosePayment"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#FFFFFF"
+        android:background="@color/white"
         android:text="ĐÓNG"
-        android:textColor="#5cc0ab"
+        android:textColor="@color/MainColor"
         />
 
 

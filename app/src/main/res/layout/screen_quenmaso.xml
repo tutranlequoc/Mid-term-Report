@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vui lòng nhập chính xác những thông tin bên dưới, chúng tôi sẽ giúp bạn tìm số hồ sơ"
-        android:textColor="#077FF6"
+        android:textColor="@color/color_077CEF"
         android:paddingBottom="5dp"
         android:layout_gravity="center"/>
     <TextView
