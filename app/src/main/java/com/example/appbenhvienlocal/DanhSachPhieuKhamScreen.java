@@ -18,7 +18,8 @@ public class DanhSachPhieuKhamScreen extends AppCompatActivity {
     ListView lvDanhSachPhieuKham;
     PhieuKhamAdapter adapter;
     ArrayList<Danhsachphieukham> phieuKhamList;
-    ImageButton btnNK;
+    ImageButton imvDanhSach;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class DanhSachPhieuKhamScreen extends AppCompatActivity {
     }
 
     private void addEvents() {
-        btnNK.setOnClickListener(new View.OnClickListener() {
+        imvDanhSach.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
@@ -39,23 +40,23 @@ public class DanhSachPhieuKhamScreen extends AppCompatActivity {
     }
 
     private void linkView() {
-        lvDanhSachPhieuKham= findViewById(R.id.lvDanhSachPhieuKhan);
+        lvDanhSachPhieuKham = findViewById(R.id.lvDanhSachPhieuKhan);
 
     }
 
     private void initData() {
-phieuKhamList = new ArrayList<Danhsachphieukham>();
-phieuKhamList.add(new Danhsachphieukham("AFGW421","ABC","11/11/2021","8:30 (Buổi sáng)",R.drawable.rounded_dathanhtoan,"Đã thanh toán"));
-phieuKhamList.add(new Danhsachphieukham("AFGW421","ABC","11/11/2021","8:30 (Buổi sáng)",R.drawable.rounded_chuathanhtoan,"Chưa thanh toán"));
-phieuKhamList.add(new Danhsachphieukham("AFGW421","ABC","11/11/2021","8:30 (Buổi sáng)",R.drawable.rounded_dahuy,"Đã hủy"));
+        phieuKhamList = new ArrayList<Danhsachphieukham>();
+        phieuKhamList.add(new Danhsachphieukham("AFGW421", "ABC", "11/11/2021", "8:30 (Buổi sáng)", R.drawable.rounded_dathanhtoan, "Đã thanh toán"));
+        phieuKhamList.add(new Danhsachphieukham("AFGW421", "ABC", "11/11/2021", "8:30 (Buổi sáng)", R.drawable.rounded_chuathanhtoan, "Chưa thanh toán"));
+        phieuKhamList.add(new Danhsachphieukham("AFGW421", "ABC", "11/11/2021", "8:30 (Buổi sáng)", R.drawable.rounded_dahuy, "Đã hủy"));
 
 
     }
 
     private void loadData() {
- adapter = new PhieuKhamAdapter(DanhSachPhieuKhamScreen.this,R.layout.phieu_kham_layout,phieuKhamList);
-lvDanhSachPhieuKham.setAdapter(adapter);
-btnNK = findViewById(R.id.btnNK);
+        adapter = new PhieuKhamAdapter(DanhSachPhieuKhamScreen.this, R.layout.phieu_kham_layout, phieuKhamList);
+        lvDanhSachPhieuKham.setAdapter(adapter);
+        imvDanhSach = findViewById(R.id.imvDanhSach);
 
     }
 }
