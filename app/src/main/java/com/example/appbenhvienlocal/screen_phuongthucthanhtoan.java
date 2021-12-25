@@ -10,16 +10,19 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageButton;
 
 import com.example.adapter.Bank;
 import com.example.adapter.BankAdapter;
+import com.example.ultis.Constant;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class screen_phuongthucthanhtoan extends AppCompatActivity {
-    Button btnthanhToanATM, btnthanhToanMomo,btnBack;
+    Button btnthanhToanATM, btnthanhToanMomo;
     ViewGroup linearMethod;
+    ImageButton btnBack;
     GridView gvBank;
     boolean expandable;
     BankAdapter bankAdapter;
@@ -53,7 +56,7 @@ public class screen_phuongthucthanhtoan extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                         Intent intent = new Intent(screen_phuongthucthanhtoan.this, screen_thongtinthanhtoan.class);
-                        //put extra
+                        Constant.bank = (Bank) adapterView.getItemAtPosition(i);
                         startActivity(intent);
                     }
                 });
@@ -64,17 +67,14 @@ public class screen_phuongthucthanhtoan extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent2 = new Intent(screen_phuongthucthanhtoan.this, screen_thongtinthanhtoan.class);
-                Bundle bundle2 = new Bundle();
-                bundle2.putString("momo","Bạn đang thực hiện thanh toán bằng Thanh toán bằng ví Momo");
-                intent2.putExtra("method2",bundle2);
+                Constant.bank = new Bank("MOMO", 0);
                 startActivity(intent2);
             }
         });
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(screen_phuongthucthanhtoan.this, screen_thongtinthanhtoan.class);
-                startActivity(intent);
+                finish();
             }
         });
     }

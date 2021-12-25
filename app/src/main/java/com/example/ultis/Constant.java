@@ -1,10 +1,13 @@
 package com.example.ultis;
 
+import com.example.adapter.Bank;
 import com.example.database.BenhVienSQLiteHelper;
 import com.example.function.HoSoDK;
+import com.example.models.BookingInfor;
 import com.example.models.Document;
 import com.example.models.User;
 
+import java.security.PublicKey;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -45,5 +48,6 @@ public class Constant {
     public static final String TBL_NAME_WARD = "ward";
     public static final String WARD_NAME = "name";
     public static final String WARE_DISTRICT_ID = "district_id";
-
+    public static BookingInfor bookingInfor;
+    public static Bank bank;
 }
