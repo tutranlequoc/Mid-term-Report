@@ -193,6 +193,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(i);
         }else if (itemId == R.id.nav_login){
             Intent i = new Intent(MainActivity.this, LoginScreen.class);
+            i.putExtra(Constant.REQUEST_TAG, Constant.REQUEST_CODE_FOR_LOGIN);
             startActivity(i);
         }else if (itemId == R.id.nav_policy){
             Intent i = new Intent(MainActivity.this, screen_dieukhoan.class);

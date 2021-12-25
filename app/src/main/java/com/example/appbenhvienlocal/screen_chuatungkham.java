@@ -73,9 +73,9 @@ public class screen_chuatungkham extends AppCompatActivity {
             File dbfile = getDatabasePath(Constant.DATABASE_NAME_ADMINISTRATIVE_UNITS);
             if(!dbfile.exists()){
                 if(copyFromAssets()){
-                    Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+                    Log.e("State: ", "Success");
                 }else {
-                    Toast.makeText(this, "Already exists", Toast.LENGTH_SHORT).show();
+                    Log.e("State: ", "Fail");
                 }
             }
         }catch (Exception e){
