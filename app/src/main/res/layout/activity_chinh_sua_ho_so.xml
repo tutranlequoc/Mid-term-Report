@@ -61,13 +61,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Họ và tên (có dấu)*"
+                    android:text="@string/fullName"
                     android:textStyle="bold"/>
                 <EditText
                     android:id="@+id/edtFullName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Họ và chữ lót"
+                    android:hint="Họ và tên đầy đủ"
                     android:layout_marginBottom="20dp"/>
                 <!--                <TextView-->
                 <!--                    android:layout_width="match_parent"-->
@@ -83,7 +83,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Ngày sinh*"
+                    android:text="@string/dateOfBirth"
                     android:textStyle="bold"/>
                 <EditText
                     android:id="@+id/edtDateBirth"
@@ -94,7 +94,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Giới tính*"
+                    android:text="@string/gender"
                     android:textStyle="bold"/>
                 <Spinner
                     android:id="@+id/spinnerGender"
@@ -104,7 +104,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CMND/Passport"
+                    android:text="@string/numberID"
                     android:textStyle="bold"/>
                 <EditText
                     android:id="@+id/edtIDNumber_Passport"

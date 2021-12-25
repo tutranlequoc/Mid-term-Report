@@ -21,7 +21,7 @@
                 android:id="@+id/btnBackThongBao"
                 android:layout_width="40dp"
                 android:layout_height="45dp"
-                android:drawableLeft="@drawable/ic_baseline_keyboard_backspace_24"
+                android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
                 android:layout_marginRight="80dp"
                 android:layout_gravity="left"
                 android:backgroundTint="#5cc0ab"/>

@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class screen_thongtinthanhtoan extends AppCompatActivity {
-    Button btnThanhToan,btnPhuongThuc,btnCancel,btnAgreePay;
+    Button btnThanhToan,btnPhuongThuc,btnCancel,btnAgreePay, btnBack;
     View lineTop, divider;
     Bundle v;
 
@@ -40,6 +40,13 @@ public class screen_thongtinthanhtoan extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(screen_thongtinthanhtoan.this, screen_phuongthucthanhtoan.class);
                 startActivity(intent);
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(screen_thongtinthanhtoan.this,screen_phuongthucthanhtoan.class);
+                startActivity(i);
             }
         });
 //        Intent i = getIntent();
@@ -89,18 +96,28 @@ public class screen_thongtinthanhtoan extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 dialogConfirm.dismiss();
-                dialogSuccess();
+                dialogSuccess(Gravity.CENTER);
             }
         });
         dialogConfirm.show();
     }
 
-    private void dialogSuccess() {
+    private void dialogSuccess(int gravity1) {
         Dialog dialogSuccess = new Dialog(screen_thongtinthanhtoan.this);
-        dialogSuccess.setContentView(R.layout.dialog_payment_success);
-        dialogSuccess.setCanceledOnTouchOutside(false);
+        dialogSuccess.setContentView(R.layout.custom_dialog_tao_ho_so_thanh_cong_thongbao);
 
-        Button btnCloseDialog = dialogSuccess.findViewById(R.id.btnClosePayment);
+
+        Window window1 = dialogSuccess.getWindow();
+        window1.setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
+        WindowManager.LayoutParams windowAttribute = window1.getAttributes();
+        windowAttribute.gravity = gravity1;
+        window1.setAttributes(windowAttribute);
+        //không cho ng dùng bấm ra ngoài để tắt dialog
+        if(gravity1 == Gravity.CENTER)
+        {
+            dialogSuccess.setCanceledOnTouchOutside(false);
+        }
+        Button btnCloseDialog = dialogSuccess.findViewById(R.id.btnAgree);
         btnCloseDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,7 +130,7 @@ public class screen_thongtinthanhtoan extends AppCompatActivity {
     private void linkViews() {
         btnThanhToan = findViewById(R.id.btnMakePayment);
         btnPhuongThuc=findViewById(R.id.btnChooseMethod);
-
+        btnBack = findViewById(R.id.btnBack);
     }
 
     @Override

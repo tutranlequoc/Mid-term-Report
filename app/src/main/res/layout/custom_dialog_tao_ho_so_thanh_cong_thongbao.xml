@@ -27,7 +27,7 @@
             android:id="@+id/txtNoiDung"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tạo hồ sơ thành công"
+            android:text="Bạn đã đặt lịch khám thành công"
             android:textColor="@color/black"
             android:layout_marginTop="40dp"
             android:layout_gravity="center"
@@ -38,16 +38,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-
         android:showDividers="middle">
 
-        <TextView
-            android:id="@+id/txtAgree"
+        <Button
+            android:id="@+id/btnAgree"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Đồng ý"
+            android:text="Đóng"
             android:textStyle="bold"
+            android:backgroundTint="@color/white"
             android:textColor="#5CC0AB"
             android:textSize="20sp"
             android:gravity="center"

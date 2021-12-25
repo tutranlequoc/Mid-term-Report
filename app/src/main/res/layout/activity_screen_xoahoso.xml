@@ -31,7 +31,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableRight="@drawable/ic_baseline_restore_from_trash_24"
-                android:background="#5cc0ab"/>
+                android:background="#5cc0ab"
+                android:paddingRight="10dp"/>
 
         </androidx.appcompat.widget.Toolbar>
 

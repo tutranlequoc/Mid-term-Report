@@ -53,6 +53,16 @@
     <string name="KhôngNhanDuocMa">Bạn không nhận được mã xác nhận?</string>
     <string name="KhongNhanDuocMa2">Nếu bạn không nhận được mã</string>
     <string name="XacMinhSoDiDong">Xác mình số di động của bạn</string>
+    <string name="question1">Đặt lịch khám bệnh theo hẹn, mọi lúc mọi nơi, mà không cần đến bệnh viện\n\n
+        \t\t Không xếp hàng chờ đợi để lấy số tiếp nhận khám bệnh\n
+        \t\t Giảm thời gian chờ khám tại bệnh viện.\n
+        \t\t Thanh toán trực tuyến từ xa, không sử dụng tiền mặt\n
+        \t\t Nhận thông tin phiếu khám bệnh điện tử qua phần mềm\n
+        \t\t Chủ động chọn lịch khám ( ngày khám, khung giờ khám, bác sỹ khám )\n
+        \t\t Nhắc lịch tái khám, đặt lịch tái khám tự động\n
+        \t\t Tra cứu kết quả khám chữa bệnh trực tuyến qua phần mềm.\n
+        \t\t Thanh toán viện phí, chi phí khám chữa bệnh trực tuyến, mọi lúc mọi nơi\n
+        \t\t Dễ dàng tiếp cận và nhận các thông báo mới, thông tin từ bệnh viện</string>
 
     <string name="DayKhongPhaiSDienThoaiCuaToi">Đây không phải là số điện thoại của tôi</string>
     <string name="thong_bao">Bạn có muốn xóa hồ sơ này không?</string>
@@ -72,4 +82,42 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ques2">Làm sao để sử dụng được phần mềm đăng ký khám bệnh trực tuyến?</string>
+    <string name="question2">\t\tCó thể truy cập và sử dụng phần mềm trên tất cả thiết bị có thể truy cập mạng internet. ( 3G,4G,5G,Wifi, dây mạng…..)\n
+\t\tMáy tính bàn, laptop: truy cập website\n
+\t\tHầu hết điện thoại thông minh: tải ứng dụng phần mềm tại kho tải Gplay hoặc AppStore\n
+\t\tMáy tính bảng và các thiết bị khác ……</string>
+    <string name="ques3">Đăng ký khám bệnh online có mất phí không?</string>
+    <string name="question3">\t\tCó phí tiện ích, khi sử dụng dịch vụ đăng ký khám bệnh trực tuyến qua phần mềm ( tương tự phí cước viễn thông qua tổng đài )\n
+\t\tHiện tại chỉ mất phí khi đăng ký khám bệnh thành công, ngoài ra việc sử dụng ứng dụng và các tính năng khác là hoàn toàn miễn phí.</string>
+    <string name="introduction">
+        \t\tChào mừng bạn đến với phần mềm Đăng Ký Khám Bệnh Trực Tuyến tại Bệnh viện Da Liễu Thành phố Hồ Chí Minh (gọi chung là "Phần mềm"). Vui lòng đọc kỹ các Điều Khoản Dịch Vụ sau đây trước khi tiếp tục truy cập hoặc sử dụng các dịch vụ của Phần mềm, để bạn biết được các quyền lợi và nghĩa vụ hợp pháp của mình liên quan đến Công ty cổ phần ứng dụng PKH và Bệnh viện Da Liễu Thành phố Hồ Chí Minh và các bên thứ ba có liên kết  (gọi chung là “chúng tôi” hoặc “của chúng tôi”).\n
+\t\t“Các Dịch Vụ” chúng tôi cung cấp hoặc phát hành bao gồm:\n
+\t\t\tPhần mềm này,\n
+\t\t\tcác tính năng hoặc tiện ích được cung cấp trên Phần mềm,\n
+\t\t\tmọi thông tin, các Phần mềm được liên kết, các tính năng, dữ liệu, văn bản, hình ảnh, hình chụp, đồ họa, nhạc, âm thanh, video, thông báo, tag, nội dung, lập trình, phần mềm, các dịch vụ ứng dụng (bao gồm nhưng không giới hạn ở bất kỳ dịch vụ ứng dụng di động nào) hoặc các tài liệu khác được cung cấp thông qua Phần mềm hoặc các dịch vụ liên quan của nó (gọi chung là “Nội Dung”). Bất kỳ tính năng mới nào được thêm vào hoặc để tăng cường Các Dịch Vụ đều phải tuân thủ các Điều Khoản Dịch Vụ này.\n
+\t\tBằng việc sử dụng các dịch vụ hoặc tiếp tục truy cập trang web, bạn cho biết rằng bạn chấp nhận, không rút lại, các điều khoản dịch vụ này. nếu bạn không đồng ý với các điều khoản này, vui lòng không sử dụng các dịch vụ của chúng tôi hay tiếp tục truy cập phần mềm.\n
+\t\tChúng tôi có quyền chỉnh sửa các Điều Khoản Dịch Vụ này vào bất kỳ lúc nào mà không cần thông báo cho người dùng. Việc bạn tiếp tục sử dụng Các Dịch Vụ, Phần mềm, hoặc Tài Khoản Của Bạn sẽ được xem là sự chấp nhận, không rút lại đối với các điều khoản chỉnh sửa đó.\n
+\t\tChúng tôi có quyền thay đổi, điều chỉnh, đình chỉ hoặc ngưng bất kỳ phần nào của Phần mềm này hoặc Các Dịch Vụ vào bất kỳ lúc nào. Chúng tôi có thể ra mắt Các Dịch Vụ nhất định hoặc các tính năng của chúng trong một phiên bản beta, phiên bản này có thể không hoạt động chính xác hoặc theo cùng cách như phiên bản cuối cùng, và chúng tôi sẽ không chịu trách nhiệm pháp lý trong các trường hợp đó. Chúng tôi cũng có thể toàn quyền áp dụng giới hạn đối với các tính năng nhất định hoặc hạn chế quyền truy cập của bạn đối với một phần hoặc toàn bộ Phần mềm hoặc Các Dịch Vụ mà không cần thông báo hoặc phải chịu trách nhiệm pháp lý.\n
+\t\tChúng tôi có quyền từ chối cho phép bạn truy cập Phần mềm hoặc Các Dịch Vụ vì bất kỳ lý do gì.
+    </string>
+    <string name="policy">Chào mừng bạn đến với phần mềm Đăng Ký Khám Bệnh Trực Tuyến tại Bệnh viện Da Liễu Thành phố Hồ Chí Minh (gọi chung là "Phần mềm"). Vui lòng đọc kỹ các Quy Định Sử Dụng dưới đây trước khi tiếp tục truy cập hoặc sử dụng các dịch vụ của Phần mềm, để bạn biết được các quyền lợi và nghĩa vụ hợp pháp của mình liên quan đến các vấn đề về việc đăng ký khám bệnh, thanh toán, nhận phiếu khám bệnh, tạo hồ sơ bệnh nhân, quản lý và sử dụng thông tin trong hồ sơ bệnh nhân, quản lý phiếu khám bệnh, hoàn tiền, hủy phiếu khám bệnh, sửa thông tin phiếu khám bệnh, cách giải quyết các sự cố.... trong quá trình sử dụng Phần mềm.\n\n
+
+Các định nghĩa:\n\n
+
+\t\tChúng tôi: theo ngữ cảnh có thể là Bệnh viện Da Liễu Thành phố Hồ Chí Minh, và/hoặc công ty cổ phần ứng dụng PKH, và/hoặc các bên thứ ba khác có liên kết trên Phần mềm.
+\t\tDịch vụ: là một hoặc một phần hoặc tất cả các tính năng và tiện ích được triển khai trên Phần mềm.
+\t\tBạn: theo ngữ cảnh có thể là người dùng, hoặc bệnh nhân, hoặc người được bệnh nhân đã ủy quyền bằng văn bản, lời nói hoặc một hình thức khác, để truy cập Phần mềm hoặc đăng ký sử dụng các Dịch Vụ trên Phần mềm giúp cho bệnh nhân.\n\n
+        ĐĂNG NHẬP\n\n
+        \t\t\Bạn phải đăng nhập mới có thể sử dụng đầy đủ các Dịch vụ của Phần mềm.
+\t\tPhần mềm định danh tài khoản của bạn bằng số điện thoại di động bạn đang sử dụng, vì vậy trong trường hợp bạn không còn hoặc mất quyền kiểm soát hay sở hữu đối với số điện thoại di động của mình, bạn hãy liên hệ ngay với chúng tôi qua tổng đài 1900 2115 hoặc email hotro@medpro.com.vn, chúng tôi sẽ hỗ trợ bạn.</string>
+    <string name="hospital_name">BỆNH VIỆN DA LIỄU THÀNH PHỐ HỒ CHÍ MINH</string>
+    <string name="hospital_name_english">HCMC HOSPITAL of DERMATO VENEROLOGY</string>
+    <string name="hospital_slogan">DA ĐẸP DA KHỎE - SỐNG KHỎE SỐNG VUI</string>
+    <string name="numberID">CMND/Passport</string>
+    <string name="gender">Giới tính (*)</string>
+    <string name="dateOfBirth">Ngày sinh(*)</string>
+    <string name="fullName">Họ và tên</string>
+    <string name="noneInfo">Chưa cập nhật</string>
+
 </resources>

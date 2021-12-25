@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +33,7 @@ public class LoginScreen extends AppCompatActivity {
     EditText edtSdt;
     Intent intent;
     TextView txtLoi;
+    ImageButton imgBackLogin;
     int REQUEST_CODE_FOR_LOGIN = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,7 @@ public class LoginScreen extends AppCompatActivity {
         btnContinue = findViewById(R.id.btnContinue);
         edtSdt = findViewById(R.id.edtSdt);
         txtLoi = findViewById(R.id.txtLoi);
+        imgBackLogin = findViewById(R.id.imgBackLogin);
     }
 
 
@@ -95,6 +98,13 @@ public class LoginScreen extends AppCompatActivity {
                         startActivity(intent);
                     }
                 }
+            }
+        });
+        imgBackLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent backMain = new Intent(LoginScreen.this, MainActivity.class);
+                startActivity(backMain);
             }
         });
     }

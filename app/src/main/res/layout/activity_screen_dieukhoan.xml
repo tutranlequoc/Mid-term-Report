@@ -32,10 +32,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableRight="@drawable/ic_baseline_home_24"
-                android:background="#5cc0ab"/>
+                android:background="#5cc0ab"
+                android:paddingRight="10dp"/>
 
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GIỚI THIỆU"
+        android:textStyle="bold"
+        android:padding="20dp"
+        android:textSize="18sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:text="@string/introduction"
+        android:paddingRight="5dp"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

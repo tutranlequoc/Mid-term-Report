@@ -26,6 +26,7 @@
         <activity
             android:name=".screen_xoahoso"
             android:exported="true">
+
         </activity>
         <activity
             android:name=".NhapMkMoi"
@@ -38,11 +39,6 @@
         <activity
             android:name=".QuenMatKhau"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ManHinhThongBao"
@@ -93,21 +89,20 @@
         <activity
             android:name=".ChonThongTinKham"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".screen_faq"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".screen_quydinh"
             android:exported="true" />
         <activity
             android:name=".screen_dieukhoan"
             android:exported="true">
+
         </activity>
         <activity
             android:name=".screen_thongbao"
@@ -143,6 +138,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".GoiYTimMaBHYT"

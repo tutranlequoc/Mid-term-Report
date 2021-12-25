@@ -16,19 +16,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BỆNH VIỆN DA LIỄU THÀNH PHỐ HỒ CHÍ MINH"
+            android:text="@string/hospital_name"
             android:textColor="#FFFFFF"
             android:textSize="10sp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HCMC HOSPITAL of DERMATO VENEREOLOGY"
+            android:text="@string/hospital_name_english"
             android:textColor="#FFFFFF"
             android:textSize="10sp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DA ĐẸP DA KHỎE - SỐNG KHỎE TRẺ VUI"
+            android:text="@string/hospital_slogan"
             android:textColor="#FFFFFF"
             android:textSize="11sp"/>
 
