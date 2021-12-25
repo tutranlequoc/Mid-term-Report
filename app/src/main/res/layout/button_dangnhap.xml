@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:text="ĐĂNG NHẬP"
-    android:backgroundTint="#4395E6"
+    android:backgroundTint="@color/color_4395E6"
     android:orientation="vertical"
     android:gravity="center">
 

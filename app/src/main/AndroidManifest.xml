@@ -29,13 +29,20 @@
 
         </activity>
         <activity
+            android:name=".ChinhSuaHoSo"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".NhapMkMoi"
             android:exported="true" >
 
         </activity>
         <activity
             android:name=".ManHinhDangKy"
-            android:exported="true"></activity>
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".QuenMatKhau"
             android:exported="true" >
@@ -46,6 +53,7 @@
         <activity
             android:name=".LoginScreen"
             android:exported="true">
+
         </activity>
         <activity
             android:name=".ManHinhNhapPassWord"
@@ -58,13 +66,18 @@
             android:exported="true" />
         <activity
             android:name=".KhaiBaoYTe"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".PhieuKhamBenh"
             android:exported="true" />
         <activity
             android:name=".ChonPhuongThucTT"
-            android:exported="true" />
+            android:exported="true" >
+
+
+        </activity>
         <activity
             android:name=".DanhSachPhieuKhamScreen"
             android:exported="true" />
@@ -73,10 +86,16 @@
             android:exported="true" />
         <activity
             android:name=".HoSoDatKham"
-            android:exported="true"></activity>
+            android:exported="true">
+
+
+        </activity>
         <activity
             android:name=".ChonNgayKham"
-            android:exported="true"></activity>
+            android:exported="true">
+
+
+        </activity>
         <activity
             android:name=".VuiLongChonGiokham"
             android:exported="true"></activity>

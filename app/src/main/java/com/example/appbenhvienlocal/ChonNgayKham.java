@@ -146,6 +146,7 @@ public class ChonNgayKham extends AppCompatActivity implements CalendarAdapter.o
             intent = new Intent(ChonNgayKham.this, VuiLongChonGiokham.class);
             intent.putParcelableArrayListExtra(Constant.THONGTIN, ketQuaTraVe);
             intent.putExtra(Constant.INDEX_THONGTIN, index+1);
+            Constant.bookingInfor.setNgayKham(dateMonthYearFromDate(date));
             startActivity(intent);
         }
     }

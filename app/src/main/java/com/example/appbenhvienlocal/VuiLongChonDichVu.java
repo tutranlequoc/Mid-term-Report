@@ -70,6 +70,8 @@ public class VuiLongChonDichVu extends AppCompatActivity {
                 intent = new Intent(VuiLongChonDichVu.this, ChonNgayKham.class);
                 intent.putParcelableArrayListExtra(Constant.THONGTIN, ketQuaTraVe);
                 intent.putExtra(Constant.INDEX_THONGTIN, index+1);
+                Constant.bookingInfor.setDichVu(dichVu.getTenDichVu());
+                Constant.bookingInfor.setTienKham(String.format("%.0f",dichVu.getGiaDichVu()) + " VNĐ");
                 startActivity(intent);
             }
         });

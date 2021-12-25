@@ -2,62 +2,68 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/navigation_background"
-    android:layout_margin="20dp"
-    android:gravity="center">
-    <TextView
-        android:id="@+id/txtThongBao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="THÔNG BÁO"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtThongBaoThanhToan"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"/>
-    <View android:id="@+id/lineTop"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@color/black"/>
+    android:layout_height="wrap_content"
+    android:divider="@drawable/divider_khai_baoyt"
+    android:showDividers="middle"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
-        <Button
-            android:id="@+id/btnCancelPayment"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XÁC NHẬN"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="22sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/txtNoiDung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thong_bao"
+            android:textColor="@color/black"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:divider="@drawable/divider_khai_baoyt_hor"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/txtHuy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Hủy"
             android:textStyle="bold"
-            android:background="@drawable/navigation_background"/>
-        <View
-            android:id="@+id/divider"
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
-            android:background="@color/black"
-            />
-        <Button
-            android:id="@+id/btnAgreePayment"
+            android:textColor="#CCC1C1"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:padding="15dp"/>
+        <TextView
+            android:id="@+id/txtDongY"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ĐỒNG Ý"
+            android:text="Đồng ý"
             android:textStyle="bold"
-            android:background="@drawable/navigation_background"
-            />
+            android:textColor="#CCC1C1"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:padding="15dp"/>
+
     </LinearLayout>
 
 

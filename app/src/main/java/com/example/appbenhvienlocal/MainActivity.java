@@ -32,6 +32,7 @@ import android.widget.Toast;
 import com.example.adapter.CustomAdapter;
 import com.example.database.BenhVienSQLiteHelper;
 import com.example.function.Function;
+import com.example.models.BookingInfor;
 import com.example.ultis.Constant;
 import com.google.android.material.navigation.NavigationView;
 
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void prepareDB() {
         Constant.database = new BenhVienSQLiteHelper(this);
+        Constant.bookingInfor = new BookingInfor();
 //        Constant.database.createDefaultUser();
     }
 
@@ -193,6 +195,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(i);
         }else if (itemId == R.id.nav_login){
             Intent i = new Intent(MainActivity.this, LoginScreen.class);
+            i.putExtra(Constant.REQUEST_TAG, Constant.REQUEST_CODE_FOR_LOGIN);
             startActivity(i);
         }else if (itemId == R.id.nav_policy){
             Intent i = new Intent(MainActivity.this, screen_dieukhoan.class);

@@ -10,12 +10,12 @@
         android:id="@+id/appBarHoSo"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#5CC0AB">
+        android:background="@color/MainColor">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolBarHoSo"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#5CC0AB">
+            android:background="@color/MainColor">
             <ImageButton
                 android:id="@+id/btnBackHS"
                 android:layout_width="30dp"
@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:text="Hồ sơ đặt khám"
                 android:textSize="18sp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:textStyle="bold"/>
             <ImageButton
