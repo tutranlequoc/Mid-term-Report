@@ -43,6 +43,12 @@
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:src="@drawable/logo_main" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="1">
+
 
 
     <TextView
@@ -105,8 +111,13 @@
         android:gravity="center"
         android:text="Đăng kí"
         android:textColor="@color/white"
-        android:textSize="20sp" />
-
-
+        android:textSize="20sp"
+        />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/nen2"
+    android:alpha="0.6"/>
 
 </LinearLayout>

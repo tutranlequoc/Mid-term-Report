@@ -14,10 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#E5E5E5"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolBar"
@@ -29,8 +29,8 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_keyboard_backspace_24"
-                android:backgroundTint="#E5E5E5"/>
+                android:backgroundTint="#E5E5E5"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -44,98 +44,132 @@
         android:layout_gravity="center"
         android:src="@drawable/logo_main" />
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Vui lòng nhập đầy đủ thông tin:"
-        android:textColor="@color/black"
-        android:textSize="20dp" />
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_edittext"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="15dp"
-        android:padding="10dp"
-        android:gravity="center"
-        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-        >
-        <Spinner
-            android:id="@+id/spRegion"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/vietnam"/>
-        <EditText
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:gravity="left"
-            android:hint="Số điện thoại"
-            android:inputType="phone"
-            android:layout_marginLeft="10dp"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Vui lòng nhập đầy đủ thông tin:"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+
+            >
+
+            <ImageView
+
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/vietnam" />
+
+            <TextView
+                android:id="@+id/txtSdtDki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="left"
+                android:hint="Số điện thoại"
+                android:inputType="phone"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <![CDATA[
 
 
 >
 
-    <EditText
+    ]]>
+
+        <EditText
+            android:id="@+id/edtHoTen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center_vertical"
+            android:hint="Họ và tên"
+            android:paddingLeft="10dp"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/edtNhapMK"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:hint="Nhập mât khẩu"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/edtXacNhanMk"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:hint="Xác nhận lại mật khẩu"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnDangKiFinal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:text="Đăng kí"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/rounded_edittext"
-        android:gravity="center_vertical"
-        android:hint="Họ và tên"
-        android:paddingLeft="10dp"
-        android:textSize="20sp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/rounded_edittext"
-        android:gravity="center_vertical"
-        android:hint="Nhập mât khẩu"
-        android:paddingLeft="10dp"
-        android:textSize="20sp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/rounded_edittext"
-        android:gravity="center_vertical"
-        android:hint="Xác nhận lại mật khẩu"
-        android:paddingLeft="10dp"
-        android:textSize="20sp" />
-
-
-    <Button
-
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:background="@drawable/rounded_button"
-        android:text="Đăng kí"
-        android:textColor="@color/white"/>
-
-
+        android:layout_height="100dp"
+        android:alpha="0.6"
+        android:background="@drawable/nen2" />
 </LinearLayout>
