@@ -10,7 +10,7 @@
         android:id="@+id/appBarPhieuKham"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#5CC0AB"
+        android:background="@color/MainColor"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +19,7 @@
             android:id="@+id/toolBarPhieuKham"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#5CC0AB">
+            android:background="@color/MainColor">
             <ImageButton
                 android:id="@+id/btnBackPhieuKham"
                 android:layout_width="30dp"
@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="Phiếu khám bệnh"
                 android:textSize="18sp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:textStyle="bold"/>
         </androidx.appcompat.widget.Toolbar>
@@ -75,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(Mã phiếu: AFGW421)"
-                android:textColor="#888383" />
+                android:textColor="@color/color_888383" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:text="Chưa thanh toán"
                 android:layout_marginTop="10dp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:background="@drawable/custom_thanh_toan_bgr"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Vui lòng thanh toán để hoàn tất đăng ký khám bệnh"
-                    android:textColor="#FF0000"
+                    android:textColor="@color/Red"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -445,7 +445,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/round_button"
             android:text="VỀ TRANG CHỦ"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:layout_weight="1"
             android:layout_marginRight="0.5dp"/>
@@ -454,7 +454,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/round_button"
             android:text="THANH TOÁN LẠI"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:layout_weight="1"/>
     </LinearLayout>

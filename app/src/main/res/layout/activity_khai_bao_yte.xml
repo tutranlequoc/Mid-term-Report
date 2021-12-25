@@ -9,7 +9,7 @@
         android:id="@+id/appBarKBYT"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#5CC0AB"
+        android:background="@color/MainColor"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,7 @@
             android:id="@+id/toolBarKBYT"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#5CC0AB">
+            android:background="@color/MainColor">
             <ImageButton
                 android:id="@+id/btnBackKBYT"
                 android:layout_width="30dp"
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:text="Khai báo Y tế"
                 android:textSize="18sp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:textStyle="bold"/>
         </androidx.appcompat.widget.Toolbar>
@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#1A4CFF"
+        android:background="@color/blue_1A4CFF"
         android:gravity="center"
         android:paddingBottom="5dp"
         android:paddingTop="5dp"
@@ -113,7 +113,7 @@
                 android:text="KHAI BÁO THÔNG TIN SAI LÀ VI PHẠM PHÁP LUẬT VIỆT NAM VÀ  CÓ THỂ XỬ LÝ HÌNH SỰ"
                 android:textStyle="bold"
                 android:textSize="12sp"
-                android:textColor="#FF0000"
+                android:textColor="@color/Red"
                 android:gravity="center"
                 android:padding="5dp"/>
             <LinearLayout
@@ -136,7 +136,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:text="Bệnh nhân/Người nhà"
-                             android:textColor="#0032C7"
+                             android:textColor="@color/blue_0032C7"
                              android:textStyle="bold"
                              android:background="@null"
                              android:button= "@drawable/custom_radiobutton"
@@ -145,7 +145,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:text="Khách đến liên hệ công tác"
-                             android:textColor="#0032C7"
+                             android:textColor="@color/blue_0032C7"
                              android:textStyle="bold"
                              android:background="@null"
                              android:button= "@drawable/custom_radiobutton"
@@ -154,7 +154,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:text="Tiêm chủng vắc xin"
-                             android:textColor="#0032C7"
+                             android:textColor="@color/blue_0032C7"
                              android:textStyle="bold"
                              android:background="@null"
                              android:button= "@drawable/custom_radiobutton"
@@ -163,7 +163,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:text="Theo dõi sức khỏe tại nhà"
-                             android:textColor="#0032C7"
+                             android:textColor="@color/blue_0032C7"
                              android:textStyle="bold"
                              android:background="@null"
                              android:button= "@drawable/custom_radiobutton"
@@ -178,7 +178,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:text="Nhân viên bệnh viện"
-                             android:textColor="#0032C7"
+                             android:textColor="@color/blue_0032C7"
                              android:textStyle="bold"
                              android:background="@null"
                              android:button= "@drawable/custom_radiobutton"
@@ -187,7 +187,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:text="Xét nghiệm COVID-19"
-                             android:textColor="#0032C7"
+                             android:textColor="@color/blue_0032C7"
                              android:textStyle="bold"
                              android:background="@null"
                              android:button= "@drawable/custom_radiobutton"
@@ -208,7 +208,7 @@
                                  android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
                                  android:text="Nhập lại"
-                                 android:textColor="#0032C7"
+                                 android:textColor="@color/blue_0032C7"
                                  android:layout_marginLeft="2dp"/>
                          </LinearLayout>
                      </RadioGroup>
@@ -234,7 +234,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintWidth_percent="1"
-                        android:dropDownSelector="#AEE8DE"
+                        android:dropDownSelector="@color/color_AEE8DE"
                         android:textSize="16sp"
                         android:completionThreshold="1"
                         android:focusable="false"
@@ -351,7 +351,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintWidth_percent="1"
-                        android:dropDownSelector="#AEE8DE"
+                        android:dropDownSelector="@color/color_AEE8DE"
                         android:textSize="16sp"
                         android:completionThreshold="1"
                         android:focusable="false"
@@ -393,7 +393,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintWidth_percent="1"
-                        android:dropDownSelector="#AEE8DE"
+                        android:dropDownSelector="@color/color_AEE8DE"
                         android:textSize="16sp"
                         android:completionThreshold="1"
                         android:focusable="false"
@@ -435,7 +435,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintWidth_percent="1"
-                        android:dropDownSelector="#AEE8DE"
+                        android:dropDownSelector="@color/color_AEE8DE"
                         android:textSize="16sp"
                         android:completionThreshold="1"
                         android:focusable="false"
@@ -477,7 +477,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintWidth_percent="1"
-                        android:dropDownSelector="#AEE8DE"
+                        android:dropDownSelector="@color/color_AEE8DE"
                         android:textSize="16sp"
                         android:completionThreshold="1"
                         android:focusable="false"
@@ -520,7 +520,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintWidth_percent="1"
-                        android:dropDownSelector="#AEE8DE"
+                        android:dropDownSelector="@color/color_AEE8DE"
                         android:textSize="16sp"
                         android:completionThreshold="1"
                         android:focusable="false"
@@ -553,7 +553,7 @@
                             android:text="Dấu hiệu"
                             android:layout_weight="2"
                             android:padding="10dp"
-                            android:textColor="#0032C7"
+                            android:textColor="@color/blue_0032C7"
                             android:textStyle="bold"/>
                         <TextView
                             android:layout_width="0dp"
@@ -561,7 +561,7 @@
                             android:text="Có"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="#0032C7"
+                            android:textColor="@color/blue_0032C7"
                             android:textStyle="bold"/>
                         <TextView
                             android:layout_width="0dp"
@@ -569,7 +569,7 @@
                             android:text="Không"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="#0032C7"
+                            android:textColor="@color/blue_0032C7"
                             android:textStyle="bold"/>
                     </TableRow>
                     <TableRow
@@ -1040,7 +1040,7 @@
                             android:text="Yếu tố dịch tế"
                             android:layout_weight="2"
                             android:padding="10dp"
-                            android:textColor="#0032C7"
+                            android:textColor="@color/blue_0032C7"
                             android:textStyle="bold"/>
                         <TextView
                             android:layout_width="0dp"
@@ -1048,7 +1048,7 @@
                             android:text="Có"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="#0032C7"
+                            android:textColor="@color/blue_0032C7"
                             android:textStyle="bold"/>
                         <TextView
                             android:layout_width="0dp"
@@ -1056,7 +1056,7 @@
                             android:text="Không"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="#0032C7"
+                            android:textColor="@color/blue_0032C7"
                             android:textStyle="bold"/>
                     </TableRow>
                     <TableRow
@@ -1452,7 +1452,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="@string/vui_long_cung_cap"
-                        android:textColor="#0032C7"
+                        android:textColor="@color/blue_0032C7"
                         android:textStyle="bold"/>
                 </LinearLayout>
 
@@ -1471,7 +1471,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:textStyle="bold"
-                    android:textColor="#0032C7"
+                    android:textColor="@color/blue_0032C7"
                     android:textSize="20sp"/>
 
                 <EditText
@@ -1487,7 +1487,7 @@
                     android:layout_marginBottom="20dp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
-                    android:background="#0032C7"
+                    android:background="@color/blue_0032C7"
                     android:textSize="16sp"
                     android:layout_gravity="center"
                     android:minHeight="0dp"
@@ -1502,7 +1502,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:textStyle="bold"
-                android:textColor="#0032C7"
+                android:textColor="@color/blue_0032C7"
                 android:textSize="20sp"
                 android:src="@drawable/logoappkhaibaoyte"
                 android:layout_gravity="center"/>

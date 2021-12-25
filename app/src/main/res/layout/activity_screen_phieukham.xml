@@ -10,30 +10,28 @@
 <com.google.android.material.appbar.AppBarLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#5cc0ab">
+    android:background="@color/MainColor">
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:gravity="left"
         android:padding="3dp">
-        <Button
-            android:id="@+id/btnBackPhieuKham"
-            android:layout_width="40dp"
-            android:layout_height="45dp"
-            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
-            android:layout_marginRight="50dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#5cc0ab"/>
+        <ImageButton
+            android:id="@+id/imgBackPhieuKham"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Danh sách Phiếu khám"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
+            android:text="Danh sách phiếu khám"
+            android:textSize="18sp"
+            android:textColor="@color/white"
             android:layout_gravity="center"
-            android:layout_marginRight="60dp"/>
+            android:textStyle="bold"/>
     </androidx.appcompat.widget.Toolbar>
 
 </com.google.android.material.appbar.AppBarLayout>

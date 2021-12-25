@@ -21,7 +21,7 @@
             android:id="@+id/appBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#5CC0AB"
+            android:background="@color/MainColor"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
                 android:id="@+id/toolBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#5CC0AB">
+                android:background="@color/MainColor">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -54,21 +54,21 @@
                                 android:text="BỆNH VIỆN DA LIỄU THÀNH PHỐ HỒ CHÍ MINH"
                                 android:textSize="8dp"
                                 android:textStyle="bold"
-                                android:textColor="#FFFFFF"/>
+                                android:textColor="@color/white"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="HCMC HOSPITAL of DERMATO VENEROLOGY"
                                 android:textSize="8dp"
                                 android:textStyle="bold"
-                                android:textColor="#FFFFFF"/>
+                                android:textColor="@color/white"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="DA ĐẸP DA KHỎE - SỐNG KHỎE SỐNG VUI"
                                 android:textSize="8dp"
                                 android:textStyle="bold"
-                                android:textColor="#FFFFFF"/>
+                                android:textColor="@color/white"/>
                         </LinearLayout>
                         <ImageView
                             android:layout_width="70dp"
@@ -167,14 +167,14 @@
                             android:layout_height="wrap_content"
                             android:text="@string/ho_tro_dat_kham"
                             android:textSize="14sp"
-                            android:textColor="#BDB8B8"
+                            android:textColor="@color/Color_BD8888"
                             android:layout_gravity="center"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/phone_number"
                             android:background="@android:color/transparent"
-                            android:textColor="#00a8c7"
+                            android:textColor="@color/Blue_00A8C7"
                             android:textSize="18sp"
                             android:layout_gravity="center"
                             android:minHeight="0dp"/>
@@ -191,7 +191,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="@string/ho_tro_zalo"
-                            android:textColor="#BDB8B8"
+                            android:textColor="@color/Color_BD8888"
                             android:textSize="14sp" />
 
                         <ImageView

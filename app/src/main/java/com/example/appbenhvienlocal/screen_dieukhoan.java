@@ -6,9 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class screen_dieukhoan extends AppCompatActivity {
-    Button btnBackDK, btnBackHome;
+    ImageButton imgBackDK, imgBackHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,19 +21,19 @@ public class screen_dieukhoan extends AppCompatActivity {
     }
 
     private void linkViews() {
-        btnBackDK = findViewById(R.id.btnBackDK);
-        btnBackHome = findViewById(R.id.btnBackHome);
+        imgBackDK = findViewById(R.id.imgBackDK);
+        imgBackHome = findViewById(R.id.imgBackHome);
     }
 
     private void addEvents() {
-        btnBackDK.setOnClickListener(new View.OnClickListener() {
+        imgBackDK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(screen_dieukhoan.this, MainActivity.class);
                 startActivity(i);
             }
         });
-        btnBackHome.setOnClickListener(new View.OnClickListener() {
+        imgBackHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(screen_dieukhoan.this, MainActivity.class);
