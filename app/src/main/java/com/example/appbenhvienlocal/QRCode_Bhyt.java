@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.budiyev.android.codescanner.CodeScanner;
@@ -18,6 +19,7 @@ public class QRCode_Bhyt extends AppCompatActivity {
     public static final int CAMERA_REQUEST_CODE=101;
     CodeScanner codeScanner;
     CodeScannerView scannerView;
+    ImageButton imvBackQRCode;
 
     @Override
 
@@ -25,11 +27,18 @@ public class QRCode_Bhyt extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qrcode_bhyt);
         linkView();
+        imvBackQRCode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         scanerCode();
     }
 
     private void linkView() {
         scannerView = findViewById(R.id.scaner_view);
+        imvBackQRCode = findViewById(R.id.btnQRCode);
     }
 
     private void scanerCode() {

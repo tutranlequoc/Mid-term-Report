@@ -139,6 +139,9 @@
         <activity
             android:name=".Fill_Infor_Screen"
             android:exported="true" />
+        <activity
+            android:name=".NhapTheATM"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

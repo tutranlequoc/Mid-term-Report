@@ -45,10 +45,13 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-   <ListView
-       android:id="@+id/lvDanhSachPhieuKhan"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/linearContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+    </LinearLayout>
 
 
 </LinearLayout>

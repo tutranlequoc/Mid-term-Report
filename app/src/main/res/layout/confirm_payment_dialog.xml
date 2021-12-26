@@ -24,7 +24,7 @@
             android:layout_marginTop="15dp"/>
 
         <TextView
-            android:id="@+id/txtNoiDung"
+            android:id="@+id/txtContentPayment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/thong_bao"

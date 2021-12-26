@@ -7,8 +7,13 @@ public class Danhsachphieukham {
     private String maPhieu,Ten,ngayKham,GioKhamDuKien,tenTrangThai;
     private int trangThai;
 
+    public Danhsachphieukham(){
 
+    }
 
+    public void setTrangThai(int trangThai) {
+        this.trangThai = trangThai;
+    }
 
     public Danhsachphieukham(String maPhieu, String ten, String ngayKham, String gioKhamDuKien, int trangThai, String tenTrangThai) {
         this.maPhieu = maPhieu;

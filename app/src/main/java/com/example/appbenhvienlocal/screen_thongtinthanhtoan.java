@@ -130,7 +130,7 @@ public class screen_thongtinthanhtoan extends AppCompatActivity {
         txtHuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                 dialogConfirm.dismiss();
+                dialogConfirm.dismiss();
             }
         });
         dialogConfirm.show();

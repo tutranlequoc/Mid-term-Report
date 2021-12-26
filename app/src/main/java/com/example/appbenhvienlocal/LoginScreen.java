@@ -40,7 +40,7 @@ public class LoginScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
         Constant.database = new BenhVienSQLiteHelper(this);
-//        Constant.database.createDefaultUser();
+        Constant.database.createDefaultUser();
         linkView();
 
         getData();
@@ -87,15 +87,20 @@ public class LoginScreen extends AppCompatActivity {
                         intent = new Intent(LoginScreen.this, ManHinhNhapPassWord.class);
 
                     }else {
-                        intent = new Intent(LoginScreen.this, OTPScreen.class);
+                        intent = new Intent(LoginScreen.this, ManHinhDangKy.class);
                     }
                     intent.putExtra(Constant.PHONE_NUMBER, phone);
                     if(REQUEST_CODE_FOR_LOGIN != 0){
                         intent.putExtra(Constant.REQUEST_TAG, REQUEST_CODE_FOR_LOGIN);
-                        startActivity(intent);
+                            startActivity(intent);
                         finish();
                     }else {
-                        startActivity(intent);
+                        try{
+                            startActivity(intent);
+                        }catch (Exception e){
+                            Toast.makeText(LoginScreen.this, "Số điện thoại chưa được đăng ký, vui lòng sử dụng tài khoản có sẵn trong READ.ME", Toast.LENGTH_SHORT).show();
+                        }
+
                     }
                 }
             }

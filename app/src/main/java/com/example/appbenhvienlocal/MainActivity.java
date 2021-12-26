@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     //Spinner spinner;
     Button btnDatKham;
+    ImageButton btnKhaiBao;
     ImageButton imgbtnZalo;
     LinearLayout layoutPhone,layoutZalo, layoutMap;
 //    ArrayAdapter<String> spinnerAdapter= new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.spinner));
@@ -68,8 +69,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void prepareDB() {
         Constant.database = new BenhVienSQLiteHelper(this);
-        //Constant.bookingInfor = new BookingInfor();
        Constant.database.createDefaultUser();
+//         Constant.bookingInfor = new BookingInfor();
+        Constant.database.createDefaultUser();
+
     }
 
     private void addEvents() {
@@ -87,6 +90,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        btnKhaiBao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,KhaiBaoYTe.class);
+                startActivity(intent);
+            }
+        });
 
         layoutPhone.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -158,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //spinner = findViewById(R.id.spinnerPhieuKham);
         btnDatKham = findViewById(R.id.btnDatKham);
-
+        btnKhaiBao = findViewById(R.id.btnKhaiBao);
 
         layoutPhone = findViewById(R.id.layoutPhone);
         layoutZalo = findViewById(R.id.layoutZalo);
@@ -189,7 +199,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 i = new Intent(MainActivity.this, LoginScreen.class);
                 i.putExtra(Constant.REQUEST_TAG, Constant.REQUEST_CODE_FOR_LOGIN);
             }else {
-                i = new Intent(MainActivity.this, screen_phieukham.class);
+                i = new Intent(MainActivity.this, DanhSachPhieuKhamScreen.class);
             }
             startActivity(i);
         }

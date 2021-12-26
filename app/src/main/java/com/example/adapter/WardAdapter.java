@@ -61,7 +61,7 @@ public class WardAdapter extends ArrayAdapter<Ward> {
     @Override
     public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_quen_ma_hs,parent,false);
-        TextView txtItem = convertView.findViewById(R.id.txtSelectedHS);
+        TextView txtItem = convertView.findViewById(R.id.txtItemListHS);
         Ward ward = wards.get(position);
         if(ward!=null)
         {

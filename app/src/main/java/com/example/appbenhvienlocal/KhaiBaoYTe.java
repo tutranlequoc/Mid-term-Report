@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.Toast;
@@ -21,15 +22,23 @@ public class KhaiBaoYTe extends AppCompatActivity {
     private AutoCompleteTextView actNoiKhaiBao, actQuocTich, actTinhThanh, actQuanHuyen, actXaPhuong;
     private ImageView imvDropDownNoiKhaiBao, imvQuocTich, imvTinhThanh, imvQuanHuyen, imvXaPhuong, imvMenu;
     private ArrayAdapter<String> adapter, adapterQT, adapterTT, adapterQH, adapterXaPhuong;
+    ImageButton imvBackKBYT;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.thong_tin_khai_bao);
-//        linkViews();
-//        initData();
-//        loadData();
-//        showMenu();
-//        addEvents();
+        setContentView(R.layout.activity_khai_bao_yte);
+        imvBackKBYT = findViewById(R.id.btnBackKBYT);
+        imvBackKBYT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        linkViews();
+        initData();
+        loadData();
+        showMenu();
+        addEvents();
 
     }
 

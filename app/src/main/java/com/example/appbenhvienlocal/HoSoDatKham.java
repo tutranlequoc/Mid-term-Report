@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +43,11 @@ public class HoSoDatKham extends AppCompatActivity implements onItemFragmentClic
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        replaceFragment();
+    }
 
     private void getData() {
        changeScreen = getIntent();
@@ -60,6 +66,7 @@ public class HoSoDatKham extends AppCompatActivity implements onItemFragmentClic
         manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         if(Constant.database.checkExistDocument(Constant.user.getPhone()) == 0){
+            ;
             transaction.replace(R.id.lvContainer, new KhongCoHoSo());
         }else {
             transaction.replace(R.id.lvContainer, new DanhSachHoSo());
@@ -71,7 +78,13 @@ public class HoSoDatKham extends AppCompatActivity implements onItemFragmentClic
         btnBackHS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                if(code == Constant.REQUEST_CODE_FOR_DOCUMENT_FROM_MAIN){
+                    changeScreen = new Intent(HoSoDatKham.this, MainActivity.class);
+                    startActivity(changeScreen);
+                }else {
+                    finish();
+                }
+
             }
         });
         btnThem.setOnClickListener(new View.OnClickListener() {

@@ -1,10 +1,12 @@
 package com.example.appbenhvienlocal;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +22,7 @@ public class ManHinhNhapPassWord extends AppCompatActivity {
     EditText edtPass;
     Intent intent;
     Button btnLogin;
+    ImageButton imvFillPass;
     int REQUEST_CODE_FOR_LOGIN = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class ManHinhNhapPassWord extends AppCompatActivity {
         txtQuenMk = findViewById(R.id.txtQuenMK);
         btnLogin = findViewById(R.id.btnLogin);
         edtPass = findViewById(R.id.edtPass);
+        imvFillPass = findViewById(R.id.imvBackFillPass);
     }
 
     private void getData() {
@@ -63,9 +67,11 @@ public class ManHinhNhapPassWord extends AppCompatActivity {
                         String userName = Constant.database.getUserName(phone);
                         Constant.user = new User(phone, userName);
                         if(REQUEST_CODE_FOR_LOGIN == 0){
+                            Toast.makeText(ManHinhNhapPassWord.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                             Intent intentDangNhap = new Intent(ManHinhNhapPassWord.this,MainActivity.class);
                             startActivity(intentDangNhap);
                         }else {
+                            Toast.makeText(ManHinhNhapPassWord.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                             finish();
                         }
                     }else {
@@ -80,6 +86,12 @@ public class ManHinhNhapPassWord extends AppCompatActivity {
                     txtSaiMk.setVisibility(View.VISIBLE);
                 }
 
+            }
+        });
+        imvFillPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
         txtDangKi.setOnClickListener(new View.OnClickListener() {
