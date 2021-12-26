@@ -155,8 +155,8 @@ public class screen_chuatungkham extends AppCompatActivity {
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent backTaoHoSo = new Intent(screen_chuatungkham.this, screen_hoso_moi.class);
-                startActivity(backTaoHoSo);
+//                Intent backTaoHoSo = new Intent(screen_chuatungkham.this, screen_hoso_moi.class);
+//                startActivity(backTaoHoSo);
                 finish();
             }
         });

@@ -1,5 +1,6 @@
 package com.example.database;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -21,7 +22,7 @@ import java.util.Random;
 
 public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
 
-    public static final int DB_VERSION = 1;
+    public static final int DB_VERSION = 2;
     public static final String DB_NAME = "BENHVIEN.sqlite";
 
     public static final String TBL_NAME_HOSODATKHAM = "HOSODATKHAM";
@@ -105,6 +106,8 @@ public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
 
     }
 
+
+
     public Cursor getData(String sql){
         SQLiteDatabase db = getReadableDatabase();
         try{
@@ -181,12 +184,48 @@ public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
 
     }
 
-    public void deleteDocument(String code){
-        SQLiteDatabase db = getWritableDatabase();
+    public ArrayList<Danhsachphieukham> getInforFromMedicalTest(String phoneNumber){
+        SQLiteDatabase db = getReadableDatabase();
         try{
-            db.execSQL("DELETE FROM " + TBL_NAME_HOSODATKHAM + " WHERE " + COL_CODE + " = " + code);
+            Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_PHIEUKHAM + " WHERE " + TBL_NAME_PHIEUKHAM + "." + COL_CODE + " IN " +
+                    "(SELECT " + TBL_NAME_HOSODATKHAM + "." + COL_CODE + " FROM " + TBL_NAME_HOSODATKHAM + " JOIN " + TBL_NAME_USER + " ON " +
+                    TBL_NAME_HOSODATKHAM + "." + COL_USER_PHONE + " = " + TBL_NAME_USER + "." + COL_USER_PHONE + ")", null);
+            ArrayList<Danhsachphieukham> danhsachphieukhams = new ArrayList<>();
+            while (cursor.moveToNext()){
+                Danhsachphieukham danhsachphieukham = new Danhsachphieukham();
+                danhsachphieukham.setMaPhieu(cursor.getString(0));
+                danhsachphieukham.setTen("ABC");
+                danhsachphieukham.setNgayKham(cursor.getString(2));
+                danhsachphieukham.setGioKhamDuKien(cursor.getString(5));
+                danhsachphieukham.setTenTrangThai("Đã thanh toán");
+                danhsachphieukham.setTrangThai(R.drawable.rounded_dathanhtoan);
+                danhsachphieukhams.add(danhsachphieukham);
+            }
+            cursor.close();
+            return danhsachphieukhams;
         }catch (Exception e){
             Log.e("Error:", e.toString());
+            return null;
+        }
+    }
+
+    public void deleteDocument(String code, String phoneNumber){
+        SQLiteDatabase db = getWritableDatabase();
+        try{
+            db.execSQL("DELETE FROM " + TBL_NAME_HOSODATKHAM + " WHERE " + COL_CODE + " =  '" +code + "'");
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+        }
+    }
+
+    public int updateDocument(ContentValues values, String code){
+        SQLiteDatabase db = getWritableDatabase();
+        try{
+            int flag = db.update(TBL_NAME_HOSODATKHAM, values, COL_CODE + "=?", new String[]{code});
+            return flag;
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+            return 0;
         }
     }
 
@@ -241,6 +280,7 @@ public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getReadableDatabase();
         try{
             Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_HOSODATKHAM + " WHERE " + COL_USER_PHONE + " =?", new String[]{phoneNumber});
+//            cursor.moveToFirst();
             return cursor.getCount();
         }catch (Exception e){
             Log.e("Error:", e.toString());
@@ -254,7 +294,7 @@ public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
     public void createDefaultUser(){
         if(getCount(TBL_NAME_USER) == 0){
             insertDataForUser("0963075062", "Lê Hoàng Giáp", "123456");
-            insertDataForUser("0326213055", "Nguyễn Đăng Bắc", "123456");
+//            insertDataForUser("0326213055", "Nguyễn Đăng Bắc", "123456");
         }
     }
 

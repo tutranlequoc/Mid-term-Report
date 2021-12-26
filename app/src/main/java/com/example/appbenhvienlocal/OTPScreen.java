@@ -12,6 +12,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,6 +41,7 @@ public class OTPScreen extends AppCompatActivity {
     String sdt,mVerificationId;
     int request_code;
     FirebaseAuth mAuth;
+    ImageButton imvBackOTP;
 
 
     @Override
@@ -69,6 +71,7 @@ public class OTPScreen extends AppCompatActivity {
         edtOtp4 = findViewById(R.id.edtOtp4);
         edtOtp5 = findViewById(R.id.edtOtp5);
         edtOtp6 = findViewById(R.id.edtOtp6);
+        imvBackOTP = findViewById(R.id.imvBackOTP);
 
     }
 
@@ -86,6 +89,12 @@ public class OTPScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+            }
+        });
+        imvBackOTP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
         txtGuiLaiMa.setOnClickListener(new View.OnClickListener() {

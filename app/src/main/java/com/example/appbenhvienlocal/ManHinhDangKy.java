@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.ultis.Constant;
@@ -31,6 +32,7 @@ public class ManHinhDangKy extends AppCompatActivity {
     Button btnDangKi;
     EditText edtSdtDKi;
     FirebaseAuth mAuth;
+    ImageButton imvBackRegister;
     private static final String TAG = ManHinhDangKy.class.getName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,7 @@ public class ManHinhDangKy extends AppCompatActivity {
     private void linkView() {
         btnDangKi = findViewById(R.id.btnDangKi);
         edtSdtDKi = findViewById(R.id.edtSdtDKi);
+        imvBackRegister = findViewById(R.id.imvBackRegister);
     }
 
     private void addEvents() {
@@ -58,6 +61,13 @@ public class ManHinhDangKy extends AppCompatActivity {
                 String sdt = edtSdtDKi.getText().toString();
                 sendVerifyToUser(sdt);
 
+            }
+        });
+
+        imvBackRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 

@@ -13,12 +13,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.database.BenhVienSQLiteHelper;
 import com.example.dialog.CustomDiaLogHoSo;
 import com.example.ultis.Constant;
 
 public class QuanLyHoSo extends AppCompatActivity {
 
-    ImageButton btnDelete;
+    ImageButton btnDelete, btnBackXacNhan;
     Button btnBackToMain, btnUpdate;
     CustomDiaLogHoSo customDiaLogHoSo;
     TextView txtCode, txtDateOfBirth, txtGender, txtIdentity, txtInsurance, txtEthnic,
@@ -42,7 +43,7 @@ public class QuanLyHoSo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(Constant.doc != null){
-                    Constant.database.deleteDocument(Constant.doc.getMaSo());
+                    Constant.database.deleteDocument(Constant.doc.getMaSo(), Constant.user.getPhone());
                 }
                 customDiaLogHoSo.dismiss();
                 finish();
@@ -101,10 +102,17 @@ public class QuanLyHoSo extends AppCompatActivity {
             }
         });
 
+        btnBackXacNhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent toEditScreen = new Intent(QuanLyHoSo.this, screen_chuatungkham.class);
+                Intent toEditScreen = new Intent(QuanLyHoSo.this, ChinhSuaHoSo.class);
                 startActivity(toEditScreen);
             }
         });
@@ -125,5 +133,6 @@ public class QuanLyHoSo extends AppCompatActivity {
         txtCountry = findViewById(R.id.txtCountry);
         txtAddress = findViewById(R.id.txtAddress);
         txtEthnic = findViewById(R.id.txtEthnic);
+        btnBackXacNhan = findViewById(R.id.btnBackXacNhan);
     }
 }

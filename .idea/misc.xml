@@ -248,22 +248,35 @@
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/drawable/rounded_textview1.xml" value="0.2755208333333333" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/drawable/rounded_textview2.xml" value="0.2755208333333333" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/drawable/search.xml" value="0.2755208333333333" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_chinh_sua_ho_so.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_chua_thanh_toan_screen.xml" value="0.264" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_da_thanh_toan_screen.xml" value="0.4" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_goi_ytim_ma_bhyt.xml" value="0.259375" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_ho_so_dat_kham.xml" value="0.259375" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_khai_bao_yte.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_main3.xml" value="0.259375" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_man_hinh_dang_ky.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_nhap_the_atm.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_otpscreen.xml" value="0.4" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_qrcode_bhyt.xml" value="0.259375" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_quan_ly_ho_so.xml" value="0.259375" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_screen_chuatungkham.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_screen_phieukham.xml" value="0.259375" />
-        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/danh_sach_phieu_kham.xml" value="0.13385416666666666" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/activity_xac_nhan_thong_tin.xml" value="0.13385416666666666" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/custom_dialog_tao_ho_so_thanh_cong.xml" value="0.259375" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/danh_sach_phieu_kham.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/fill_infor_screen.xml" value="0.4" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/fragment_danh_sach_phieu_kham.xml" value="0.259375" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/fragment_khong_co_ho_so.xml" value="0.13385416666666666" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/fragment_khong_co_phieu_kham.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/function.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/goi_y_mabhyt.xml" value="0.2453125" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/layout_header_navigation.xml" value="0.4" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/listview_ho_so_dat_kham.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/login_screen.xml" value="0.4" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/man_hinh_nhap_password.xml" value="0.536" />
-        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/phieu_kham_layout.xml" value="0.6" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/phieu_kham_layout.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/qrcode_screen.xml" value="0.264" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/qrcode_screen_MaBHYT.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/qrcode_screen_bhyt.xml" value="0.264" />
@@ -273,6 +286,7 @@
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/screen_thongbao.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/verify_bhyt_screen.xml" value="0.264" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/layout/welcome_screen.xml" value="0.259375" />
+        <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/menu/context_menu_khai_bao_y_te.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report/app/src/main/res/menu/menu_navigation.xml" value="0.259375" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report_new/app/src/main/res/drawable-v24/rounded_button.xml" value="0.2755208333333333" />
         <entry key="..\:/Learn/Mobile/Mid-term-Report_new/app/src/main/res/drawable/ic_baseline_keyboard_backspace_24.xml" value="0.2755208333333333" />

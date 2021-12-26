@@ -10,12 +10,12 @@
         android:id="@+id/appBarHoSo"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#5CC0AB">
+        android:background="@color/MainColor">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolBarHoSo"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#5CC0AB">
+            android:background="@color/MainColor">
             <ImageButton
                 android:id="@+id/imgBack"
                 android:layout_width="30dp"
@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:text="Chỉnh sửa hồ sơ"
                 android:textSize="18sp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:textStyle="bold"/>
         </androidx.appcompat.widget.Toolbar>
@@ -61,18 +61,18 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/fullName"
+                    android:text="Họ và tên (có dấu)*"
                     android:textStyle="bold"/>
                 <EditText
                     android:id="@+id/edtFullName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Họ và tên đầy đủ"
+                    android:hint="Họ và chữ lót"
                     android:layout_marginBottom="20dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/dateOfBirth"
+                    android:text="Ngày sinh*"
                     android:textStyle="bold"/>
                 <EditText
                     android:id="@+id/edtDateBirth"
@@ -83,7 +83,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/gender"
+                    android:text="Giới tính*"
                     android:textStyle="bold"/>
                 <Spinner
                     android:id="@+id/spinnerGender"
@@ -93,7 +93,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/numberID"
+                    android:text="CMND/Passport"
                     android:textStyle="bold"/>
                 <EditText
                     android:id="@+id/edtIDNumber_Passport"
@@ -214,9 +214,9 @@
                 android:id="@+id/btnCreateDoc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TẠO MỚI HỒ SƠ"
-                android:background="#5CC0AB"
-                android:textColor="#FFFFFF"
+                android:text="CẬP NHẬT"
+                android:background="@color/MainColor"
+                android:textColor="@color/white"
                 android:textStyle="bold"/>
         </LinearLayout>
     </ScrollView>
