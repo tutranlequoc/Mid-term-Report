@@ -40,7 +40,7 @@ public class LoginScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
         Constant.database = new BenhVienSQLiteHelper(this);
-//        Constant.database.createDefaultUser();
+        Constant.database.createDefaultUser();
         linkView();
 
         getData();

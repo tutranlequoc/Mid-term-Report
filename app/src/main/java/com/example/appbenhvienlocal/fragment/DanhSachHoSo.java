@@ -31,6 +31,7 @@ public class DanhSachHoSo extends Fragment {
        View view = inflater.inflate(R.layout.fragment_danh_sach_ho_so, container, false);
        lvHoSo = view.findViewById(R.id.lvHoSo);
        hoSoDKS = new ArrayList<>();
+       initData();
        return view;
     }
 
@@ -38,6 +39,16 @@ public class DanhSachHoSo extends Fragment {
         hoSoDKS = Constant.database.getInForFromDocument(Constant.user.getPhone());
         adapter = new CustomAdapter((Activity) getContext(), hoSoDKS, R.layout.listview_ho_so_dat_kham);
         lvHoSo.setAdapter(adapter);
+        lvHoSo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                onItemFragmentClick = (onItemFragmentClick) getActivity();
+                if(onItemFragmentClick != null){
+                    HoSoDK doc = (HoSoDK) adapter.getItem(i);
+                    onItemFragmentClick.click(doc);
+                }
+            }
+        });
     }
 
     @Override

@@ -32,4 +32,33 @@ public class CodePatient {
         codeRandom += phoneNumber;
         return codeRandom;
     }
+
+    public static String createCodeTest(String codePatient){
+        String codeTest = "";
+        String letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        codeTest = "TP-";
+        Random random = new Random();
+        codePatient = codePatient.substring(3, codePatient.length() - 1);
+        int upperbound_digit = codePatient.length() - 1;
+        int upperbound_letter = letter.length() - 1;
+        int count = 0;
+        int random_index_digit;
+        int radom_index_letter;
+        String digitChar;
+        String letterChar;
+        List<Integer> numbers = new ArrayList<>();
+        while (count < codePatient.length() - 2){
+            random_index_digit = random.nextInt(upperbound_digit);
+            radom_index_letter = random.nextInt(upperbound_letter);
+            if(!numbers.contains(random_index_digit)){
+                numbers.add(random_index_digit);
+                count++;
+                digitChar = codePatient.substring(random_index_digit, random_index_digit+1);
+                letterChar = letter.substring(radom_index_letter, radom_index_letter+1);
+                codePatient = codePatient.replace(digitChar, letterChar);
+            }
+        }
+        codeTest += codePatient;
+        return codeTest;
+    }
 }

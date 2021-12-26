@@ -135,7 +135,6 @@
             android:name=".MainActivity2"
             android:exported="true" >
 
-
         </activity>
         <activity
             android:name=".OTPScreen"
@@ -169,6 +168,9 @@
         <activity
             android:name=".Fill_Infor_Screen"
             android:exported="true" />
+        <activity
+            android:name=".NhapTheATM"
+            android:exported="true"></activity>
     </application>
        
 </manifest>

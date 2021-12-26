@@ -5,16 +5,17 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         android:id="@+id/imvBankThumb"
         android:scaleType="fitXY"
         android:src="@drawable/agribank"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:background="@drawable/customborder_noikhaibao" />
     <TextView
         android:id="@+id/txtBankName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="Agribank"
         android:layout_gravity="center"
         android:textAlignment="center"/>
