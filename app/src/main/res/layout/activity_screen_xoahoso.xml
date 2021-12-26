@@ -12,27 +12,35 @@
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#5cc0ab">
-            <Button
-                android:id="@+id/btnBackXacNhanTT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
-                android:background="#5cc0ab"/>
+            android:background="@color/MainColor">
+
+
+            <ImageButton
+                android:id="@+id/imgBackXacNhanTT"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/back" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Xác nhận thông tin"
-                android:textSize="25dp"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"/>
-            <Button
-                android:id="@+id/btnXoaHoSo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableRight="@drawable/ic_baseline_restore_from_trash_24"
-                android:background="#5cc0ab"/>
+                android:layout_gravity="center"
+                android:text="Xác nhận hồ sơ"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
+            <ImageButton
+                android:id="@+id/imgXoaHoSo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_home_24" />
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>

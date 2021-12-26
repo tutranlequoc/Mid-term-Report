@@ -8,6 +8,32 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green_layout">#665CC0AB</color>
+    <color name="main_color">#5CC0AB</color>
+    <color name="MainColor">#5CC0AB</color>
+    <color name="BackgroundColor">#E5E5E5</color>
+    <color name="Red">#FF0000</color>
+    <color name="Blue">#0038FF</color>
+    <color name="blue_1A4CFF">#1A4CFF</color>
+    <color name="Color_BD8888">#BDB8B8</color>
+    <color name="Blue_00A8C7">#00a8c7</color>
+    <color name="color_338E8E8E">#338E8E8E</color>
+    <color name="color_888383">#888383</color>
+    <color name="blue_0032C7">#0032C7</color>
+    <color name="color_BFB1B1">#BFB1B1</color>
+    <color name="color_AEE8DE">#AEE8DE</color>
+
+
+    <color name="color_8F8C8C">#8F8C8C</color>
+    <color name="colorr_0E977A">#0E977A</color>
+    <color name="color_077CEF">#077CEF</color>
+    <color name="color_4395E6">#4395E6</color>
+    <color name="color_CCC1C1">#CCC1C1</color>
+    <color name="color_1A4CFF">#1A4CFF</color>
+    <color name="color_5C6C7C">#5C6C7C</color>
+    <color name="color_065493">#065493</color>
+    <color name="color_805CC0AB">#805CC0AB</color>
+    <color name="color_067E72">#067E72</color>
+    <color name="color_A19F9F">#A19F9F</color>
 
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
 

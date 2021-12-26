@@ -8,7 +8,7 @@
         android:id="@+id/appBarTTKham"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#5CC0AB"
+        android:background="@color/MainColor"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,7 +17,7 @@
             android:id="@+id/toolBarTTKham"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#5CC0AB">
+            android:background="@color/MainColor">
             <ImageButton
                 android:id="@+id/btnTTK"
                 android:layout_width="30dp"
@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:text="Chọn thông tin khám"
                 android:textSize="18sp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:textStyle="bold"/>
         </androidx.appcompat.widget.Toolbar>
@@ -53,9 +53,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="#5CC0AB"
+        android:background="@color/MainColor"
         android:text="Tiếp tục"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="20sp" />
 
 

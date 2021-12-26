@@ -12,11 +12,13 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class screen_xoahoso extends AppCompatActivity {
 
-    Button btnDeleteFile, btnCancelDelete, btnAgreeDelete, btnBackXacNhan;
+    Button  btnCancelDelete, btnAgreeDelete;
+     ImageButton imgDeleteFile,imgBackXacNhanTT;
     View deleteFileLine, deleteFileDiv;
 
     @Override
@@ -28,13 +30,13 @@ public class screen_xoahoso extends AppCompatActivity {
     }
 
     private void addEvents() {
-        btnDeleteFile.setOnClickListener(new View.OnClickListener() {
+        imgDeleteFile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openConfirmDialog(Gravity.CENTER);
             }
         });
-        btnBackXacNhan.setOnClickListener(new View.OnClickListener() {
+        imgBackXacNhanTT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(screen_xoahoso.this, screen_hoso_moi.class);
@@ -83,7 +85,7 @@ public class screen_xoahoso extends AppCompatActivity {
     }
 
     private void linkViews() {
-        btnDeleteFile = findViewById(R.id.btnXoaHoSo);
-        btnBackXacNhan = findViewById(R.id.btnBackXacNhanTT);
+        imgDeleteFile = findViewById(R.id.imgXoaHoSo);
+        imgBackXacNhanTT = findViewById(R.id.imgBackXacNhanTT);
     }
 }

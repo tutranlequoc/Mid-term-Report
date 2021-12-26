@@ -53,4 +53,5 @@ public class Constant {
     public static Bank bank;
     public static Danhsachphieukham danhsachphieukham;
     public static String code_medical_test;
+    public static final String VERIFYID = "verifyId";
 }

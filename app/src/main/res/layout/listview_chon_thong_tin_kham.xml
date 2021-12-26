@@ -23,13 +23,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chọn chuyên khoa"
-            android:textColor="#BFB1B1"
+            android:textColor="@color/color_BFB1B1"
             android:textSize="18sp" />
         <TextView
             android:id="@+id/txtKetQua"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:textColor="#BFB1B1"
+            android:textColor="@color/color_BFB1B1"
             android:textSize="18sp" />
     </LinearLayout>
 </LinearLayout>

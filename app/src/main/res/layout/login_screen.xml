@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E5E5E5"
+    android:background="@color/BackgroundColor"
     android:orientation="vertical"
 
     tools:context=".LoginScreen">
@@ -13,7 +13,7 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#E5E5E5"
+        android:background="@color/BackgroundColor"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,14 +23,15 @@
             android:id="@+id/toolBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#E5E5E5">
+            android:background="@color/BackgroundColor">
 
 
         <ImageButton
+            android:id="@+id/imgBackLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_keyboard_backspace_24"
-            android:backgroundTint="#E5E5E5"/>
+            android:backgroundTint="@color/BackgroundColor"/>
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -90,7 +91,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:text="Có lỗi xảy ra vui vòng thử lại sau."
-        android:textColor="#FF0000"
+        android:textColor="@color/Red"
         android:textSize="15sp"
         android:visibility="gone"/>
 

@@ -5,11 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.provider.Settings;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -18,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.ultis.Constant;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
@@ -40,6 +38,7 @@ public class OTPScreen extends AppCompatActivity {
     TextView txtSdtOtp,txtSdtNumber,txtMoSMS,txtGuiLaiMa,txtNotMyPhone;
     EditText edtOtp1,edtOtp2,edtOtp3,edtOtp4,edtOtp5,edtOtp6;
     String sdt,mVerificationId;
+    int request_code;
     FirebaseAuth mAuth;
 
 
@@ -52,7 +51,6 @@ public class OTPScreen extends AppCompatActivity {
 //
         getData();
         mAuth = FirebaseAuth.getInstance();
-        mAuth.getFirebaseAuthSettings().setAppVerificationDisabledForTesting(true);
         CheckValue();
         addEvents();
 
@@ -76,8 +74,9 @@ public class OTPScreen extends AppCompatActivity {
 
     private void getData() {
 
-        sdt = getIntent().getStringExtra("SdtDKi");
-        mVerificationId = getIntent().getStringExtra("verifyID");
+        sdt = getIntent().getStringExtra(Constant.PHONE_NUMBER);
+        mVerificationId = getIntent().getStringExtra(Constant.VERIFYID);
+        request_code = getIntent().getIntExtra(Constant.REQUEST_TAG,0);
         txtSdtOtp.setText(sdt);
         txtSdtNumber.setText(sdt);
     }
@@ -105,7 +104,6 @@ public class OTPScreen extends AppCompatActivity {
 
                         txtGuiLaiMa.setText("Vui lòng thử lại sau " + timeConvert);
                         txtGuiLaiMa.setClickable(false);
-                        sendOTPAgain();
                     }
 
                     @Override
@@ -124,41 +122,7 @@ public class OTPScreen extends AppCompatActivity {
 
             }
         });
-        txtMoSMS.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.addCategory(Intent.CATEGORY_APP_MESSAGING);
-                startActivity(intent);
-            }
-        });
     }
-
-    private void sendOTPAgain() {
-        PhoneAuthOptions options =
-                PhoneAuthOptions.newBuilder(mAuth)
-                        .setPhoneNumber("+84"+sdt)       // Phone number to verify
-                        .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
-                        .setActivity(this)                 // Activity (for callback binding)
-                        .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                            @Override
-                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-                                signInWithPhoneAuthCredential(phoneAuthCredential);
-                            }
-
-                            @Override
-                            public void onVerificationFailed(@NonNull FirebaseException e) {
-                                Toast.makeText(OTPScreen.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                            }
-                            public void onCodeSent(String verifycationID, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                                super.onCodeSent(verifycationID, forceResendingToken);
-
-                            }
-                        })          // OnVerificationStateChangedCallbacks
-                        .build();
-        PhoneAuthProvider.verifyPhoneNumber(options);
-    }
-
     private void CheckValue(){
 
         edtOtp1.addTextChangedListener(new TextWatcher() {
@@ -295,7 +259,12 @@ public class OTPScreen extends AppCompatActivity {
 
                             FirebaseUser user = task.getResult().getUser();
                             // Update UI
-                            goToMainActivity(user.getPhoneNumber());
+                            if (request_code == 9 ){
+                                goToNhapMKMoi(user.getPhoneNumber());
+                            }
+                            else {
+                                gotoFillInfor(user.getPhoneNumber());
+                            }
                         } else {
                             // Sign in failed, display a message and update the UI
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
@@ -308,12 +277,15 @@ public class OTPScreen extends AppCompatActivity {
                 });
     }
 
-    private void goToMainActivity(String phoneNumber) {
-        Intent intent = new Intent(OTPScreen.this,MainActivity.class);
-        intent.putExtra("SdtDKi",phoneNumber);
-
+    private void goToNhapMKMoi(String phoneNumber) {
+        Intent intent = new Intent(OTPScreen.this,NhapMkMoi.class);
+        intent.putExtra(Constant.PHONE_NUMBER,phoneNumber);
         startActivity(intent);
     }
-
+    private void gotoFillInfor(String phoneNumber) {
+        Intent intent = new Intent(OTPScreen.this,Fill_Infor_Screen.class);
+        intent.putExtra(Constant.PHONE_NUMBER,phoneNumber);
+        startActivity(intent);
+    }
 
 }

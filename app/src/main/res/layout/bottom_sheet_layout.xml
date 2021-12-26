@@ -26,16 +26,17 @@
         android:layout_height="50dp"
         android:background="@drawable/round_button"
         android:text="CHƯA TỪNG KHÁM, ĐĂNG KÝ MỚI"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:layout_marginBottom="20dp"/>
+
     <Button
         android:id="@+id/btnNhapHS"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:background="@drawable/button_border"
         android:text="ĐÃ TỪNG KHÁM, NHẬP SỐ HỒ SƠ"
-        android:textColor="#5CC0AB"
+        android:textColor="@color/MainColor"
         android:textSize="10sp"
         android:layout_marginBottom="10dp"/>
         android:textColor="#5CC0AB"
@@ -47,7 +48,7 @@
         android:layout_height="50dp"
         android:text="QUÉT MÃ BHYT"
         android:background="@drawable/button_border"
-        android:textColor="#5CC0AB"
+        android:textColor="@color/MainColor"
         android:textSize="16sp"/>
 
 </LinearLayout>
