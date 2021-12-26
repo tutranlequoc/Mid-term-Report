@@ -98,6 +98,7 @@ public class LoginScreen extends AppCompatActivity {
                         try{
                             startActivity(intent);
                         }catch (Exception e){
+                            finish();
                             Toast.makeText(LoginScreen.this, "Số điện thoại chưa được đăng ký, vui lòng sử dụng tài khoản có sẵn trong READ.ME", Toast.LENGTH_SHORT).show();
                         }
 

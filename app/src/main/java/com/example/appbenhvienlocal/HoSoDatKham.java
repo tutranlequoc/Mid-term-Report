@@ -43,11 +43,6 @@ public class HoSoDatKham extends AppCompatActivity implements onItemFragmentClic
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        replaceFragment();
-    }
 
     private void getData() {
        changeScreen = getIntent();
