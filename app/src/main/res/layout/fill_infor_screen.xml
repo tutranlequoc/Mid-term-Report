@@ -90,12 +90,6 @@
                 android:inputType="phone"
                 android:textSize="20sp" />
         </LinearLayout>
-        <![CDATA[
-
-
->
-
-    ]]>
 
         <EditText
             android:id="@+id/edtHoTen"

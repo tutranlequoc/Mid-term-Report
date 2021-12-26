@@ -56,6 +56,12 @@ public class HoSoDatKham extends AppCompatActivity implements onItemFragmentClic
        }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        replaceFragment();
+    }
+
     private void replaceFragment() {
         manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();

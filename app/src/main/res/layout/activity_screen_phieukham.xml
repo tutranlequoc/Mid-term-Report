@@ -29,7 +29,6 @@
             android:layout_height="wrap_content"
             android:text="Danh sách Phiếu khám"
             android:textSize="20sp"
-            android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:layout_gravity="center"
            />

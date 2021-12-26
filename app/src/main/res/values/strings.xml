@@ -3,14 +3,14 @@
     <string name="h_nh_nh">Hình ảnh</string>
     <string name="dat_kham">ĐẶT KHÁM</string>
     <string name="phone_number"><b>1900-2115</b></string>
-    <string name="ho_so"><b>Hồ sơ</b></string>
+    <string name="ho_so"><b>HỒ SƠ ĐẶT KHÁM</b></string>
     <string name="mo_ta_anh">Hình ảnh</string>
     <string name="ho_tro_dat_kham">Hỗ trợ đặt khám</string>
     <string name="ho_tro_zalo">Hỗ trợ Zalo</string>
     <string name="ban_do">Bản đồ</string>
-    <string name="phieu_kham"><b>Phiếu khám</b></string>
+    <string name="phieu_kham"><b>PHIẾU KHÁM BỆNH</b></string>
     <string name="kiem_tra"><b>Kiểm tra</b></string>
-    <string name="notification">Thông báo</string>
+    <string name="notification"><b>THÔNG BÁO</b></string>
     <string name="open_navigation_drawer">Open Navigation</string>
     <string name="close_navigation_drawer">Close Navigation</string>
     <string name="noi_khai_bao"><font color="#0032C7"><b>Nơi khai báo</b></font> <font color="#FF0000">(*)</font><font color="#0032C7"><b>:</b></font></string>
@@ -80,8 +80,6 @@
         <item>Khám và tư vấn thẩm mỹ da</item>
         <item>Khám và tư vấn tạo hình thẩm mỹ</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ques2">Làm sao để sử dụng được phần mềm đăng ký khám bệnh trực tuyến?</string>
     <string name="question2">\t\tCó thể truy cập và sử dụng phần mềm trên tất cả thiết bị có thể truy cập mạng internet. ( 3G,4G,5G,Wifi, dây mạng…..)\n
 \t\tMáy tính bàn, laptop: truy cập website\n
@@ -119,5 +117,16 @@ Các định nghĩa:\n\n
     <string name="dateOfBirth">Ngày sinh(*)</string>
     <string name="fullName">Họ và tên</string>
     <string name="noneInfo">Chưa cập nhật</string>
+    <string name="policies"><b>ĐIỀU KHOẢN DỊCH VỤ</b></string>
+    <string name="ruler"><b>QUY ĐỊNH SỬ DỤNG</b></string>
+    <string name="faq"><b>CÂU HỎI THƯỜNG GẶP</b></string>
+    <string name="login"><b>ĐĂNG NHẬP</b></string>
+    <string name="question_1">Lợi ích khi sử dụng phần mềm đăng ký khám bệnh trực tuyến này là gì?</string>
+    <string name="security_policy">\t\tChào mừng bạn đến với phần mềm Đăng Ký Khám Bệnh Trực Tuyến tại Bệnh viện Da Liễu Thành phố Hồ Chí Minh (gọi chung là "Phần mềm") được vận hành bởi Bệnh viện Da Liễu Thành phố Hồ Chí Minh và công ty cổ phần ứng dụng PKH (gọi chung là "chúng tôi" hoặc "của chúng tôi"). Chúng tôi nghiêm túc thực hiện trách nhiệm của mình liên quan đến bảo mật thông tin theo các quy định về bảo vệ bí mật thông tin cá nhân của pháp luật Việt Nam và cam kết tôn trọng quyền riêng tư và sự quan tâm của tất cả người dùng đối với Phần mềm (chúng tôi gọi các dịch vụ chúng tôi cung cấp trên Phần mềm là “Các Dịch Vụ”). Chúng tôi nhận biết tầm quan trọng của dữ liệu cá nhân mà bạn đã tin tưởng giao cho chúng tôi và tin rằng chúng tôi có trách nhiệm quản lý, bảo vệ và xử lý dữ liệu cá nhân của bạn một cách thích hợp. Chính Sách Bảo Mật này (“Chính Sách Bảo Mật” hay “Chính Sách”) được thiết kế để giúp bạn hiểu được cách thức chúng tôi thu thập, sử dụng, tiết lộ và/hoặc xử lý dữ liệu cá nhân mà bạn đã cung cấp cho chúng tôi và/hoặc lưu giữ về bạn, cho dù là hiện nay hoặc trong tương lai, cũng như để giúp bạn đưa ra quyết định đúng trước khi cung cấp cho chúng tôi bất kỳ dữ liệu cá nhân nào của bạn. Vui lòng đọc kỹ Chính Sách Bảo Mật này. Nếu bạn có bất kỳ thắc mắc nào về thông tin này hoặc các phương pháp bảo mật thông tin của chúng tôi, vui lòng liên hệ với chúng tôi qua tổng đài 19002115 hoặc gửi email đến địa chỉ <b>hotro@medpro.com.vn.</b>\n
+\t\t“Dữ liệu cá nhân” có nghĩa là dữ liệu, dù đúng hay không về một cá nhân mà thông qua đó có thể được xác định được danh tính, hoặc từ dữ liệu đó và thông tin khác mà một tổ chức có hoặc có khả năng tiếp cận. Các ví dụ thường gặp về dữ liệu cá nhân có thể gồm có tên, số chứng minh nhân dân và thông tin liên hệ.\n
+\t\tBằng việc sử dụng Các Dịch Vụ, đăng ký một tài khoản với chúng tôi, truy cập Phần mềm của chúng tôi, hoặc tiếp cận Các Dịch Vụ, bạn xác nhận và đồng ý rằng bạn chấp nhận các phương pháp, yêu cầu, và/hoặc chính sách được mô tả trong Chính Sách Bảo Mật này, và theo đây bạn đồng ý cho phép chúng tôi thu thập, sử dụng, tiết lộ và/hoặc xử lý dữ liệu cá nhân của bạn như mô tả trong đây.\n
+\t\tNếu bạn không đồng ý cho phép xử lý dữ liệu cá nhân của bạn như mô tả trong chính sách này, vui lòng không sử dụng các dịch vụ của chúng tôi hay truy cập phần mềm của chúng tôi. Nếu chúng tôi thay đổi Chính Sách Bảo Mật của mình, chúng tôi sẽ đăng những thay đổi đó hoặc Chính Sách Bảo Mật sửa đổi trên Phần mềm. Chúng tôi có quyền sửa đổi bổ sung Chính Sách Bảo Mật này vào bất kỳ lúc nào.</string>
+    <string name="security"><b>CHÍNH SÁCH BẢO MẬT</b></string>
+    <string name="logout">ĐĂNG XUẤT</string>
 
 </resources>

@@ -13,6 +13,7 @@
         android:background="@color/MainColor"
         android:alpha="0.7"
         android:textColor="@color/white"
+        android:textSize="18sp"
         android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"/>
     <TextView
         android:layout_width="wrap_content"

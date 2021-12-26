@@ -3,7 +3,7 @@
     package="com.example.appbenhvienlocal">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -16,13 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppBenhVienLocal">
         <activity
+            android:name=".chinhsachbaomat"
+            android:exported="true" />
+        <activity
             android:name=".QRCode_Bhyt"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".screen_phuongthucthanhtoan"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".screen_xoahoso"
             android:exported="true">
@@ -35,49 +36,37 @@
         </activity>
         <activity
             android:name=".NhapMkMoi"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ManHinhDangKy"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".QuenMatKhau"
-            android:exported="true" >
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ManHinhThongBao"
             android:exported="true" />
         <activity
             android:name=".LoginScreen"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ManHinhNhapPassWord"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".QuanLyHoSo"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".PhieuKhamBenhDaThanhToan"
             android:exported="true" />
         <activity
             android:name=".KhaiBaoYTe"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".PhieuKhamBenh"
             android:exported="true" />
         <activity
             android:name=".ChonPhuongThucTT"
-            android:exported="true" >
-
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".DanhSachPhieuKhamScreen"
             android:exported="true" />
@@ -86,16 +75,10 @@
             android:exported="true" />
         <activity
             android:name=".HoSoDatKham"
-            android:exported="true">
-
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ChonNgayKham"
-            android:exported="true">
-
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".VuiLongChonGiokham"
             android:exported="true"></activity>
@@ -107,49 +90,37 @@
             android:exported="true" />
         <activity
             android:name=".ChonThongTinKham"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".screen_faq"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".screen_quydinh"
             android:exported="true" />
         <activity
             android:name=".screen_dieukhoan"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".screen_thongbao"
             android:exported="true" />
         <activity
             android:name=".screen_thongtinthanhtoan"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity2"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".OTPScreen"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".screen_hoso_moi"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".screen_phieukham"
             android:exported="true" />
         <activity
             android:name=".screen_chuatungkham"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".screen_datungkham"
             android:exported="true" />
@@ -172,5 +143,5 @@
             android:name=".NhapTheATM"
             android:exported="true"></activity>
     </application>
-       
+
 </manifest>
