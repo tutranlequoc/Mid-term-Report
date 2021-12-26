@@ -24,7 +24,7 @@ public class KhaiBaoYTe extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.thong_tin_khai_bao);
+        setContentView(R.layout.activity_khai_bao_yte);
 //        linkViews();
 //        initData();
 //        loadData();

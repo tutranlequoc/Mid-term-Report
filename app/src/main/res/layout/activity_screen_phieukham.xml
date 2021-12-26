@@ -32,7 +32,7 @@
             android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:layout_gravity="center"
-            android:textStyle="bold"/>
+           />
     </androidx.appcompat.widget.Toolbar>
 
 </com.google.android.material.appbar.AppBarLayout>

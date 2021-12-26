@@ -103,12 +103,12 @@ public class screen_thongtinthanhtoan extends AppCompatActivity {
 //        divider=dialogConfirm.findViewById(R.id.divider);
         TextView txtDongY = dialogConfirm.findViewById(R.id.txtDongY);
         TextView txtHuy = dialogConfirm.findViewById(R.id.txtHuy);
-        TextView txtNoiDung = dialogConfirm.findViewById(R.id.txtContentPayment);
+//        TextView txtNoiDung = dialogConfirm.findViewById(R.id.txtContentPayment);
         String noiDung = "Bạn đang thực hiện thanh toán bằng " + "<font color=#5CC0AB>Thanh toán bằng Thẻ ATM nội địa/Internet Banking của "+
                 Constant.bank.getBankName() + "</font>" + ". Với số tiền " + "<font color=#5CC0AB>" + Constant.bookingInfor.getTienKham() + "</font>";
 
-        txtNoiDung.setText(Html.fromHtml(noiDung));
-        txtNoiDung.setTypeface(txtNoiDung.getTypeface(), Typeface.BOLD);
+//        txtNoiDung.setText(Html.fromHtml(noiDung));
+//        txtNoiDung.setTypeface(txtNoiDung.getTypeface(), Typeface.BOLD);
         txtDongY.setTextColor(Color.parseColor("#5CC0AB"));
 
         txtDongY.setOnClickListener(new View.OnClickListener() {
@@ -116,11 +116,11 @@ public class screen_thongtinthanhtoan extends AppCompatActivity {
             public void onClick(View view) {
                 dialogConfirm.dismiss();
 //                dialogSuccess();
-                String code_test = CodePatient.createCodeTest(Constant.doc.getMaSo());
-//                Constant.database.insertDataForMedicalTest(code_test, Constant.doc.getMaSo(),
-//                        Constant.bookingInfor.getNgayKham(), "Khám BHYT", Constant.bookingInfor.getTienKham(),
-//                        Constant.bookingInfor.getGioKham());
-                Constant.code_medical_test = code_test;
+//                String code_test = CodePatient.createCodeTest(Constant.doc.getMaSo());
+////                Constant.database.insertDataForMedicalTest(code_test, Constant.doc.getMaSo(),
+////                        Constant.bookingInfor.getNgayKham(), "Khám BHYT", Constant.bookingInfor.getTienKham(),
+////                        Constant.bookingInfor.getGioKham());
+//                Constant.code_medical_test = code_test;
                 Intent intent = new Intent(screen_thongtinthanhtoan.this, NhapTheATM.class);
                 startActivity(intent);
 
