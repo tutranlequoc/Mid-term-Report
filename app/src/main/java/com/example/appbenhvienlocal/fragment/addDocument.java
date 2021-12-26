@@ -36,13 +36,13 @@ public class addDocument extends Fragment {
     }
     public void bottomSheet(){
         View view1 = getLayoutInflater().inflate(R.layout.bottom_sheet_themhoso,null);
-//        Button close = view1.findViewById(R.id.btnClose);
-//        close.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
+        Button close = view1.findViewById(R.id.btnClose);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         BottomSheetDialog dialog = new BottomSheetDialog(getActivity());
         dialog.setContentView(view1);
         dialog.show();

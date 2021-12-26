@@ -38,7 +38,6 @@ public class HoSoDatKham extends AppCompatActivity implements onItemFragmentClic
         setContentView(R.layout.activity_ho_so_dat_kham);
         linkViews();
         addEvents();
-        replaceFragment();
         getData();
 
     }
@@ -49,6 +48,12 @@ public class HoSoDatKham extends AppCompatActivity implements onItemFragmentClic
        if(changeScreen != null){
            code = changeScreen.getIntExtra(Constant.REQUEST_TAG, 0);
        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        replaceFragment();
     }
 
     private void replaceFragment() {

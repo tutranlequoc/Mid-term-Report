@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
 
 public class screen_phieukham extends AppCompatActivity {
 
-    Button btnBackPhieuKham;
+    ImageButton imgBackPhieuKham;
     Spinner spinner;
     ArrayList<String> trangthai;
     @Override
@@ -39,12 +40,12 @@ public class screen_phieukham extends AppCompatActivity {
     }
 
     private void linkViews() {
-        btnBackPhieuKham = findViewById(R.id.btnBackPhieuKham);
+        imgBackPhieuKham = findViewById(R.id.imgBackPhieuKham);
         spinner = findViewById(R.id.spinnerDanhSach);
     }
 
     private void addEvents() {
-        btnBackPhieuKham.setOnClickListener(new View.OnClickListener() {
+        imgBackPhieuKham.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(screen_phieukham.this, MainActivity.class);

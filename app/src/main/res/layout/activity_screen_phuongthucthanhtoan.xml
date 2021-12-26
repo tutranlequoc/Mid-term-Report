@@ -59,6 +59,7 @@
         android:paddingHorizontal="5dp"
         android:paddingTop="10dp"
         android:paddingBottom="5dp"
+        android:visibility="gone"
        />
     <Button
         android:id="@+id/btnThanhToanMomo"
