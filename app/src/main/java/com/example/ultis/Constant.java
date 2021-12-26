@@ -4,6 +4,7 @@ import com.example.adapter.Bank;
 import com.example.database.BenhVienSQLiteHelper;
 import com.example.function.HoSoDK;
 import com.example.models.BookingInfor;
+import com.example.models.Danhsachphieukham;
 import com.example.models.Document;
 import com.example.models.User;
 
@@ -50,4 +51,6 @@ public class Constant {
     public static final String WARE_DISTRICT_ID = "district_id";
     public static BookingInfor bookingInfor;
     public static Bank bank;
+    public static Danhsachphieukham danhsachphieukham;
+    public static String code_medical_test;
 }

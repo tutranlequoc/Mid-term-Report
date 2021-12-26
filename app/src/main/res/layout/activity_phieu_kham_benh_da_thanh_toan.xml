@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarPhieuKham"
-        app:layout_constraintBottom_toTopOf="@+id/layoutBottomPK">
+        app:layout_constraintBottom_toTopOf="@+id/btnBackPKTT">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,6 +71,7 @@
                 android:src="@drawable/_maphieu"
                 android:scaleType="fitXY"/>
             <TextView
+                android:id="@+id/txtCodeMedicalTest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(Mã phiếu: AFGW421)"
@@ -82,12 +83,14 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
             <TextView
+                android:id="@+id/txtChuyenKhoa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chuyên khoa: Khám bệnh ngoài da"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
             <TextView
+                android:id="@+id/txtOrderNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="49"
@@ -120,7 +123,7 @@
                     android:id="@+id/txtMessage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Vui lòng thanh toán để hoàn tất đăng ký khám bệnh"
+                    android:text="Xin vui lòng đến bệnh viện vào đúng thời gian đã hẹn"
                     android:textColor="#FF0000"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -169,8 +172,9 @@
                             app:layout_constraintWidth_percent="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:textColor="@color/black"/>
+                            android:textColor="#8E8E8E"/>
                         <TextView
+                            android:id="@+id/txtDichVu"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:text="Chưa cập nhật"
@@ -195,8 +199,9 @@
                             app:layout_constraintWidth_percent="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:textColor="@color/black"/>
+                            android:textColor="#8E8E8E"/>
                         <TextView
+                            android:id="@+id/txtDate"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:text="Chưa cập nhật"
@@ -221,8 +226,9 @@
                             app:layout_constraintWidth_percent="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:textColor="@color/black"/>
+                            android:textColor="#8E8E8E"/>
                         <TextView
+                            android:id="@+id/txtTime"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:text="Chưa cập nhật"
@@ -247,34 +253,39 @@
                             app:layout_constraintWidth_percent="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:textColor="@color/black"/>
+                            android:textColor="#8E8E8E"/>
+
                         <TextView
+                            android:id="@+id/txtFullName"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:text="Chưa cập nhật"
                             android:layout_weight="1"
-                            app:layout_constraintWidth_percent="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/txtHoTen"
+                            android:text="Chưa cập nhật"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/txtHoTen"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:textColor="@color/black"/>
+                            app:layout_constraintWidth_percent="0.5" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingTop="5dp">
+
                         <TextView
                             android:id="@+id/txtGioiTinh"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:text="Giới tính: "
-                            app:layout_constraintHorizontal_bias="0"
-                            app:layout_constraintWidth_percent="0.5"
+                            android:textColor="#8E8E8E"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:textColor="@color/black"/>
+                            app:layout_constraintWidth_percent="0.5" />
                         <TextView
+                            android:id="@+id/txtGender"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:text="Chưa cập nhật"
@@ -299,17 +310,20 @@
                             app:layout_constraintWidth_percent="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:textColor="@color/black"/>
+                            android:textColor="#8E8E8E"/>
+
                         <TextView
+                            android:id="@+id/txtDateOfBirth"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:text="Chưa cập nhật"
                             android:layout_weight="1"
-                            app:layout_constraintWidth_percent="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/txtNgaySinh"
+                            android:text="Chưa cập nhật"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/txtNgaySinh"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:textColor="@color/black"/>
+                            app:layout_constraintWidth_percent="0.5" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -325,8 +339,9 @@
                             app:layout_constraintWidth_percent="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:textColor="@color/black"/>
+                            android:textColor="#8E8E8E"/>
                         <TextView
+                            android:id="@+id/txtForm"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:text="Chưa cập nhật"
@@ -342,17 +357,19 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingTop ="5dp">
+
                         <TextView
                             android:id="@+id/txtTinhTP"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:text="Tỉnh/TP: "
-                            app:layout_constraintHorizontal_bias="0"
-                            app:layout_constraintWidth_percent="0.5"
+                            android:textColor="#8E8E8E"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:textColor="@color/black"/>
+                            app:layout_constraintWidth_percent="0.5" />
                         <TextView
+                            android:id="@+id/txtCity"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:text="Chưa cập nhật"
@@ -377,8 +394,9 @@
                             app:layout_constraintWidth_percent="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:textColor="@color/black"/>
+                            android:textColor="#8E8E8E"/>
                         <TextView
+                            android:id="@+id/txtMoney"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:text="Chưa cập nhật"
@@ -415,6 +433,7 @@
                             android:layout_gravity="center"/>
                     </LinearLayout>
                     <TextView
+                        android:id="@+id/txtCodeBN"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="MP-2110228BFHBNR"
@@ -444,7 +463,7 @@
         </LinearLayout>
     </ScrollView>
     <Button
-        android:id="@+id/layoutBottomPK"
+        android:id="@+id/btnBackPKTT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
