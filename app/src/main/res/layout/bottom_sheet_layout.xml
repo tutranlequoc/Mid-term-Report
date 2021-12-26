@@ -51,5 +51,4 @@
         android:textColor="@color/MainColor"
         android:textSize="16sp"/>
 
-
 </LinearLayout>

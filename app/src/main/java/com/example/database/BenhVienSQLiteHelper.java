@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 
 import com.example.appbenhvienlocal.R;
 import com.example.function.HoSoDK;
+import com.example.models.Danhsachphieukham;
 import com.example.models.Document;
 
 import java.lang.reflect.Array;
@@ -183,9 +184,27 @@ public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
     public void deleteDocument(String code){
         SQLiteDatabase db = getWritableDatabase();
         try{
-            queryExec("DELETE FROM " + TBL_NAME_HOSODATKHAM + " WHERE " + COL_CODE + " = " + code);
+            db.execSQL("DELETE FROM " + TBL_NAME_HOSODATKHAM + " WHERE " + COL_CODE + " = " + code);
         }catch (Exception e){
             Log.e("Error:", e.toString());
+        }
+    }
+
+    public Danhsachphieukham getInForFromMedicalTest(String code, String fullName){
+        SQLiteDatabase db = getReadableDatabase();
+        try{
+            Cursor cursor = db.rawQuery("SELECT * FROM " + TBL_NAME_PHIEUKHAM + " WHERE " + COL_CODE_MEDICAL_TEST + " =?", new String[]{code});
+            cursor.moveToFirst();
+            Danhsachphieukham danhsachphieukham = new Danhsachphieukham();
+            danhsachphieukham.setMaPhieu(cursor.getString(0));
+            danhsachphieukham.setNgayKham(cursor.getString(2));
+            danhsachphieukham.setGioKhamDuKien(cursor.getString(5));
+            danhsachphieukham.setTen(fullName);
+            danhsachphieukham.setTenTrangThai("Đã thanh toán");
+            return danhsachphieukham;
+        }catch(Exception e){
+            Log.e("Error:", e.toString());
+            return null;
         }
     }
 
@@ -288,5 +307,30 @@ public class BenhVienSQLiteHelper extends SQLiteOpenHelper {
         }
     }
 
+    public boolean insertDataForMedicalTest(String code, String code_patient, String date, String form, String money, String time){
+        try{
+            SQLiteDatabase db = getWritableDatabase();
+            String sql = "INSERT INTO " + TBL_NAME_PHIEUKHAM + " VALUES(?,?,?,?,?,?)";
+            SQLiteStatement statement = db.compileStatement(sql);
+            statement.bindString(1, code);
+            statement.bindString(2, code_patient);
+            statement.bindString(3, date);
+            statement.bindString(4,form);
+            statement.bindString(5, money);
+            statement.bindString(6, time);
+            statement.executeInsert();
+            return true;
+        }catch (Exception e){
+            Log.e("Error:", e.toString());
+            return false;
+        }
 
+    }
+
+
+//    public static final String COL_CODE_MEDICAL_TEST = "CODE_TEST";
+//    public static final String COL_DATE = "DATE";
+//    public static final String COL_FORM = "FORM";
+//    public static final String COL_MONEY = "MONEY";
+//    public static final String COL_TIME = "TIME";
 }

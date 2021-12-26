@@ -260,8 +260,9 @@
     android:id="@+id/btnMakePayment"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:text="THANH TOÁN"
     android:background="#5cc0AB"
-    android:textColor="@color/white"/>
+    android:textColor="@color/white"
+    android:text="ĐẶT KHÁM"
+    android:textSize="20sp"/>
 
 </LinearLayout>
