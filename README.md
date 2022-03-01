@@ -6,5 +6,5 @@
 #### Account: 0963075062 
 #### Pass: 123456
 Link github: https://github.com/tutranlequoc/Mid-term-Report.git
-/p Link Trello: https://trello.com/b/Jd62PYmh/b%E1%BB%87nh-vi%E1%BB%87n-da-li%E1%BB%85u
+# Link Trello: https://trello.com/b/Jd62PYmh/b%E1%BB%87nh-vi%E1%BB%87n-da-li%E1%BB%85u
 
